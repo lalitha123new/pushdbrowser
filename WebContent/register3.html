@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta charset="ISO-8859-1">
+<title>Push-d Registration</title>
+<link href="bs/css/bootstrap.min.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+<link href="fa/css/font-awesome.min.css" rel="stylesheet">
+<link href="css/register.css" rel="stylesheet">
+
+	<script src="bs/js/jquery-2.1.1.min.js"></script>
+	<script src="bs/js/jquery.cookie.js"></script>
+	<script src="bs/js/bootstrap.min.js"></script>
+	
+	<script type="text/javascript">
+	history.forward();
+	</script> 
+	
+	<style>
+	
+	
+	.wsas_class{
+	
+	border:1px solid black;
+	padding-top:25px;
+	padding-bottom:25px;
+	
+	}
+	
+	.center_align {
+	text-align:center;
+	}
+	
+	
+	.header_class {
+	background-color:#4C6BB5;
+	}
+	
+	
+	
+	</style>
+
+</head>
+
+<body>
+
+
+<form name="registerForm" method = "post">
+		
+		<div class="center-container">
+			
+			<center class="content-top1">
+				<p  class="no_blink" style="color:blue;font-weight:bold;font-size:18px;">Please  complete  the  registration process  in one  go  or   by re-logging  within  48 hours</p>
+			</center>
+			
+			<div class="content-top">
+			
+			<div class="header-div" style="background-color:#4C6BB5;width:100%;margin-left:auto;margin-right:auto;margin-bottom:30px;">
+			<h4 class="header-w3ls header_class"> Initial Evaluation<br>Anxiety Symptoms</h4>
+			</div>
+			
+					
+					<!-- begin GAD-7 -->
+					
+					<div id="q4" class="q required col-md-12">
+						<!-- <h2 style = "background-color:#4C6BB5;text-align:center;"><b>GAD-7</b></h2> -->
+						
+						<table class="matrix1">
+
+						<tr>
+							<th scope="col">Over the last 2 weeks, how often have you been bothered by the following problems? &nbsp;</th>
+							<th width="60px;" scope="col">Not at all</th>
+							<th width="60px;" scope="col">Several Days</th>
+							<th width="60px;" scope="col">More than half the days</th>
+							<th width="60px;" scope="col">Nearly every day</th>
+						</tr>
+						
+						<tr class="matrix_row_light">
+							<td class="question" style="width: px;">1. Feeling nervous, anxious or on edge.</td>
+							<td><label for="RESULT_RadioButton-5-0-0"
+								class="hidden">Strongly Agree</label><input
+								type="radio" name="RESULT_RadioButton-5-0"
+								class="multiple_choice" id="RESULT_RadioButton-5-0-0" value="0" /></td>
+							<td><label for="RESULT_RadioButton-5-0-1"
+								class="hidden">Agree</label><input type="radio"
+								name="RESULT_RadioButton-5-0" class="multiple_choice"
+								id="RESULT_RadioButton-5-0-1" value="1" /></td>
+							<td><label for="RESULT_RadioButton-5-0-2"
+								class="hidden">Neutral</label><input type="radio"
+								name="RESULT_RadioButton-5-0" class="multiple_choice"
+								id="RESULT_RadioButton-5-0-2" value="2" /></td>
+							<td><label for="RESULT_RadioButton-5-0-3"
+								class="hidden">Disagree</label><input type="radio"
+								name="RESULT_RadioButton-5-0" class="multiple_choice"
+								id="RESULT_RadioButton-5-0-3" value="3" /></td>
+							<!--<td><label for="RESULT_RadioButton-4-0-4" class="hidden">Strongly Disagree</label><input type="radio" name="RESULT_RadioButton-4-0" class="multiple_choice" id="RESULT_RadioButton-4-0-4" value="Radio-4" /></td>-->
+						</tr>
+						
+						<tr class="matrix_row_dark">
+							<td class="question" style="width: px;">2. Not being able to stop or control worrying </td>
+							<td><label for="RESULT_RadioButton-5-1-0"
+								class="hidden">Strongly Agree</label><input
+								type="radio" name="RESULT_RadioButton-5-1"
+								class="multiple_choice" id="RESULT_RadioButton-5-1-0" value="0" /></td>
+							<td><label for="RESULT_RadioButton-5-1-1"
+								class="hidden">Agree</label><input type="radio"
+								name="RESULT_RadioButton-5-1" class="multiple_choice"
+								id="RESULT_RadioButton-5-1-1" value="1" /></td>
+							<td><label for="RESULT_RadioButton-5-1-2"
+								class="hidden">Neutral</label><input type="radio"
+								name="RESULT_RadioButton-5-1" class="multiple_choice"
+								id="RESULT_RadioButton-5-1-2" value="2" /></td>
+							<td><label for="RESULT_RadioButton-5-1-3"
+								class="hidden">Disagree</label><input type="radio"
+								name="RESULT_RadioButton-5-1" class="multiple_choice"
+								id="RESULT_RadioButton-5-1-3" value="3" /></td>
+							<!--<td><label for="RESULT_RadioButton-4-1-4" class="hidden">Strongly Disagree</label><input type="radio" name="RESULT_RadioButton-4-1" class="multiple_choice" id="RESULT_RadioButton-4-1-4" value="Radio-4" /></td>-->
+						</tr>
+						
+						<tr class="matrix_row_light">
+							<td class="question" style="width: px;">3. Worrying too much about different things </td>
+							<td><label for="RESULT_RadioButton-5-2-0"
+								class="hidden">Strongly Agree</label><input
+								type="radio" name="RESULT_RadioButton-5-2"
+								class="multiple_choice" id="RESULT_RadioButton-5-2-0" value="0" /></td>
+							<td><label for="RESULT_RadioButton-5-2-1"
+								class="hidden">Agree</label><input type="radio"
+								name="RESULT_RadioButton-5-2" class="multiple_choice"
+								id="RESULT_RadioButton-5-2-1" value="1" /></td>
+							<td><label for="RESULT_RadioButton-5-2-2"
+								class="hidden">Neutral</label><input type="radio"
+								name="RESULT_RadioButton-5-2" class="multiple_choice"
+								id="RESULT_RadioButton-5-2-2" value="2" /></td>
+							<td><label for="RESULT_RadioButton-5-2-3"
+								class="hidden">Disagree</label><input type="radio"
+								name="RESULT_RadioButton-5-2" class="multiple_choice"
+								id="RESULT_RadioButton-5-2-3" value="3" /></td>
+							<!--<td><label for="RESULT_RadioButton-4-2-4" class="hidden">Strongly Disagree</label><input type="radio" name="RESULT_RadioButton-4-2" class="multiple_choice" id="RESULT_RadioButton-4-2-4" value="Radio-4" /></td>-->
+						</tr>
+						
+						<tr class="matrix_row_dark">
+							<td class="question" style="width: px;">4. Trouble relaxing </td>
+							<td><label for="RESULT_RadioButton-5-3-0"
+								class="hidden">Strongly Agree</label><input
+								type="radio" name="RESULT_RadioButton-5-3"
+								class="multiple_choice" id="RESULT_RadioButton-5-3-0" value="0" /></td>
+							<td><label for="RESULT_RadioButton-5-3-1"
+								class="hidden">Agree</label><input type="radio"
+								name="RESULT_RadioButton-5-3" class="multiple_choice"
+								id="RESULT_RadioButton-5-3-1" value="1" /></td>
+							<td><label for="RESULT_RadioButton-5-3-2"
+								class="hidden">Neutral</label><input type="radio"
+								name="RESULT_RadioButton-5-3" class="multiple_choice"
+								id="RESULT_RadioButton-5-3-2" value="2" /></td>
+							<td><label for="RESULT_RadioButton-5-3-3"
+								class="hidden">Disagree</label><input type="radio"
+								name="RESULT_RadioButton-5-3" class="multiple_choice"
+								id="RESULT_RadioButton-5-3-3" value="3" /></td>
+							<!--<td><label for="RESULT_RadioButton-4-3-4" class="hidden">Strongly Disagree</label><input type="radio" name="RESULT_RadioButton-4-3" class="multiple_choice" id="RESULT_RadioButton-4-3-4" value="Radio-4" /></td>-->
+						</tr>
+						
+						<tr class="matrix_row_light">
+							<td class="question" style="width: px;">5. Being so restless that it is hard to sit still </td>
+							<td><label for="RESULT_RadioButton-5-4-0"
+								class="hidden">Strongly Agree</label><input
+								type="radio" name="RESULT_RadioButton-5-4"
+								class="multiple_choice" id="RESULT_RadioButton-5-4-0" value="0" /></td>
+							<td><label for="RESULT_RadioButton-5-4-1"
+								class="hidden">Agree</label><input type="radio"
+								name="RESULT_RadioButton-5-4" class="multiple_choice"
+								id="RESULT_RadioButton-5-4-1" value="1" /></td>
+							<td><label for="RESULT_RadioButton-5-4-2"
+								class="hidden">Neutral</label><input type="radio"
+								name="RESULT_RadioButton-5-4" class="multiple_choice"
+								id="RESULT_RadioButton-5-4-2" value="2" /></td>
+							<td><label for="RESULT_RadioButton-5-4-3"
+								class="hidden">Disagree</label><input type="radio"
+								name="RESULT_RadioButton-5-4" class="multiple_choice"
+								id="RESULT_RadioButton-5-4-3" value="3" /></td>
+							<!--<td><label for="RESULT_RadioButton-4-4-4" class="hidden">Strongly Disagree</label><input type="radio" name="RESULT_RadioButton-4-4" class="multiple_choice" id="RESULT_RadioButton-4-4-4" value="Radio-4" /></td>-->
+						</tr>
+						
+						<tr class="matrix_row_dark">
+							<td class="question" style="width: px;">6. Becoming easily annoyed or irritable </td>
+							<td><label for="RESULT_RadioButton-5-5-0"
+								class="hidden">Strongly Agree</label><input
+								type="radio" name="RESULT_RadioButton-5-5"
+								class="multiple_choice" id="RESULT_RadioButton-4-5-0" value="0" /></td>
+							<td><label for="RESULT_RadioButton-5-5-1"
+								class="hidden">Agree</label><input type="radio"
+								name="RESULT_RadioButton-5-5" class="multiple_choice"
+								id="RESULT_RadioButton-5-5-1" value="1" /></td>
+							<td><label for="RESULT_RadioButton-5-5-2"
+								class="hidden">Neutral</label><input type="radio"
+								name="RESULT_RadioButton-5-5" class="multiple_choice"
+								id="RESULT_RadioButton-5-5-2" value="2" /></td>
+							<td><label for="RESULT_RadioButton-5-5-3"
+								class="hidden">Disagree</label><input type="radio"
+								name="RESULT_RadioButton-5-5" class="multiple_choice"
+								id="RESULT_RadioButton-5-5-3" value="3" /></td>
+							<!--<td><label for="RESULT_RadioButton-4-5-4" class="hidden">Strongly Disagree</label><input type="radio" name="RESULT_RadioButton-4-5" class="multiple_choice" id="RESULT_RadioButton-4-5-4" value="Radio-4" /></td>-->
+						</tr>
+						
+						<tr class="matrix_row_light">
+							<td class="question" style="width: px;">7. Feeling afraid as if something awful might happen </td>
+							<td><label for="RESULT_RadioButton-5-6-0"
+								class="hidden">Strongly Agree</label><input
+								type="radio" name="RESULT_RadioButton-5-6"
+								class="multiple_choice" id="RESULT_RadioButton-5-6-0" value="0" /></td>
+							<td><label for="RESULT_RadioButton-5-6-1"
+								class="hidden">Agree</label><input type="radio"
+								name="RESULT_RadioButton-5-6" class="multiple_choice"
+								id="RESULT_RadioButton-5-6-1" value="1" /></td>
+							<td><label for="RESULT_RadioButton-5-6-2"
+								class="hidden">Neutral</label><input type="radio"
+								name="RESULT_RadioButton-5-6" class="multiple_choice"
+								id="RESULT_RadioButton-5-6-2" value="2" /></td>
+							<td><label for="RESULT_RadioButton-5-6-3"
+								class="hidden">Disagree</label><input type="radio"
+								name="RESULT_RadioButton-5-6" class="multiple_choice"
+								id="RESULT_RadioButton-5-6-3" value="3" /></td>
+							<!--<td><label for="RESULT_RadioButton-4-6-4" class="hidden">Strongly Disagree</label><input type="radio" name="RESULT_RadioButton-4-6" class="multiple_choice" id="RESULT_RadioButton-4-6-4" value="Radio-4" /></td>-->
+						</tr>
+						
+						
+						
+						</table>
+						
+						
+					</div>
+					
+					<!-- end of GAD-7 -->
+					
+					
+						
+						<!-- begin WSAS questions -->
+						<div id="q4" class="q required col-md-12" style="border:2px solid black;">
+						
+						<h2 style="color:black;text-align:center;text-decoration:underline;margin-bottom:20px;">Your current  functioning</h2>
+						
+						<span class="question top_question">Instructions: People's problems sometimes affect their ability to do certain day-to-day tasks in their lives. Below is a list of statements dealing with  your  current  functioning in the last 2 weeks. 
+						Please read the items carefully and choose one  of the options that best describes you. '0' means 'not at all impaired' and '8' means very severely impaired to the point I can't work.&nbsp;<b class="icon_required" style="color:#FF0000">*</b></span>
+						<br>
+						<br>
+						
+						
+						
+						<div class="col-md-12" style="margin-bottom:20px;">
+				
+				
+						<div class="form-group">
+					
+						<label class="label-css">1. Because of my [problem] my ability to work is impaired.</label> 
+						
+						<div class ="dropdown col-md-6">
+						
+						<select  id = "select_ability" class="drop_down" style = "background-color:#F0F3FA;">
+						<option  value="9" class ="option_class" selected>Select</option>
+						<option value="0"  class ="option_class" name="RESULT_RadioButton-6-0-0">0(Not at all)</option>
+      					<option value="1" class ="option_class" name="RESULT_RadioButton-6-0-1">1</option>
+      					<option value="2" class ="option_class" name="RESULT_RadioButton-6-0-2">2(Slightly)</option>
+      					<option value="3" class ="option_class" name="RESULT_RadioButton-6-0-3">3</option>
+      					<option value="4" class ="option_class" name="RESULT_RadioButton-6-0-4">4(Definitely)</option>
+      					<option value="5" class ="option_class" name="RESULT_RadioButton-6-0-5">5</option>
+      					<option value="6" class ="option_class" name="RESULT_RadioButton-6-0-6">6(Markedly)</option>
+      					<option value="7" class ="option_class" name="RESULT_RadioButton-6-0-7">7</option>
+      					<option value="8" class ="option_class" name="RESULT_RadioButton-6-0-8">8(Very severely)</option>
+						
+						</select>
+						
+						</div>
+						
+						</div>
+						
+					</div>
+					
+					
+					
+					<div class="col-md-12" style="margin-bottom:20px;">
+				
+				
+						<div class="form-group">
+					
+						<label class="label-css">2. Because of my [problem] my home management (cleaning, tidying, shopping, cooking, looking after home or children, paying bills) is impaired.</label> 
+						
+						<div class ="dropdown col-md-6">
+						
+						<select  id = "select_home" class="drop_down" style = "background-color:#F0F3FA;">
+						<option value="9" class ="option_class" selected>Select</option>
+						<option value="0"  class ="option_class" name="RESULT_RadioButton-6-1-0">0(Not at all)</option>
+      					<option value="1" class ="option_class" name="RESULT_RadioButton-6-1-1">1</option>
+      					<option value="2" class ="option_class" name="RESULT_RadioButton-6-1-2">2(Slightly)</option>
+      					<option value="3" class ="option_class" name="RESULT_RadioButton-6-1-3">3</option>
+      					<option value="4" class ="option_class" name="RESULT_RadioButton-6-1-4">4(Definitely)</option>
+      					<option value="5" class ="option_class" name="RESULT_RadioButton-6-1-5">5</option>
+      					<option value="6" class ="option_class" name="RESULT_RadioButton-6-1-6">6(Markedly)</option>
+      					<option value="7" class ="option_class" name="RESULT_RadioButton-6-1-7">7</option>
+      					<option value="8" class ="option_class" name="RESULT_RadioButton-6-1-8">8(Very severely)</option>
+						
+						</select>
+						
+						</div>
+						
+						</div>
+						
+					</div>
+					
+					<div class="col-md-12" style="margin-bottom:20px;">
+				
+				
+						<div class="form-group">
+					
+						<label class="label-css">3. Because of my [problem] my social leisure activities (with other people e.g. parties, bars, clubs, outings, visits, dating, home entertaining) are impaired.</label> 
+						
+						<div class ="dropdown col-md-6">
+						
+						<select  id = "select_leisure"  class="drop_down" style = "background-color:#F0F3FA;">
+						<option  value="9" class ="option_class" selected>Select</option>
+						<option value="0"  class ="option_class" name="RESULT_RadioButton-6-2-0">0(Not at all)</option>
+      					<option value="1" class ="option_class" name="RESULT_RadioButton-6-2-1">1</option>
+      					<option value="2" class ="option_class" name="RESULT_RadioButton-6-2-2">2(Slightly)</option>
+      					<option value="3" class ="option_class" name="RESULT_RadioButton-6-2-3">3</option>
+      					<option value="4" class ="option_class" name="RESULT_RadioButton-6-2-4">4(Definitely)</option>
+      					<option value="5" class ="option_class" name="RESULT_RadioButton-6-2-5">5</option>
+      					<option value="6" class ="option_class" name="RESULT_RadioButton-6-2-6">6(Markedly)</option>
+      					<option value="7" class ="option_class" name="RESULT_RadioButton-6-2-7">7</option>
+      					<option value="8" class ="option_class" name="RESULT_RadioButton-6-2-8">8(Very severely)</option>
+						
+						</select>
+						
+						</div>
+						
+						</div>
+						
+					</div>
+					
+					<div class="col-md-12" style="margin-bottom:20px;">
+				
+				
+						<div class="form-group">
+					
+						<label class="label-css">4. Because of my [problem], my private leisure activities (done alone, such as reading, gardening, collecting, sewing, walking alone) are impaired.</label> 
+						
+						<div class ="dropdown col-md-6">
+						
+						<select  id = "select_private" class="drop_down" style = "background-color:#F0F3FA;">
+						<option value="9" class ="option_class" selected>Select</option>
+						<option value="0"  class ="option_class" name="RESULT_RadioButton-6-3-0">0(Not at all)</option>
+      					<option value="1" class ="option_class" name="RESULT_RadioButton-6-3-1">1</option>
+      					<option value="2" class ="option_class" name="RESULT_RadioButton-6-3-2">2(Slightly)</option>
+      					<option value="3" class ="option_class" name="RESULT_RadioButton-6-3-3">3</option>
+      					<option value="4" class ="option_class" name="RESULT_RadioButton-6-3-4">4(Definitely)</option>
+      					<option value="5" class ="option_class" name="RESULT_RadioButton-6-3-5">5</option>
+      					<option value="6" class ="option_class" name="RESULT_RadioButton-6-3-6">6(Markedly)</option>
+      					<option value="7" class ="option_class" name="RESULT_RadioButton-6-3-7">7</option>
+      					<option value="8" class ="option_class" name="RESULT_RadioButton-6-3-8">8(Very severely)</option>
+						
+						</select>
+						
+						</div>
+						
+						</div>
+						
+					</div>
+					
+					<div class="col-md-12" style="margin-bottom:20px;">
+				
+				
+						<div class="form-group">
+					
+						<label class="label-css">5. Because of my [problem], my ability to form and maintain close relationships with others, including those I live with, is impaired.</label> 
+						
+						<div class ="dropdown col-md-6">
+						
+						<select   id = "select_maintain" class="drop_down" style = "background-color:#F0F3FA;">
+						<option value="9"  class ="option_class" selected>Select</option>
+						<option value="0"  class ="option_class" name="RESULT_RadioButton-6-4-0">0(Not at all)</option>
+      					<option value="1" class ="option_class" name="RESULT_RadioButton-6-4-1">1</option>
+      					<option value="2" class ="option_class" name="RESULT_RadioButton-6-4-2">2(Slightly)</option>
+      					<option value="3" class ="option_class" name="RESULT_RadioButton-6-4-3">3</option>
+      					<option value="4" class ="option_class" name="RESULT_RadioButton-6-4-4">4(Definitely)</option>
+      					<option value="5" class ="option_class" name="RESULT_RadioButton-6-4-5">5</option>
+      					<option value="6" class ="option_class" name="RESULT_RadioButton-6-4-6">6(Markedly)</option>
+      					<option value="7" class ="option_class" name="RESULT_RadioButton-6-4-7">7</option>
+      					<option value="8" class ="option_class" name="RESULT_RadioButton-6-4-8">8(Very severely)</option>
+						
+						</select>
+						
+						</div>
+						
+						</div>
+						
+					</div>
+					
+					
+					
+					</div>
+					<!-- end of WSAS questions -->
+					
+					<div class="outside_container">
+					
+					<div class="buttons_reverse">
+						<button type="button"  id="nextbutton3" name="Submit" value="Submit" onclick="next3()" class="submit_button">Submit</button>
+						
+					</div>
+						 
+						 
+						</div>
+
+					
+				
+
+				<div class="clear"></div>
+
+				
+				<div class="col-md-12" style="text-align: center; margin-top: 20px;">
+					<!-- <button type="button" ng-disabled="!isHidden1"
+					class="btn btn-success" ng-click="usersinfo()">Submit</button> -->
+				</div>
+				
+				<div class="clear"></div> 
+				
+			 </div>
+			 <!-- end of content top -->
+			 
+			<div class="container">
+			<div class="pagination">
+  
+			  <a href="#">1</a>
+			  <a href="#">2</a>
+			  <a  class="active" href="#">3</a>
+			  <a href="#">4</a>
+			  
+			</div>
+			</div> 
+			
+			
+			<div class="footer">
+			
+				<div>
+					<p class="copyright" style="color:black;">Copyright &copy; 2018 - NIMHANS</p>
+				</div>
+
+			</div>
+					
+					
+					</div>
+
+			
+	</form>
+	<script src="js/values.js"></script>
+	<script src="js/registration.js"></script>
+	<script>
+	
+	var register3_array = [];
+	var register3_obj = {};
+	var registernew_obj = {};
+	var questions7_array = [];
+	var questions5_array = [];
+	var thirdScreener;
+	var fourthScreener;
+	
+	var srs_id = localStorage.getItem("srs_id");
+	
+	
+	function next3(){
+		
+		//totalScore2 is anxiety score and totalScore3 is current functionng score
+		//thirdScreener is anxiety data and fourthScreener is current functioning data
+		
+		//anxiety screener
+		depression0 =$('input[name=RESULT_RadioButton-5-'+0+']:checked').val();
+		depression1 =$('input[name=RESULT_RadioButton-5-'+1+']:checked').val();
+		depression2 =$('input[name=RESULT_RadioButton-5-'+2+']:checked').val();
+		depression3 =$('input[name=RESULT_RadioButton-5-'+3+']:checked').val();
+		depression4 =$('input[name=RESULT_RadioButton-5-'+4+']:checked').val();
+		depression5 =$('input[name=RESULT_RadioButton-5-'+5+']:checked').val();
+		depression6 =$('input[name=RESULT_RadioButton-5-'+6+']:checked').val();
+		
+		if( depression0 && depression1 && depression2 && depression3  && depression4 && depression5 && depression6 ){
+			
+			thirdScreener=depression0+"#"+depression1+"#"+depression2+"#"+depression3+"#"+depression4+"#"+depression5+"#"+depression6;	
+			questions7_array.push(depression0,depression1,depression2,depression3,depression4,depression5,depression6);
+		}else{
+			
+			thirdScreener="";
+		}
+		
+		
+		
+		
+		
+		register3_obj.register3_screener1_questions7 = questions7_array; 
+		var totalScore2=0;
+		
+		for(var i=0;i<7;i++){
+			
+			if($('input[name=RESULT_RadioButton-5-'+i+']:checked').val()!=undefined){
+				fourthScreener+=$('input[name=RESULT_RadioButton-5-'+i+']:checked').val()+"@";
+				totalScore2+=parseInt($('input[name=RESULT_RadioButton-5-'+i+']:checked').val());
+				questions7_array.push()
+			}
+			
+			}
+		
+		registernew_obj.id=srs_id;
+	 
+		
+		register3_obj.register3_screener1_totalScore1=totalScore2;
+		
+		
+		
+		
+		//current functioning screener
+		function1 = parseInt($('#select_ability').find(":selected").val());
+		function2 = parseInt($('#select_home').find(":selected").val());
+		function3 = parseInt($('#select_leisure').find(":selected").val());
+		function4 = parseInt($('#select_private').find(":selected").val());
+		function5 = parseInt($('#select_maintain').find(":selected").val());
+		
+		questions5_array.push(function1,function2,function3,function4,function5);
+		register3_obj.register3_screener2_questions5 = questions5_array;
+		
+		var totalScore3=0;
+		totalScore3+= function1 + function2 + function3 + function4 + function5;
+		
+		registernew_obj.reginfo=thirdScreener+"#@@#undefined@"+function1+"@"+function2+"@"+function3+"@"+function4+"@"+function5+"@";
+		
+		
+		
+		 
+		 register3_obj.register3_screener2_totalScore2 = totalScore3;
+		
+		register3_array.push(register3_obj);
+		
+		
+		localStorage.setItem("register3_array_localstorage", JSON.stringify(register3_array[0]));
+		
+if((questions7_array.length == 7) && (function1 != 9) && (function2 != 9) && (function3 != 9) && (function4 != 9) && (function5 != 9)){
+		
+		var newArr1=JSON.stringify(registernew_obj);
+		
+		
+		$.ajax({
+			  type: "POST",
+			  url: serverURL + "users/regNewUserform/3",
+			  data: newArr1,
+			  
+			  headers: { 
+			        'Accept': 'application/json',
+			        'Content-Type': 'application/json' 
+			    },
+			  success: function(data){ 
+				   
+				  window.location.href="register4.html";
+			  },
+			  error: function() {
+				  console.log("Error Occured");
+				 
+			  }
+		});
+		
+		
+		}else{
+			
+			alert("all fields are mandatory");
+			questions7_array=[];
+			register3_array=[];
+			return false;
+			
+		}// client validations
+		
+		
+		
+		}
+	
+	function nextpage(){
+		//window.location.href="register4.html";
+	}
+		
+	
+	
+
+	</script>
+
+</body>
+</html>

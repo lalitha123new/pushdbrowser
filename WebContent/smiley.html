@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+	<title>hello</title>
+
+	<!-- Bootstrap -->
+	<link href="bs/css/bootstrap.min.css" rel="stylesheet">
+	<link href="fa/css/font-awesome.min.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+
+    
+    <script src="bs/js/jquery-2.1.1.min.js"></script>
+    <script src="bs/js/bootstrap.min.js"></script>
+ 	<script src="bs/js/jquery.cookie.js"></script>
+	<script src="js/values.js"></script>
+	 
+	 <script type="text/javascript">
+	 
+	 $(document).ready(function (){
+	 		$('#smileyModal').modal('show');
+	 		
+	 		
+	 	});
+	 
+	 $.getJSON(serverURL + "users", function(data){
+		    myFunction(data);
+		});
+	 
+	 var fc=1;
+	 
+	 function myFunction(arr) {
+			var i;
+			
+		    for(i = 1; i < arr.length; i++) {
+		       if(userId == arr[i].id)
+		    	   {
+		    	 
+		    	   $('#check1').click(function(){
+			            if($(this).prop("checked") == true){
+			            	setFlag("true");
+			            	 $("#c1").removeClass("hidden");
+			            }
+			            else
+			            	{
+			            	$("#c1").addClass("hidden");
+			            	}
+			        });
+		    	  		
+		    	   $('#check2').click(function(){
+			            if($(this).prop("checked") == true){
+			            
+			             setFlag("true");
+			             $("#c1").removeClass("hidden");
+			               
+			            }
+			            else
+		            	{
+		            	$("#c1").addClass("hidden");
+		            	}
+			        });
+		    	   }   
+			
+		    }
+		
+		}
+	 	
+	 </script>
+	 
+	 <script type="text/javascript">
+		
+     </script>
+	 
+	 <script type="text/javascript">
+	 	
+	  function myfun1(){
+		  $('#table1').removeClass("hidden");
+		  $('#table2').addClass("hidden");
+		  $('#table3').addClass("hidden");
+		  $('#table4').addClass("hidden");
+		  $('#table5').addClass("hidden");
+		  $('#table6').addClass("hidden");
+		  $.ajax({
+			  type: "PUT",
+			  url: serverURL + "users/" + userId + "/smiley/" + "A",
+			  success: function(data) {
+				},
+			  error: function() {
+			  } 
+		});
+	  }
+	  
+	  function myfun2(){
+		  $('#table1').addClass("hidden");
+		  $('#table2').removeClass("hidden");
+		  $('#table3').addClass("hidden");
+		  $('#table4').addClass("hidden");
+		  $('#table5').addClass("hidden");
+		  $('#table6').addClass("hidden");
+		  $.ajax({
+			  type: "PUT",
+			  url: serverURL + "users/" + userId + "/smiley/" + "B",
+			  success: function(data) {
+				},
+			  error: function() {
+			  } 
+		});
+	  }
+	  
+	  function myfun3(){
+		  $('#table1').addClass("hidden");
+		  $('#table2').addClass("hidden");
+		  $('#table3').removeClass("hidden");
+		  $('#table4').addClass("hidden");
+		  $('#table5').addClass("hidden");
+		  $('#table6').addClass("hidden");
+		  $.ajax({
+			  type: "PUT",
+			  url: serverURL + "users/" + userId + "/smiley/" + "C",
+			  success: function(data) {
+				},
+			  error: function() {
+			  } 
+		});
+	  }
+	  
+	  function myfun4(){
+		  $('#table1').addClass("hidden");
+		  $('#table2').addClass("hidden");
+		  $('#table3').addClass("hidden");
+		  $('#table4').removeClass("hidden");
+		  $('#table5').addClass("hidden");
+		  $('#table6').addClass("hidden");
+		  $.ajax({
+			  type: "PUT",
+			  url: serverURL + "users/" + userId + "/smiley/" + "D",
+			  success: function(data) {
+				},
+			  error: function() {
+			  } 
+		});
+	  }
+	  
+	  function myfun5(){
+		  $('#table1').addClass("hidden");
+		  $('#table2').addClass("hidden");
+		  $('#table3').addClass("hidden");
+		  $('#table4').addClass("hidden");
+		  $('#table5').removeClass("hidden");
+		  $('#table6').addClass("hidden");
+		  $.ajax({
+			  type: "PUT",
+			  url: serverURL + "users/" + userId + "/smiley/" + "E",
+			  success: function(data) {
+				},
+			  error: function() {
+			  } 
+		});
+	  }
+	  
+	 function myfun6() {
+		 $('#table1').addClass("hidden");
+		  $('#table2').addClass("hidden");
+		  $('#table3').addClass("hidden");
+		  $('#table4').addClass("hidden");
+		  $('#table5').addClass("hidden");
+		  $('#table6').removeClass("hidden");
+		  $.ajax({
+			  type: "PUT",
+			  url: serverURL + "users/" + userId + "/smiley/" + "F or G",
+			  success: function(data) {
+				},
+			  error: function() {
+			  } 
+		});
+	 }
+	 </script>
+	
+	
+</head>
+
+<body>
+
+<!-- <div class="modal fade" id="smileyModal" role="dialog" data-backdrop="static"  data-keyboard="false" > -->
+<div class="modal show" id="smileyModal" role="dialog" data-backdrop="static"  data-keyboard="false" >
+		<div class="modal-dialog modal-lg">
+			<form id="reviewForm">
+			<!-- Modal content-->
+			<div class="modal-content">
+				<div class="modal-header modal-header-smiley">
+					Which face comes closest to expressing how you are feeling today? <br>Please click on that face.
+				<div class="btn-group btn-group-justified" role="group" aria-label="...">
+ 
+  			<div>
+  			
+  			
+  <table> 
+  <tr>
+  <td>
+  
+   <br><img  src="images/smiley1.jpg" class="img-responsive" name="image" width="60" height="60" value="1" onclick="myfun1()"><br>
+  </td>
+  <td>
+   <br><img  src="images/smiley2.jpg" class="img-responsive" name="image" width="60" height="60" value="2"onclick="myfun2()"><br>
+  </td>
+  <td>
+   <br><img  src="images/smiley3.jpg" class="img-responsive" name="image" width="60" height="60" value="3" onclick="myfun3()"><br>
+  </td>
+  <td>
+   <br><img src="images/smiley4.jpg" class="img-responsive" name="image" width="60" height="60" value="4" onclick="myfun4()"><br>
+  </td>
+  <td>
+   <br><img src="images/smiley5.jpg" class="img-responsive" name="image" width="60" height="60" value="5" onclick="myfun5()"><br>
+  </td>
+  <td>
+   <br><img  src="images/smiley6.jpg" class="img-responsive" name="image" width="60" height="60" value="6" onclick="myfun6()"><br>
+  </td>
+  <td>
+   <br><img  src="images/smiley7.jpg" class="img-responsive" name="image" width="60" height="60" value="7" onclick="myfun6()"><br>
+  </td>
+  </tr>
+  <tr style="text-align: center;">
+  <td>A</td>
+  <td>B</td>
+  <td>C</td>
+  <td>D</td>
+  <td>E</td>
+  <td>F</td>
+  <td>G</td>
+  </tr>
+  </table>
+  
+  
+  <table class="hidden" id="table1">
+  <thead>
+  <tr>
+  <td><h3>A</h3><br>Your feeling state is recorded. Thank you!</td></tr>
+   <tr>
+  <td><a href="home3.jsp"><h4><font style='color: black'>Click Here to Resume</font></h4></a></td>
+  </tr>
+  </thead>
+  
+  </table>
+  
+  <table class="hidden" id="table2">
+  <thead>
+  <tr>
+  <td><h3>B</h3><br>Your feeling state is recorded. Thank you!</td></tr>
+   <tr>
+  <td><a href="home3.jsp"><h4><font style='color: black'>Click Here to Resume</font></h4></a></td>
+  </tr>
+  </thead>
+  </table>
+  
+  
+  <table class="hidden" id="table3">
+  <thead>
+  <tr>
+  <td><h3>C</h3><br>Your feeling state is recorded. Thank you!</td></tr>
+  <tr>
+  <td><a href="home3.jsp"><h4><font style='color: black'>Click Here to Resume</font></h4></a></td>
+  </tr>
+  </thead>
+  </table>
+  
+  
+  <table class="hidden" id="table4">
+  <thead>
+  <tr>
+  <td><h3>D</h3><br>Your feeling state is recorded. Thank you!</td></tr>
+  <tr>
+  <td><a href="home3.jsp"><h4><font style='color: black'>Click Here to Resume</font></h4></a></td>
+  </tr>
+  </thead>
+  </table>
+  
+  
+  <table class="hidden" id="table5">
+  <thead>
+  <tr>
+  <td><h3>E</h3><br>Your feeling state is recorded. Thank you!</td></tr>
+  <tr>
+  <td><a href="home3.jsp"><h4><font style='color: black'>Click Here to Resume</font></h4></a></td>
+  </tr>
+  </thead>
+  </table>
+  
+  <table class="hidden" id="table6">
+    <thead><tr><td><h3>Sorry ...</h3></td></tr>
+    <tr><td> What is the nature of this feeling?</td></tr>
+    </thead>
+  <tr>
+  <td>
+  <input type="checkbox">Feeling sad</td>
+  </tr>
+   <tr>
+  <td>
+  <input type="checkbox">Feeling angry</td>
+  </tr>
+   <tr>
+  <td>
+  <input type="checkbox">Feeling tense/anxious/nervous</td>
+  </tr>
+   <tr>
+  <td>
+  <input type="checkbox" id="check1">Feeling like dying/wishing death comes my way</td>
+  
+  </tr>
+   <tr>
+  <td>
+  <input type="checkbox" id="check2">Feeling like ending my life</td>
+  
+  </tr>
+  <tr>
+  <td id = "c1" class = "hidden">You may want to go through this section:<a href="#" onclick = "getPage(15)"><font style='color: black'> “Dealing with suicidal thoughts"</font></a></td></tr>
+  <tr><td><a href="home3.jsp"><h4><font style='color: black'>Resume my session</font></h4></a></td>
+  </tr>
+  
+  </table>
+  </div>
+  </div>
+  </div>
+  </div>
+  </form>
+  </div>
+  </div>
+  
+  
+	
+</body>
+</html>

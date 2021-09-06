@@ -1,0 +1,54 @@
+<script>
+	$.ajax({
+		  type: "GET",
+		  url: serverURL + "users/" + userId + "/stats",
+		  success: function(data){
+			 var dateSplit = data['userCreationTime'].split(" ");
+			
+			  date1 = new Date(dateSplit[0]);
+			 
+			  date2 = new Date();
+			  
+			  diff = Math.ceil(((date2 - date1 + 1) / (1000 * 60 * 60 * 24)) / 7);
+			  
+			  for (l = 1; l <= 7; l++) {
+				  if(l == diff) {
+					  $('#pb'+l).addClass("progress-bar progress-bar-striped progress-bar-warning active");
+				  }
+				  else if(l < diff) {
+					  $('#pb'+l).addClass("progress-bar progress-bar-success");
+				  }
+				  else {
+					  $('#pb'+l).addClass("progress-bar");
+					  $('#pb'+l).css("background-color", "grey");
+				  }
+			  }
+			  
+			 
+		  }
+	});
+</script>
+
+<div class="progress">
+	<div id="pb1" style="width: 13%;">
+		<span class="">Week 1</span>
+	</div>
+	<div id="pb2" style="width: 13%;">
+		<span class="">Week 2</span>
+	</div>
+	<div id="pb3" style="width: 13%;">
+		<span class="">Week 3</span>
+	</div> 
+	<div id="pb4" style="width: 13%;">
+		<span class="">Week 4</span>
+	</div>
+	<div id="pb5" style="width: 13%;">
+		<span class="">Week 5</span>
+	</div>
+	<div id="pb6" style="width: 13%;">
+		<span class="">Week 6</span>
+	</div>
+	<div id="pb7" style="width: 22%;">
+		<span class="">Beyond Week 6</span>
+	</div>
+</div>

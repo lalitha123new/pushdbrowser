@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+<head>
+<base  />
+<meta http-equiv="cache-control" content="no-cache" />
+<meta http-equiv="expires" content="0" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>PushD</title>
+<link rel="stylesheet" type="text/css" media="screen" href="form_js/jqueryui/1.11.4/themes/smoothness/jquery-ui.css" />
+<link rel="stylesheet" type="text/css" media="all" href="include/form/fonts71523.css?1701" />
+<link rel="stylesheet" type="text/css" media="all" href="include/form/screen71523.css?1701" />
+<link rel="stylesheet" type="text/css" media="print" href="include/form/print71523.css?1701" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<link rel="stylesheet" type="text/css" media="screen" href="include/form/responsive71523.css?1701" />
+<link rel="stylesheet" href="js/externalFiles/font-awesome.min.css">
+<link href="bs/css/bootstrap.min.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+<link href="fa/css/font-awesome.min.css" rel="stylesheet">
+<script>
+/* document.getElementById("q2").required = false; */
+</script>
+<style type="text/css" media="all">
+/* LOOK AND FEEL */
+body{
+	background: #F0F3FA;
+	background-size: cover;
+	font-family: 'Muli',sans-serif;
+	font-size: 13px;
+	background-position: 50% 50%;
+}
+
+.form_table{
+	width: 650px;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 4px;
+	border: 0px solid #333333;
+	background: #FFFFFF;
+	background-size: cover;
+	color: #575B66;
+	overflow: hidden;
+	box-shadow: 0 1px 6px rgba(0,0,0,0.30);
+	background-position: 50% 50%;
+}
+
+.form_table a{
+	color: #0D47A1;
+}
+
+.outside a{
+	color: #0D47A1;
+}
+
+.form_table a:visited{
+	color: #0D47A1;
+}
+
+.outside a:visited{
+	color: #0D47A1;
+}
+
+.segment_header{
+	width: auto;
+	margin: 1px;
+	color: #FFFFFF;
+	background: #4C6BB5;
+	background-size: cover;
+	background-repeat: repeat;
+	background-position: 50% 50%;
+	border-radius: 4px;
+}
+
+.segment_header h1{
+	border-radius: 4px;
+	padding: 20px 10px;
+	font-family: 'Muli',sans-serif;
+}
+
+.q{
+	padding: 15px;
+	margin-bottom: 5px;
+	margin-left: 5px;
+	float: left;
+	display: block;
+}
+
+.q .question{
+	font-weight: bold;
+}
+
+.q .left_question_first{
+	width: 15em;
+}
+
+.required .icon{
+	background-image: none;
+	background-position: left;
+	background-repeat: no-repeat;
+	font-size: 13px;
+	padding-left: 14px;
+}
+
+.q .text_field{
+	background: #FAFBFD;
+	border: 1px solid #D8E1F5;
+	border-radius: 2px;
+	border-width: 1px;
+	color: #575B66;
+	font-family: 'Muli',sans-serif;
+	font-size: 13px;
+	margin: 1px 0;
+	padding: 10px;
+}
+
+.q .file_upload{
+	background: #FAFBFD;
+	border: 1px solid #D8E1F5;
+	border-radius: 2px;
+	border-width: 1px;
+	color: #575B66;
+	font-family: 'Muli',sans-serif;
+	font-size: 13px;
+	margin-top: 1px;
+	padding: 10px;
+}
+
+.q .file_upload_button{
+	margin-top: 2px;
+}
+
+.q .inline_grid td{
+	padding: 5px;
+	vertical-align: baseline;
+}
+
+.q .drop_down{
+	background: #FAFBFD;
+	border: 1px solid #D8E1F5;
+	border-radius: 2px;
+	border-width: 1px;
+	color: #575B66;
+	font-family: 'Muli',sans-serif;
+	font-size: 13px;
+	margin: 1px 0;
+	padding: 9px;
+}
+
+.q .matrix th{
+	color: #7280A1;
+	background: #EEF2FA;
+	padding: 5px;
+	font-weight: bold;
+	text-align: center;
+	vertical-align: bottom;
+}
+
+.q .matrix td{
+	padding: 5px;
+	text-align: center;
+	white-space: nowrap;
+	height: 26px;
+	border-bottom: 1px solid #D8E1F5;
+	border-top: 1px solid #D8E1F5;
+}
+
+.q .matrix td.question{
+	border-right: 1px solid #D8E1F5;
+	font-weight: normal;
+}
+
+.q .matrix .multi_scale_sub th{
+	font-weight: normal;
+	border-top: 1px solid #D8E1F5 !important;
+	background: #FAFBFD;
+}
+
+.q .matrix .multi_scale_break{
+	border-right: 1px solid #D8E1F5;
+}
+
+.q .matrix_row_dark td{
+	color: #575B66;
+	background: #FAFBFD;
+}
+
+.q .matrix_row_dark td.question{
+	color: #575B66;
+	background: #FAFBFD;
+}
+
+.q .matrix_row_light td{
+	color: #575B66;
+	background: #FFFFFF;
+}
+
+.q .matrix_row_light td.question{
+	color: #575B66;
+	background: #FFFFFF;
+}
+
+.q .rating_ranking td{
+	padding: 5px;
+}
+
+.q .scroller{
+	border: 1px solid #333333;
+}
+
+.highlight{
+	background: #FFF9C4  !important;
+}
+
+tr.highlight td{
+	background: #FFF9C4  !important;
+}
+
+.outside{
+	color: #575B66;
+}
+
+.outside_container{
+	width: 650px;
+	padding: 1em 0;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	color: #575B66;
+}
+
+.outside_container .submit_button{
+	color: #FFFFFF !important;
+	background: #4C6BB5;
+	background-size: auto;
+	border-style: none;
+	border-width: 0px;
+	border-color: #FFFFFF;
+	border-radius: 30px;
+	text-align: center;
+	font-family: 'Muli',sans-serif;
+	font-size: 14px;
+	font-weight: normal;
+	min-width: 30%;
+	padding: 16px 20px;
+	text-transform: none;
+	box-shadow: 0 1px 6px rgba(0,0,0,0.30);
+}
+
+.outside_container .submit_button:hover{
+	background: #405C9E;
+	border-color: #BBBBBB;
+	background-size: auto;
+}
+
+.progressBarWrapper{
+	border-radius: 4px;
+	background: #FFFFFF;
+	background-size: cover;
+	border-color: #333333;
+}
+
+.progressBarBack{
+	color: #FFFFFF;
+	background-color: #E8BC63;
+}
+
+.progressBarFront{
+	color: #575B66;
+}
+
+.ui-widget{
+	font-family: 'Muli',sans-serif;
+}
+
+.invalid{
+	background: #FDF1F0;
+}
+
+.invalid .invalid_message{
+	color: #EC756B;
+	background: #FDF1F0;
+	border: 1px solid #EC756B;
+	border-radius: 2px;
+}
+
+.form_table.invalid{
+	border: 2px solid #EC756B;
+}
+
+.invalid .matrix .invalid_row{
+	background: #FDF1F0;
+}
+.home{
+position : absolute;
+}
+@media only screen and (max-width: 800px) {
+    .home{
+    position : relative;
+    
+    }
+}
+
+</style>
+<script type="text/javascript" src="form_js/jquery/1.12.4/jquery.min.js"></script>
+<script type="text/javascript" src="form_js/jqueryui/1.11.4/jquery-ui.min.js"></script>
+<script type="text/javascript" src="include/form/form71523.js?1701"></script>
+    <script src="bs/js/jquery.session.js"></script>
+	<script src="bs/js/jquery.cookie.js"></script>
+    <script src="js/values.js"></script>
+    <script src="bs/js/bootstrap.min.js"></script>
+    <script src="js/inc.js"></script>
+</head>
+<body>
+<div id="FSForm"><button  class="home" onclick="window.location.href='index.jsp'" style="border-radius: 50%; border: 1px solid #4C6BB5; margin: 15px; background: transparent;">
+<i class="fa fa-home" aria-hidden="true" style=" font-size: 23px; color: #4C6BB5;" ></i></button>
+
+
+<!-- BEGIN_ITEMS -->
+<div class="form_table" method="post">
+
+<div class="clear"></div>
+
+<div id="q7" class="q full_width">
+<a class="item_anchor" name="ItemAnchor0"></a>
+<!--<div class="segment_header" style="color:#000000;width:auto;text-align:Right;background-repeat:repeat;background-color:transparent;background-image:url(https://fs28.formsite.com/4Rlq9k/"/images/stock/2015/Education/Education24.jpg");background-size: cover;background-position: 50% 50%;"><h1 style="font-size:36px;font-family:'Dosis',sans-serif;padding:190px 1em 10px ;background-color:rgba(0, 0, 0, 0.188235)"></h1></div>-->
+</div>
+
+<div class="clear"></div>
+
+<div id="q9" class="q full_width">
+<a class="item_anchor" name="ItemAnchor1"></a>
+<div class="segment_header" style="width:auto;text-align:Center;"><h1 style="font-size:24px;font-family:'Arvo',serif;padding:20px 1em ;">ARE YOU DEPRESSED?</h1><h4 style="font-family:'Arvo',serif;padding:10px 1em ;">PLEASE CHECK IT OUT HERE.</h4></div>
+</div>
+
+<div class="clear"></div>
+
+<div id="q1" class="q required">
+<a class="item_anchor" name="ItemAnchor2"></a>
+<label class="question top_question" for="RESULT_TextField-2">Age&nbsp;<b class="icon_required" style="color:#FF0000">*</b></label>
+<input type="text" name="RESULT_TextField-2" class="text_field" id="RESULT_TextField-2"  size="14" maxlength="10" value="" />
+</div>
+<div id="q2" class="q required">
+<a class="item_anchor" name="ItemAnchor3"></a>
+<label class="question top_question" for="RESULT_TextField-3">Current work&nbsp;<b class="icon_required" style="color:#FF0000"></b></label>
+<input type="text" name="RESULT_TextField-3" class="text_field" id="RESULT_TextField-3"  size="40" maxlength="255" value="" />
+</div>
+<div id="q11" class="q required">
+<a class="item_anchor" name="ItemAnchor4"></a>
+<span class="question top_question">Gender&nbsp;<b class="icon_required" style="color:#FF0000">*</b></span>
+<table class="inline_grid">
+<tbody><tr>
+<td><input type="radio" name="RESULT_RadioButton-4" class="multiple_choice" id="RESULT_RadioButton-4_0" value="Male"><label for="RESULT_RadioButton-4_0">Male</label></td>
+</tr>
+<tr>
+<td><input type="radio" name="RESULT_RadioButton-4" class="multiple_choice" id="RESULT_RadioButton-4_1" value="Female"><label for="RESULT_RadioButton-4_1">Female</label></td>
+</tr>
+</tbody></table>
+</div>
+<div class="clear"></div>
+<div id="q13" class="q required">
+<a class="item_anchor" name="ItemAnchor5"></a>
+<label class="question top_question" for="RESULT_RadioButton-5">Have you ever consulted a mental health professional?&nbsp;<b class="icon_required" style="color:#FF0000">*</b></label>
+<select id="RESULT_RadioButton-5" name="RESULT_RadioButton-5" class="drop_down">
+<option></option>
+<option value="Yes">Yes</option>
+<option value="No">No</option>
+</select>
+</div>
+<div id="q14" class="q required">
+<a class="item_anchor" name="ItemAnchor6"></a>
+<label class="question top_question" for="RESULT_RadioButton-6">Are you currently interested to meet a mental health professional?&nbsp;<b class="icon_required" style="color:#FF0000">*</b></label>
+<select id="RESULT_RadioButton-6" name="RESULT_RadioButton-6" class="drop_down">
+<option></option>
+<option value="Yes">Yes</option>
+<option value="No">No</option>
+<option value="Not sure">Not sure</option>
+</select>
+</div>
+<div class="clear"></div>
+<div id="q15" class="q required">
+<a class="item_anchor" name="ItemAnchor7"></a>
+<label class="question top_question" for="RESULT_RadioButton-7">Are you currently interested in using any kind of internet based self-help program for mental health?&nbsp;<b class="icon_required" style="color:#FF0000">*</b></label>
+<select id="RESULT_RadioButton-7" name="RESULT_RadioButton-7" class="drop_down">
+<option></option>
+<option value="Yes">Yes</option>
+<option value="No">No</option>
+<option value="Not sure">Not sure</option>
+</select>
+</div>
+<div class="clear"></div>
+
+<div id="q4" class="q required">
+<a class="item_anchor" name="ItemAnchor4"></a>
+<span class="question top_question">Instructions: Below is a list of statements dealing with your mood in the last few days. 
+<br>Please read the items carefully and mark the option (&#10004;) that best describes you.&nbsp;<b class="icon_required" style="color:#FF0000">*</b></span>
+<br>
+<table class="matrix">
+<tr>
+<th scope="col">Over the last 2 weeks, how often have you been bothered by any of the following problems?&nbsp;</th><th width="60px;" scope="col">Not at all</th><th width="60px;" scope="col">Several Days</th><th width="60px;" scope="col">More than half the days</th><th width="60px;" scope="col">Nearly every day</th>
+</tr>
+<tr class="matrix_row_light">
+<td class="question" style="width:px;">1. Little interest or pleasure in doing things.</td>
+<td><label for="RESULT_RadioButton-4-0-0" class="accessibility_hidden">Strongly Agree</label><input type="radio" name="RESULT_RadioButton-4-0" class="multiple_choice" id="RESULT_RadioButton-4-0-0" value="0" /></td>
+<td><label for="RESULT_RadioButton-4-0-1" class="accessibility_hidden">Agree</label><input type="radio" name="RESULT_RadioButton-4-0" class="multiple_choice" id="RESULT_RadioButton-4-0-1" value="1" /></td>
+<td><label for="RESULT_RadioButton-4-0-2" class="accessibility_hidden">Neutral</label><input type="radio" name="RESULT_RadioButton-4-0" class="multiple_choice" id="RESULT_RadioButton-4-0-2" value="2" /></td>
+<td><label for="RESULT_RadioButton-4-0-3" class="accessibility_hidden">Disagree</label><input type="radio" name="RESULT_RadioButton-4-0" class="multiple_choice" id="RESULT_RadioButton-4-0-3" value="3" /></td>
+<!--<td><label for="RESULT_RadioButton-4-0-4" class="accessibility_hidden">Strongly Disagree</label><input type="radio" name="RESULT_RadioButton-4-0" class="multiple_choice" id="RESULT_RadioButton-4-0-4" value="Radio-4" /></td>-->
+</tr>
+<tr class="matrix_row_dark">
+<td class="question" style="width:px;">2. Feeling down, depressed, or hopeless</td>
+<td><label for="RESULT_RadioButton-4-1-0" class="accessibility_hidden">Strongly Agree</label><input type="radio" name="RESULT_RadioButton-4-1" class="multiple_choice" id="RESULT_RadioButton-4-1-0" value="0" /></td>
+<td><label for="RESULT_RadioButton-4-1-1" class="accessibility_hidden">Agree</label><input type="radio" name="RESULT_RadioButton-4-1" class="multiple_choice" id="RESULT_RadioButton-4-1-1" value="1" /></td>
+<td><label for="RESULT_RadioButton-4-1-2" class="accessibility_hidden">Neutral</label><input type="radio" name="RESULT_RadioButton-4-1" class="multiple_choice" id="RESULT_RadioButton-4-1-2" value="2" /></td>
+<td><label for="RESULT_RadioButton-4-1-3" class="accessibility_hidden">Disagree</label><input type="radio" name="RESULT_RadioButton-4-1" class="multiple_choice" id="RESULT_RadioButton-4-1-3" value="3" /></td>
+<!--<td><label for="RESULT_RadioButton-4-1-4" class="accessibility_hidden">Strongly Disagree</label><input type="radio" name="RESULT_RadioButton-4-1" class="multiple_choice" id="RESULT_RadioButton-4-1-4" value="Radio-4" /></td>-->
+</tr>
+<tr class="matrix_row_light">
+<td class="question" style="width:px;">3. Trouble falling or staying asleep, or sleeping too much</td>
+<td><label for="RESULT_RadioButton-4-2-0" class="accessibility_hidden">Strongly Agree</label><input type="radio" name="RESULT_RadioButton-4-2" class="multiple_choice" id="RESULT_RadioButton-4-2-0" value="0" /></td>
+<td><label for="RESULT_RadioButton-4-2-1" class="accessibility_hidden">Agree</label><input type="radio" name="RESULT_RadioButton-4-2" class="multiple_choice" id="RESULT_RadioButton-4-2-1" value="1" /></td>
+<td><label for="RESULT_RadioButton-4-2-2" class="accessibility_hidden">Neutral</label><input type="radio" name="RESULT_RadioButton-4-2" class="multiple_choice" id="RESULT_RadioButton-4-2-2" value="2" /></td>
+<td><label for="RESULT_RadioButton-4-2-3" class="accessibility_hidden">Disagree</label><input type="radio" name="RESULT_RadioButton-4-2" class="multiple_choice" id="RESULT_RadioButton-4-2-3" value="3" /></td>
+<!--<td><label for="RESULT_RadioButton-4-2-4" class="accessibility_hidden">Strongly Disagree</label><input type="radio" name="RESULT_RadioButton-4-2" class="multiple_choice" id="RESULT_RadioButton-4-2-4" value="Radio-4" /></td>-->
+</tr>
+<tr class="matrix_row_dark">
+<td class="question" style="width:px;">4. Feeling tired or having little energy</td>
+<td><label for="RESULT_RadioButton-4-3-0" class="accessibility_hidden">Strongly Agree</label><input type="radio" name="RESULT_RadioButton-4-3" class="multiple_choice" id="RESULT_RadioButton-4-3-0" value="0" /></td>
+<td><label for="RESULT_RadioButton-4-3-1" class="accessibility_hidden">Agree</label><input type="radio" name="RESULT_RadioButton-4-3" class="multiple_choice" id="RESULT_RadioButton-4-3-1" value="1" /></td>
+<td><label for="RESULT_RadioButton-4-3-2" class="accessibility_hidden">Neutral</label><input type="radio" name="RESULT_RadioButton-4-3" class="multiple_choice" id="RESULT_RadioButton-4-3-2" value="2" /></td>
+<td><label for="RESULT_RadioButton-4-3-3" class="accessibility_hidden">Disagree</label><input type="radio" name="RESULT_RadioButton-4-3" class="multiple_choice" id="RESULT_RadioButton-4-3-3" value="3" /></td>
+<!--<td><label for="RESULT_RadioButton-4-3-4" class="accessibility_hidden">Strongly Disagree</label><input type="radio" name="RESULT_RadioButton-4-3" class="multiple_choice" id="RESULT_RadioButton-4-3-4" value="Radio-4" /></td>-->
+</tr>
+<tr class="matrix_row_light">
+<td class="question" style="width:px;">5. Poor appetite or overeating</td>
+<td><label for="RESULT_RadioButton-4-4-0" class="accessibility_hidden">Strongly Agree</label><input type="radio" name="RESULT_RadioButton-4-4" class="multiple_choice" id="RESULT_RadioButton-4-4-0" value="0" /></td>
+<td><label for="RESULT_RadioButton-4-4-1" class="accessibility_hidden">Agree</label><input type="radio" name="RESULT_RadioButton-4-4" class="multiple_choice" id="RESULT_RadioButton-4-4-1" value="1" /></td>
+<td><label for="RESULT_RadioButton-4-4-2" class="accessibility_hidden">Neutral</label><input type="radio" name="RESULT_RadioButton-4-4" class="multiple_choice" id="RESULT_RadioButton-4-4-2" value="2" /></td>
+<td><label for="RESULT_RadioButton-4-4-3" class="accessibility_hidden">Disagree</label><input type="radio" name="RESULT_RadioButton-4-4" class="multiple_choice" id="RESULT_RadioButton-4-4-3" value="3" /></td>
+<!--<td><label for="RESULT_RadioButton-4-4-4" class="accessibility_hidden">Strongly Disagree</label><input type="radio" name="RESULT_RadioButton-4-4" class="multiple_choice" id="RESULT_RadioButton-4-4-4" value="Radio-4" /></td>-->
+</tr>
+<tr class="matrix_row_dark">
+<td class="question" style="width:px;">6. Feeling bad about yourself or that you are a failure or have let yourself or your family down</td>
+<td><label for="RESULT_RadioButton-4-5-0" class="accessibility_hidden">Strongly Agree</label><input type="radio" name="RESULT_RadioButton-4-5" class="multiple_choice" id="RESULT_RadioButton-4-5-0" value="0" /></td>
+<td><label for="RESULT_RadioButton-4-5-1" class="accessibility_hidden">Agree</label><input type="radio" name="RESULT_RadioButton-4-5" class="multiple_choice" id="RESULT_RadioButton-4-5-1" value="1" /></td>
+<td><label for="RESULT_RadioButton-4-5-2" class="accessibility_hidden">Neutral</label><input type="radio" name="RESULT_RadioButton-4-5" class="multiple_choice" id="RESULT_RadioButton-4-5-2" value="2" /></td>
+<td><label for="RESULT_RadioButton-4-5-3" class="accessibility_hidden">Disagree</label><input type="radio" name="RESULT_RadioButton-4-5" class="multiple_choice" id="RESULT_RadioButton-4-5-3" value="3" /></td>
+<!--<td><label for="RESULT_RadioButton-4-5-4" class="accessibility_hidden">Strongly Disagree</label><input type="radio" name="RESULT_RadioButton-4-5" class="multiple_choice" id="RESULT_RadioButton-4-5-4" value="Radio-4" /></td>-->
+</tr>
+<tr class="matrix_row_light">
+<td class="question" style="width:px;">7. Trouble concentrating on things, such as reading the newspaper or watching television</td>
+<td><label for="RESULT_RadioButton-4-6-0" class="accessibility_hidden">Strongly Agree</label><input type="radio" name="RESULT_RadioButton-4-6" class="multiple_choice" id="RESULT_RadioButton-4-6-0" value="0" /></td>
+<td><label for="RESULT_RadioButton-4-6-1" class="accessibility_hidden">Agree</label><input type="radio" name="RESULT_RadioButton-4-6" class="multiple_choice" id="RESULT_RadioButton-4-6-1" value="1" /></td>
+<td><label for="RESULT_RadioButton-4-6-2" class="accessibility_hidden">Neutral</label><input type="radio" name="RESULT_RadioButton-4-6" class="multiple_choice" id="RESULT_RadioButton-4-6-2" value="2" /></td>
+<td><label for="RESULT_RadioButton-4-6-3" class="accessibility_hidden">Disagree</label><input type="radio" name="RESULT_RadioButton-4-6" class="multiple_choice" id="RESULT_RadioButton-4-6-3" value="3" /></td>
+<!--<td><label for="RESULT_RadioButton-4-6-4" class="accessibility_hidden">Strongly Disagree</label><input type="radio" name="RESULT_RadioButton-4-6" class="multiple_choice" id="RESULT_RadioButton-4-6-4" value="Radio-4" /></td>-->
+</tr>
+<tr class="matrix_row_dark">
+<td class="question" style="width:px;">8. Moving or speaking so slowly that other people could have noticed? Or the opposite — being so fidgety or restless that you have been moving around a lot more than usual</td>
+<td><label for="RESULT_RadioButton-4-7-0" class="accessibility_hidden">Strongly Agree</label><input type="radio" name="RESULT_RadioButton-4-7" class="multiple_choice" id="RESULT_RadioButton-4-7-0" value="0" /></td>
+<td><label for="RESULT_RadioButton-4-7-1" class="accessibility_hidden">Agree</label><input type="radio" name="RESULT_RadioButton-4-7" class="multiple_choice" id="RESULT_RadioButton-4-7-1" value="1" /></td>
+<td><label for="RESULT_RadioButton-4-7-2" class="accessibility_hidden">Neutral</label><input type="radio" name="RESULT_RadioButton-4-7" class="multiple_choice" id="RESULT_RadioButton-4-7-2" value="2" /></td>
+<td><label for="RESULT_RadioButton-4-7-3" class="accessibility_hidden">Disagree</label><input type="radio" name="RESULT_RadioButton-4-7" class="multiple_choice" id="RESULT_RadioButton-4-7-3" value="3" /></td>
+<!--<td><label for="RESULT_RadioButton-4-7-4" class="accessibility_hidden">Strongly Disagree</label><input type="radio" name="RESULT_RadioButton-4-7" class="multiple_choice" id="RESULT_RadioButton-4-7-4" value="Radio-4" /></td>-->
+</tr>
+<tr class="matrix_row_light">
+<td class="question" style="width:px;">9. Thoughts that you would be better off dead or of hurting yourself in some way</td>
+<td><label for="RESULT_RadioButton-4-8-0" class="accessibility_hidden">Strongly Agree</label><input type="radio" name="RESULT_RadioButton-4-8" class="multiple_choice" id="RESULT_RadioButton-4-8-0" value="0" /></td>
+<td><label for="RESULT_RadioButton-4-8-1" class="accessibility_hidden">Agree</label><input type="radio" name="RESULT_RadioButton-4-8" class="multiple_choice" id="RESULT_RadioButton-4-8-1" value="1" /></td>
+<td><label for="RESULT_RadioButton-4-8-2" class="accessibility_hidden">Neutral</label><input type="radio" name="RESULT_RadioButton-4-8" class="multiple_choice" id="RESULT_RadioButton-4-8-2" value="2" /></td>
+<td><label for="RESULT_RadioButton-4-8-3" class="accessibility_hidden">Disagree</label><input type="radio" name="RESULT_RadioButton-4-8" class="multiple_choice" id="RESULT_RadioButton-4-8-3" value="3" /></td>
+<!--<td><label for="RESULT_RadioButton-4-8-4" class="accessibility_hidden">Strongly Disagree</label><input type="radio" name="RESULT_RadioButton-4-8" class="multiple_choice" id="RESULT_RadioButton-4-8-4" value="Radio-4" /></td>-->
+</tr>
+</table>
+</div>
+
+<div class="clear"></div>
+
+
+<div class="clear"></div>
+
+<div style="position:relative;font-family:'Open Sans',Helvetica,Arial,sans-serif;font-size:12px;line-height:36px;text-align:left;background-color:#fafafa;height:35px;margin-top:10px;overflow:hidden;">
+
+</div>
+</div>
+<!-- END_ITEMS -->
+<input type="hidden" name="EParam" value="FzpUCZwnDno=" />
+<div class="outside_container">
+<div class="buttons_reverse"><input type="submit" name="Submit" value="Submit" onclick="submitForm();" class="submit_button" /></div></div>
+</div>
+<!-- Modal -->
+	<div class="modal" id="myModal_form" role="dialog">
+		<div class="modal-dialog">
+			<!-- Modal content-->
+			<div class="modal-content">
+				<div class="modal-header modal-header-success" style="background: #4CAF50;color: white">
+					<h5><b>FEEDBACK</b></h5>
+				</div>
+				<div class="modal-body text-justify">
+					<p id="feedback1" class="hidden" style="color:darkblue;"><b>You do not seem to have depressive symptoms. However, if you have any mental health concerns do contact a professional.</b></p>
+					<p id="feedback2" class="hidden" style="color:darkblue;"><b>You seem to be having mild depressive symptoms. We suggest you to consult a mental health professional.</b></p>
+					<p id="feedback3" class="hidden" style="color:darkblue;"><b>You seem to be having significant depressive symptoms. We strongly recommend you to consult a mental health professional.</b></p>
+				</div>
+				<div align="center"><b>Note: This is only a screening tool. It is not meant for making a diagnosis.</b></div>
+				<div align="center"><br>
+				<p>If you are experiencing depressive symptoms, apart from consulting a mental health professional, you can do something to help yourself too!</p>
+				<p>PUSH-D is an internet based self-care program. It is like an online self-help course. </p>
+				<p>If you are interested to register for this program and ready to spend time to help yourself, you can contact us for an initial detailed evaluation.</p>
+				<p>The initial evaluation can be done face to face/ over email. . </p><p>If the PUSH-D program is found suitable for you, you will be issued the user name and password for registering into the program.</p>
+				<p>If you are interested, you can connect to us for initial evaluation, by</p>
+				<p>Sending us a mail at <a href="Mailto:push.d.nimhans@gmail.com">push.d.nimhans@gmail.com</a></p>
+				<!-- <p>Or</p>
+				 <p>Sending us an SMS to 9620638249</p>-->
+				<p>Please provide your phone number in your Mail for a quick connect and clarifications</p>
+				</div>
+				<div class="modal-footer">
+					<button id="myInput" type="button" class="btn btn-primary" onclick="redirect_indexpage()">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+		<div class="modal fade" id="complete" role="dialog">
+		<div class="modal-dialog" >
+			<!-- Modal content-->
+			<div class="modal-content">
+
+				<div class="text-justify" style="padding: 20px;">Please complete the form to get the feedback</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+<script>
+function redirect_indexpage(){
+	$('#myModal_form').modal("hide");
+	window.location.href = "index.jsp";
+}
+function submitForm(){
+	$('#feedback1').addClass('hidden');
+	$('#feedback2').addClass('hidden');
+	$('#feedback3').addClass('hidden');
+	formData = "responce=";
+	formData+=($('#RESULT_TextField-2').val()=="" ? undefined : $('#RESULT_TextField-2').val())+',';
+	formData+=($('#RESULT_TextField-3').val()=="" ? 0 : $('#RESULT_TextField-3').val())+',';
+	formData+=$('input[name=RESULT_RadioButton-4]:checked').val()+',';
+	var totalScore=0
+	for(var i=0;i<9;i++){
+		formData+=$('input[name=RESULT_RadioButton-4-'+i+']:checked').val()+',';
+		if($('input[name=RESULT_RadioButton-4-'+i+']:checked').val()!=undefined)
+			totalScore+=parseInt($('input[name=RESULT_RadioButton-4-'+i+']:checked').val());
+	}
+	
+	
+	if(totalScore<5)
+		$('#feedback1').removeClass('hidden');
+	else if(totalScore<10)
+		$('#feedback2').removeClass('hidden');
+	else
+		$('#feedback3').removeClass('hidden');
+	
+	console.log(formData);
+	formData+=totalScore+',';
+	formData+=($('#RESULT_RadioButton-5').val()=="" ? undefined : $('#RESULT_RadioButton-5').val())+',';
+	formData+=($('#RESULT_RadioButton-6').val()==""? undefined : $('#RESULT_RadioButton-6').val()) +',';
+	formData+=($('#RESULT_RadioButton-7').val()== ""? undefined : $('#RESULT_RadioButton-7').val())+',';
+	
+	if(formData.includes("undefined")){
+		
+		$('#complete').modal("show");
+		return
+	}
+	
+	
+	
+	$.ajax({
+		  type: "POST",
+		  url: serverURL + "users/responce",
+		  
+		  data: formData,
+		 
+		  success: function(data) { 
+			  $('#myModal_form').modal("show");
+			 
+		  },
+		  error: function() {
+			  //alert("Error Occured");
+			  
+		  }
+	});
+	
+	
+}
+</script>
+
+</html>

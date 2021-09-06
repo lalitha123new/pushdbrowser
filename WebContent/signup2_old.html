@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href="bs/css/bootstrap.min.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+
+<script src="bs/js/jquery-2.1.1.min.js"></script>
+<script src="bs/js/jquery.cookie.js"></script>
+
+<style>
+
+.blink {
+	-webkit-animation: blink .75s linear infinite;
+	-moz-animation: blink .75s linear infinite;
+	-ms-animation: blink .75s linear infinite;
+	-o-animation: blink .75s linear infinite;
+	 animation: blink .75s linear infinite;
+}
+@-webkit-keyframes blink {
+	0% { opacity: 1; }
+	50% { opacity: 1; }
+	50.01% { opacity: 0; }
+	100% { opacity: 0; }
+}
+@-moz-keyframes blink {
+	0% { opacity: 1; }
+	50% { opacity: 1; }
+	50.01% { opacity: 0; }
+	100% { opacity: 0; }
+}
+@-ms-keyframes blink {
+	0% { opacity: 1; }
+	50% { opacity: 1; }
+	50.01% { opacity: 0; }
+	100% { opacity: 0; }
+}
+@-o-keyframes blink {
+	0% { opacity: 1; }
+	50% { opacity: 1; }
+	50.01% { opacity: 0; }
+	100% { opacity: 0; }
+}
+@keyframes blink {
+	0% { opacity: 1; }
+	50% { opacity: 1; }
+	50.01% { opacity: 0; }
+	100% { opacity: 0; }
+}
+
+ .input{
+    height: 35px;
+    width: 300px;
+   
+    margin-bottom:1%;
+    border-radius:8px;
+} 
+
+.paragraph_class{
+font-weight:bold;
+}
+
+form {
+width: 500px;
+    margin: 0 auto;
+    }
+    
+    .row{
+    width:500px;
+    
+   
+    }
+    
+</style>
+
+</head>
+
+<body style="background-color:#FFF59D;">
+
+   <div class="container" style="margin-top:20px;margin-bottom:20px;">
+   	  <h1 class="blink" style="text-align:center;color:#000099;">Sign-up</h1>
+   </div>
+   
+   <form>
+    
+   <div class="form-group row">
+    <label for="email" class="col-md-2 col-form-label">Email:</label>
+    <div class="col-md-10">
+      <input type="text"  class="form-control" id="email_id" name="firstname" disabled>
+    </div>
+  </div>
+  
+  <div class="form-group row">
+    <label for="username" class="col-md-2 col-form-label">UserName:</label>
+    <div class="col-md-10">
+      <input type="text"  class="form-control" id="username" value="" placeholder="Create username" disabled>
+    </div>
+  </div>
+  
+  <div class="form-group row">
+    <label for="username" class="col-md-2 col-form-label">Password:</label>
+    <div class="col-md-10">
+      <input class="form-control"  id="password" type="password" name="lastname" value="" placeholder="Create password">
+    </div>
+  </div>
+  
+  <div class="form-group row">
+    <label for="username" class="col-md-2 col-form-label">Conform<br>Password:</label>
+    <div class="col-md-10">
+      <input class="form-control"  id="cpassword" type="password" name="lastname" value="" placeholder="Confirm password">
+    </div>
+  </div>
+  
+  
+  
+  
+  </form>
+  
+  <button  class="btn btn-lg btn-primary " style="border-radius:8px;margin-left:40%;;margin-right:40%; auto" name="Submit" onclick="signup()" type="Submit">Submit</button>
+   	 
+	 
+  
+  
+</body>
+
+<script src="js/registration.js"></script>
+</html>

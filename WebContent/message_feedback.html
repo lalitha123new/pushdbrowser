@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta charset="ISO-8859-1">
+<title>Push-d Registration</title>
+<link href="bs/css/bootstrap.min.css" rel="stylesheet">
+
+
+	<script src="bs/js/jquery-2.1.1.min.js"></script>
+	<script src="bs/js/jquery.cookie.js"></script>
+	<script src="bs/js/bootstrap.min.js"></script>
+	<script type="text/javascript">
+	history.forward();
+	</script> 
+	
+	<body>
+<div class="container" style="margin-top:100px;">
+<h3 style="text-align: center;">Message</h3>
+
+		<div class="container" id="new"
+			style="padding-right: 20px; padding-left: 20px; padding-top: 50px;padding-bottom:10px; border: 2px solid black;">
+			
+			
+			<p style="text-align: justify;padding-left:20px;padding-right:20px;font-size:18px;">
+			<!-- <b>You have  completed  the registration -evaluation process.You can start using PUSH-D  by logging in. But  please  remember that our  recommendation to  you is based on  the  responses you provided. Your registration is valid for a period of 3 months.
+     		</b> -->
+     		<b>Your registration is successful. You can now login and begin to use PUSH-D to learn self-help techniques to manage depressive symptoms.</b>
+			</p>
+			
+			
+			<!-- <a class="page-scroll" href=".jsp"
+				style="font-size: 16px; margin-left: 40%; margin-right: 40%; background-color: green; color: white; padding-top: 5px; padding-bottom: 5px; padding-right: 5px; padding-left: 5px; text-decoration: none;">Close</a>-->
+				<button type="button" class="btn btn-success" onclick="next_page()" data-dismiss="modal" style="margin-left: 40%; margin-right: 40%;">Close</button>
+		</div>
+</div>
+<script>
+
+function next_page(){
+	if ($(window).width() < 500) {
+		window.location.href = "googleplay.html";
+	}else
+	window.location.href = "index.jsp";
+	
+}
+</script>
+</body>
+</html>

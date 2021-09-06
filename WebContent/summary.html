@@ -1,0 +1,86 @@
+<!-- Modal -->
+<div class="modal fade" id="summaryModal" data-backdrop="static" data-keyboard="false" role="dialog">
+	<div class="modal-dialog">
+		<!-- Modal content-->
+		<div class="modal-content">
+			<div class="modal-header modal-header-success">
+				<h5>Section Completed</h5>
+			</div>
+			<form id="summaryForm">
+				<div class="modal-body">
+					<p>You just completed the section on <strong id="date"></strong> !</p>
+					<p>My Summary for Me</p>
+					<p>(What did I learn/re-learn here in this entire section)</p>
+					<textarea id="mySummary" name="summary" rows="5" class="form-control"></textarea>
+				</div>
+				<div class="modal-footer">
+					<button id="submitSummary" type="button" class="btn btn-primary">Submit</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+
+<script>
+	$('#submitSummary').click(function (){
+		
+		formData = $("#summaryForm").serialize();
+		
+		
+		 if(formData.length > 8) {		//	default it is taking the length = 8
+			$.ajax({
+				  type: "POST",
+				  url: serverURL + "users/" + userId + "/sections/" + activeSectionId + "/summary",
+				  data: formData,
+				  success: function() {
+					 
+					  if(activeSectionId == 11 && activeSubSectionId == 0) {
+				  			window.location.replace("section3.jsp");
+					  }
+					
+					  window.location.replace("section.jsp");
+				  },
+			  	  error: function() {
+					  alert("Error occured due to " + serverURL + "sections/" + sectionId);
+					 
+				  } 
+			});	
+		}
+		else {
+			alert("Please fill the summary ...");
+		} 
+		
+		 if(activeSectionId == 2 || activeSectionId ==3){
+			 activeSectionId= activeSectionId-1;
+		 
+		 
+		 var Indata = {
+					userId : userId,
+					section_id : activeSectionId,
+					sub_section_id : 2,
+					version_id: 1,
+					response : 'section1',
+					category_id : 'null'
+				};
+			var myJSON = JSON.stringify(Indata);
+			
+			$.ajax({
+				type : "POST",
+				url : serverURL + "users/" + userId+ "/sections/" + activeSectionId
+				+ "/subsections/" + 2 + "/" + "3rdSecdata/1",
+				data : myJSON,
+				contentType : "application/json",
+				dataType : "json",
+				success : function(data) {
+					
+					//console.log(data);
+              
+				},
+				error : function() {
+              
+					alert("Error: server encountered an internal error. Please try again after some time ");
+				}
+			});
+		 }
+	});
+</script>

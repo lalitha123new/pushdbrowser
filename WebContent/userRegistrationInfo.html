@@ -1,0 +1,1348 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>User Registration Information</title>
+<!-- Bootstrap -->
+	<link href="bs/css/bootstrap.min.css" rel="stylesheet">
+	<link href="fa/css/font-awesome.min.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+	<!-- <link href="css/daterangepicker.css" rel="stylesheet"> -->
+
+	<script src="bs/js/jquery-2.1.1.min.js"></script>
+    <script src="bs/js/jquery.cookie.js"></script>
+    <script src="js/values.js"></script>
+    <script src="js/inc.js"></script>
+   	<script src="bs/js/bootstrap.min.js"></script>
+   	<!-- <script src="js/moment.min.js"></script>
+   	<script src="js/daterangepicker.min.js"></script>-->
+   	<link href="css/feedback_display_admin.css" rel="stylesheet">
+   
+   	<script type="text/javascript">
+   	history.forward();
+   	
+   	
+	</script>
+	
+	<style>
+    
+    #table{
+    background-color:white;
+    border:2px solid black;
+    width:100%;
+    margin: 0 auto;
+    
+    }
+    
+    .header_class{
+    background-color:#FFF59D;
+    border:2px solid black;
+    text-align:center;
+    padding-top:10px;
+    vertical-align:top;
+    }
+    
+    th{
+    font-color:#3c42e8;
+    }
+    
+    .className {
+    background-color:#FFF59D;
+    border:2px solid black;
+    max-width:150px;
+    min-width:100px;
+    padding-left:5px;
+    text-align:center;
+    }
+    .className1 {
+    background-color:#FFF59D;
+    padding-left:5px;
+    text-align:center;
+    }
+    
+    .new_header_class{
+    padding-right:10px;
+    padding-left:10px;
+    font-size:13px;
+    font-weight:normal;
+    }
+    th{
+    color:#3c42e8;
+    }
+    
+    
+    .gradient_class{
+	 background-color: red; /* For browsers that do not support gradients */
+ 	 background-image: linear-gradient(to right, #dee7f4 , #66EAE8,#0080ff,#000099);
+	} 
+	
+	
+	/* i {
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+  
+  text-align:center;
+  
+} */
+	
+	
+	.up {
+  transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+}
+    
+ </style>
+ 
+</head>
+
+<body class="bgcolor" oncontextmenu="return false">
+
+<nav class="navbar navbar-inverse navbar-static-top">
+	<div class="container">
+		<!-- Brand and toggle get grouped for better mobile display -->
+		<div class="navbar-header col-md-10">
+			<button type="button" class="navbar-toggle collapsed"
+				data-toggle="collapse" data-target="#navbar-collapse-1"
+				aria-expanded="false">
+				<span class="sr-only">Toggle navigation</span> <span
+					class="icon-bar"></span> <span class="icon-bar"></span> <span
+					class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand active" href="index.jsp">PUSH-D</a>
+		</div>
+		<div class="col-md-1" style="padding: 10px 10px 0px 25px;">
+			<a href="viewUsers.jsp" type="button" class="btn btn-success"
+				data-toggle="tooltip" data-placement="top" title="Home"><i
+				class="glyphicon glyphicon-home"></i></a>
+		</div>
+		<!-- Collect the nav links, forms, and other content for toggling -->
+		<div class="collapse navbar-collapse col-md-1" id="navbar-collapse-1">
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="index.jsp">Logout</a></li>
+			</ul>
+		</div>
+		<!-- /.navbar-collapse -->
+	</div>
+	<!-- /.container --> </nav>
+	
+	
+	
+
+<div id="header"></div>
+
+
+<div class="container-fluid">
+
+	<div>
+	
+	<div class="col-md-12">
+
+	<h3 style="text-align:center;">User registration info</h3>
+	<div style="text-align:center;margin-bottom:20px;"><span style="font-weight:bold;">Search: </span><input type="text" id="search" placeholder="Enter User_Id"></input></div>
+	
+	
+	<div id="divID_new" style="padding-top:30px;overflow:scroll;height:400px;border:1px solid black;">
+	
+		<table id="table1" width="100%">
+		<thead>
+		
+		<tr>
+		
+			<th class="header_class">Sl.No</th>
+			<th class="header_class">Date</th>
+			<th class="header_class">User_Id</th>
+			<!-- <th class="header_class">User_name</th>
+			<th class="header_class">Age</th>
+			<th class="header_class">Sex</th> -->
+			
+			<th class="header_class">R1<p class="new_header_class" title="Have you sought help from a mental health professional any time in your life?">Q1</p></th>
+			<th class="header_class">R1<p class="new_header_class" title="Do you think you are currently dealing with a mental health problem? ">Q2</p></th>
+			<th class="header_class">R1<p class="new_header_class" title="Are you currently seeking help from a professional for a mental health problem?">Q3</p></th>
+			
+			<th class="header_class">R2<p class="new_header_class" title="Over the last 2 weeks, how often have you been bothered by any of the following problems?Little interest or pleasure in doing things">Depress Q1</p></th>
+			<th class="header_class">R2 <p class="new_header_class" title="Over the last 2 weeks, how often have you been bothered by any of the following problems? Feeling down, depressed, or hopeless">Depress Q2</p></th>
+			<th class="header_class">R2  <p class="new_header_class" title="Over the last 2 weeks, how often have you been bothered by any of the following problems? Trouble falling or staying asleep, or sleeping too much.">Depress Q3</p></th>
+			<th class="header_class">R2 <p class="new_header_class" title="Over the last 2 weeks, how often have you been bothered by any of the following problems?Feeling tired or having little energy.">Depress Q4</p></th>
+			<th class="header_class">R2<p class="new_header_class" title="Over the last 2 weeks, how often have you been bothered by any of the following problems? Poor appetite or overeating">Depress Q5</p></th>
+			<th class="header_class">R2<p class="new_header_class" title="Over the last 2 weeks, how often have you been bothered by any of the following problems?Feeling bad about yourself or that you are a failure or have let yourself or your family down">Depress Q6</p></th>
+			<th class="header_class">R2<p class="new_header_class" title="Over the last 2 weeks, how often have you been bothered by any of the following problems?Trouble concentrating on things, such as reading the newspaper or watching television">Depress Q7</p></th>
+			<th class="header_class">R2<p class="new_header_class" title="Over the last 2 weeks, how often have you been bothered by any of the following problems?Moving or speaking so slowly that other people could have noticed? Or the opposite being so fidgety or restless that you have been moving around a lot more than usual">Depress Q8</p></th>
+			<th class="header_class">R2<p class="new_header_class" title="Over the last 2 weeks, how often have you been bothered by any of the following problems?Thoughts that you would be better off dead or of hurting yourself in some way">Depress Q9</p></th>
+			<th class="header_class">R2<p class="new_header_class">Depress Score</p></th>
+			
+			<th class="header_class">R2<p class="new_header_class" title="Have you ever attempeted to hurt yourself in the past? ">P4Screener Q1</p></th>
+			<th class="header_class">R2<p class="new_header_class" title="Have you thought about how you might actually hurt yourself?">P4Screener Q2</p></th>
+			<th class="header_class">R2<p class="new_header_class" title="There is a big difference between having a thought and acting on a thought. How likely do you think it is that you will act on any thoughts about hurting yourself or ending your life sometime over the next month?">P4Screener Q3</p></th>
+			<th class="header_class">R2<p class="new_header_class" title="Are there things in you/your life that will stop you (prevent you) from harming yourself? (Things that would help you to avoid putting suicidal thoughts into action)">P4Screener Q4</p></th>
+			<th class="header_class">R2<p class="new_header_class" title="If yes,please specify?">Q4 If yes,please specify</p></th>
+			<th class="header_class">R2<p class="new_header_class" title="p4 screener score">P4Screener Score</p></th>
+			
+			
+			<th class="header_class">R3<p class="new_header_class" title="Over the last 2 weeks, how often have you been bothered by the following problems? Feeling nervous, anxious or on edge">Anxiety Q1</p></th>
+			<th class="header_class">R3<p class="new_header_class" title="Over the last 2 weeks, how often have you been bothered by the following problems?Not being able to stop or control worrying">Anxiety Q2</p></th>
+			<th class="header_class">R3<p class="new_header_class" title="Over the last 2 weeks, how often have you been bothered by the following problems?Worrying too much about different things">Anxiety Q3</p></th>
+			<th class="header_class">R3<p class="new_header_class" title="Over the last 2 weeks, how often have you been bothered by the following problems?Trouble relaxing">Anxiety Q4</p></th>
+			<th class="header_class">R3<p class="new_header_class" title="Over the last 2 weeks, how often have you been bothered by the following problems?Being so restless that it is hard to sit still">Anxiety Q5</p></th>
+			<th class="header_class">R3<p class="new_header_class" title="Over the last 2 weeks, how often have you been bothered by the following problems? Becoming easily annoyed or irritable">Anxiety Q6</p></th>
+			<th class="header_class">R3<p class="new_header_class" title="Over the last 2 weeks, how often have you been bothered by the following problems?Feeling afraid as if something awful might happen">Anxiety Q7</p></th>
+			<th class="header_class">R3<p class="new_header_class">Anxiety Score</p></th>
+			
+			<th class="header_class">R3<p class="new_header_class" title="Because of my [problem] my ability to work is impaired.">Current.Func Q1</p></th>
+			<th class="header_class">R3<p class="new_header_class" title=" Because of my [problem] my home management (cleaning, tidying, shopping, cooking, looking after home or children, paying bills) is impaired.">Current.Func Q2</p></th>
+			<th class="header_class">R3<p class="new_header_class" title="Because of my [problem] my social leisure activities (with other people e.g. parties, bars, clubs, outings, visits, dating, home entertaining) are impaired.">Current.Func Q3</p></th>
+			<th class="header_class">R3<p class="new_header_class" title="Because of my [problem], my private leisure activities (done alone, such as reading, gardening, collecting, sewing, walking alone) are impaired.">Current.Func Q4</p></th>
+			<th class="header_class">R3<p class="new_header_class" title="Because of my [problem], my ability to form and maintain close relationships with others, including those I live with, is impaired.">Current.Func Q5</p></th>
+			<th class="header_class">R3<p class="new_header_class">Current.Func Score</p></th>
+			
+			<th class="header_class">R4<p class="new_header_class">Q1</p></th>
+			<th class="header_class">R4<p class="new_header_class">Q2</p></th>
+			<th class="header_class">R4<p class="new_header_class">Q3(selected options)</p></th>
+		
+			<th class="header_class">Overall<p class="new_header_class">score</p></th>
+			 <th class="header_class">Date1<p class="new_header_class"></p></th>
+			<th class="header_class">Screener1<p class="new_header_class"> after 10 sections</p></th>
+			<th class="header_class">Date2<p class="new_header_class"></p></th>
+			<th class="header_class">Screener2<p class="new_header_class">after 3 weeks</p></th> 
+			
+			
+		
+		</tr>
+		</thead>
+		
+		</table>
+	
+	</div>
+	
+	<div class="container" style="text-align:center;margin-top:20px;">
+	<button class="btn btn-success" onclick="download_table()">Download</button></div>
+	
+	</div>
+	</div>
+	</div>
+	
+	<!-- display score and feedback with colors when admin clicks on user_id -->
+	<div class="modal fade" id="feedbackmodal" role="dialog">
+		<div class="modal-dialog modal-lg">
+		
+			<!-- Modal content-->
+			<div class="modal-content">
+				<div class="modal-header modal-header-success" style="background: #4CAF50;color: white">
+				<button type="button" class="btn btn-success" onclick="close_modal()" style="float:right;">&times;</button>
+				
+					<p id="feedback_of_user_id" style="font-weight:bold;text-align:center;">Scores and overall feedback of user_id : </p>
+				</div>
+				
+				<div class="modal-body text-justify">
+				
+				<div class="center-container">
+				
+				<div class="col-md-9">
+				
+				<br><br>
+				<p>Based on your response, this is how we rate you, on current mood and  functioning indicators.</p>
+				</div>
+				
+				<div class="col-md-3">
+				<!-- new table added -->
+				 <table style="margin-left:50px;">
+					<tr style="margin-bottom:10px;">
+					<td style="background-color:#dee7f4;width:25px;height:25px;"></td><td style="border:none;"><span style="text-align:right;margin-left:10px;">None</span></td>
+					<!-- <br><span style="text-align:right;margin-left:10px;"> Reported</span> -->
+					</tr>
+					</table><br>
+					
+					<table style="margin-left:50px;">
+					<tr style="margin-bottom:10px;">
+					<td style="background-color:#66EAE8;width:25px;height:25px;"></td><td style="border:none;"><span style="text-align:right;margin-left:10px;">Mild</span></td>
+					</tr>
+					</table><br>
+				
+					<table style="margin-left:50px;">
+					<tr>
+					<td style="background-color:#0080ff;width:25px;height:25px;"></td><td style="border:none;"><span style="text-align:right;margin-left:10px;">Moderate</span></td>
+					</tr>
+					</table><br>
+				
+					<table style="margin-left:50px;margin-bottom:10px;">
+					<tr>
+					<td style="background-color:#000099;width:25px;height:25px;"></td><td style="border:none;"><span style="text-align:right;margin-left:10px;">Severe</span></td>
+					</tr>
+					</table>
+					
+				</div>
+				
+				</div>
+				
+				<div class="clear"></div>
+				
+				<br><br>
+				<div class="col-md-12">
+				<div class="col-md-1"><span style="font-weight:bold;text-align:right">Depressive Symptoms</span></div>
+				<div class="col-md-1 feedback_label" style="text-align:right;padding-right:0px;"><p>None 
+			</p></div>
+				
+				<div class="col-md-9">
+				
+					<table class="score_table">
+					
+					
+					
+					<tbody>
+					
+					<tr class="gradient_class">
+					
+					<td style="height:20px;border:none;" id=""><p id="" class="hidden" style="color:black;text-align:center;font-weight:bold;">None Reported</p></td>
+					<td style="height:20px;border:none;" id=""><p id="" class="hidden" style="color:black;text-align:center;font-weight:bold;">Your Score</p></td>
+					<td style="border:none;" id=""><p id="" class="hidden" style="color:black;text-align:center;font-weight:bold;">Your Score</p></td>
+					<td style="border:none;" id=""><p id="" class="hidden" style="color:black;text-align:center;font-weight:bold;">Your Score</p></td>
+					
+					</tr>
+					
+					</tbody>
+					</table>
+					<table class="score_table">
+					
+					
+					
+					<tbody>
+					
+					<tr>
+					
+					<td style="height:20px;border:none;" id="arrow1"><p id="icon1" class="hidden" style="color:black;text-align:center;font-weight:bold;"><span class="glyphicon glyphicon-arrow-up"></span></p></td>
+					
+					<td style="height:20px;border:none;" id="arrow2"><p id="icon2" class="hidden" style="color:black;text-align:center;font-weight:bold;"><span class="glyphicon glyphicon-arrow-up"></span></p></td>
+					<td style="border:none;" id="arrow3"><p id="icon3" class="hidden" style="color:black;text-align:center;font-weight:bold;"><span class="glyphicon glyphicon-arrow-up"></span></p></td>
+					<td style="border:none;" id="arrow4"><p id="icon4" class="hidden" style="color:black;text-align:center;font-weight:bold;"><span class="glyphicon glyphicon-arrow-up"></span></p></td>
+					
+					</tr>
+					
+					</tbody>
+					</table>
+					
+					<table class="score_table">
+					
+					
+					
+					<tbody>
+					
+					<tr>
+					
+					<td style="height:20px;border:none;" id="col1_new"><p id="p1_new" class="hidden" style="color:black;text-align:center;font-weight:bold;">None Reported</p></td>
+					
+					<td style="height:20px;border:none;" id="col1"><p id="p1" class="hidden" style="color:black;text-align:center;font-weight:bold;">Your Score</p></td>
+					<td style="border:none;" id="col2"><p id="p2" class="hidden" style="color:black;text-align:center;font-weight:bold;">Your Score</p></td>
+					<td style="border:none;" id="col3"><p id="p3" class="hidden" style="color:black;text-align:center;font-weight:bold;">Your Score</p></td>
+					
+					</tr>
+					
+					</tbody>
+					</table><br><br><br>
+					
+				</div>
+				
+				<div class="col-md-1 feedback_label" style="text-align:left;"><p>Severe</p></div>
+				</div>
+				
+				
+				<div class="clear"></div>
+				
+				<div class="col-md-12">
+				<div class="col-md-1"><span style="font-weight:bold;">Anxiety Symptoms</span></div>
+				<div class="col-md-1 feedback_label" style="text-align:right;padding-right:0px;"><p>None</p></div>
+				
+				<div class="col-md-9">
+				
+					<table class="score_table">
+					
+					
+					<tbody>
+					<tr class="gradient_class">
+					<td style="height:20px;border:none;" id=""><p id="" class="hidden" style="color:black;text-align:center;font-weight:bold;">None Reported</p></td>
+					<td style="height:20px;border:none;" id=""><p id="" class="hidden" style="color:black;text-align:center;font-weight:bold;">Your Score</p></td>
+					<td style="border:none;" id=""><p id="" class="hidden" style="color:black;text-align:center;font-weight:bold;">Your Score</p></td>
+					<td style="border:none;" id=""><p id="" class="hidden" style="color:white;text-align:center;font-weight:bold;">Your Score</p></td>
+					</tr>
+					</tbody>
+					</table>
+					
+					<table class="score_table">
+					
+					
+					
+					<tbody>
+					
+					<tr>
+					
+					<td style="height:20px;border:none;" id="arrow5"><p id="icon5" class="hidden" style="color:black;text-align:center;font-weight:bold;"><span class="glyphicon glyphicon-arrow-up"></span></p></td>
+					
+					<td style="height:20px;border:none;" id="arrow6"><p id="icon6" class="hidden" style="color:black;text-align:center;font-weight:bold;"><span class="glyphicon glyphicon-arrow-up"></span></p></td>
+					<td style="border:none;" id="arrow7"><p id="icon7" class="hidden" style="color:black;text-align:center;font-weight:bold;"><span class="glyphicon glyphicon-arrow-up"></span></p></td>
+					<td style="border:none;" id="arrow8"><p id="icon8" class="hidden" style="color:black;text-align:center;font-weight:bold;"><span class="glyphicon glyphicon-arrow-up"></span></p></td>
+					
+					</tr>
+					
+					</tbody>
+					</table>
+					
+					<table class="score_table">
+					
+					
+					<tbody>
+					<tr>
+					<td style="height:20px;border:none;" id="col4_new"><p id="p4_new" class="hidden" style="color:black;text-align:center;font-weight:bold;">None Reported</p></td>
+					<td style="height:20px;border:none;" id="col4"><p id="p4" class="hidden" style="color:black;text-align:center;font-weight:bold;">Your Score</p></td>
+					<td style="border:none;" id="col5"><p id="p5" class="hidden" style="color:black;text-align:center;font-weight:bold;">Your Score</p></td>
+					<td style="border:none;" id="col6"><p id="p6" class="hidden" style="color:black;text-align:center;font-weight:bold;">Your Score</p></td>
+					</tr>
+					</tbody>
+					</table><br>
+					<br><br>
+					
+				</div>
+				
+				
+				
+				<div class="col-md-1 feedback_label" style="text-align:left;"><p>Severe</p></div>
+				</div>
+				
+				
+				<div class="clear"></div>
+				
+				<div class="col-md-12">
+				<div class="col-md-1"><span style="font-weight:bold;">Self-rated Suicidal Thoughts</span></div>
+				<div class="col-md-1 feedback_label" style="text-align:right;padding-right:0px;"><p>None</p></div>
+				
+				<div class="col-md-9">
+				
+					<table class="score_table">
+					
+					
+					<tbody>
+					<tr class="gradient_class">
+					<td style="height:20px;border:none;" id=""><p id="" class="hidden" style="color:black;text-align:center;font-weight:bold;">None Reported</p></td>
+					<td style="height:20px;border:none;" id=""><p id="" class="hidden" style="color:black;text-align:center;font-weight:bold;">Your Score<br>(Minimal)</p></td>
+					<td style="border:none;" id=""><p id="" class="hidden" style="color:black;text-align:center;font-weight:bold;">Your Score<br>(Low)</p></td>
+					<td style="border:none;" id=""><p id="" class="hidden" style="color:black;text-align:center;font-weight:bold;">Your Score<br>(High)</p></td>
+					</tr>
+					</tbody>
+					</table>
+					
+					<table class="score_table">
+					
+					
+					<tbody>
+					<tr>
+					<td style="height:20px;border:none;" id="arrow9"><p id="icon9" class="hidden" style="color:black;text-align:center;font-weight:bold;"><span class="glyphicon glyphicon-arrow-up"></span></p></td>
+					<td style="height:20px;border:none;" id="arrow10"><p id="icon10" class="hidden" style="color:black;text-align:center;font-weight:bold;"><span class="glyphicon glyphicon-arrow-up"></span></p></td>
+					<td style="border:none;" id="arrow11"><p id="icon11" class="hidden" style="color:black;text-align:center;font-weight:bold;"><span class="glyphicon glyphicon-arrow-up"></span></p></td>
+					<td style="border:none;" id="arrow12"><p id="icon12" class="hidden" style="color:black;text-align:center;font-weight:bold;"><span class="glyphicon glyphicon-arrow-up"></span></p></td>
+					</tr>
+					</tbody>
+					</table>
+					
+					<table class="score_table">
+					
+					
+					<tbody>
+					<tr>
+					<td style="height:20px;border:none;" id="col7_new"><p id="p7_new" class="hidden" style="color:black;text-align:center;font-weight:bold;">None Reported</p></td>
+					<td style="height:20px;border:none;" id="col7"><p id="p7" class="hidden" style="color:black;text-align:center;font-weight:bold;">Your Score<br>(Minimal)</p></td>
+					<td style="border:none;" id="col8"><p id="p8" class="hidden" style="color:black;text-align:center;font-weight:bold;">Your Score<br>(Low)</p></td>
+					<td style="border:none;" id="col9"><p id="p9" class="hidden" style="color:black;text-align:center;font-weight:bold;">Your Score<br>(High)</p></td>
+					</tr>
+					</tbody>
+					</table><br><br><br>
+					
+				</div>
+				
+				<div class="col-md-1 feedback_label" style="text-align:left;"><p>Severe</p></div>
+				</div>
+				
+				
+				<div class="clear"></div>
+				<div class="col-md-12">
+				
+				<div class="col-md-1"><span style="font-weight:bold;">Interference With<br> Daily Functioning</span></div>
+				<div class="col-md-1 feedback_label" style="text-align:right;padding-right:0px;"><p>None</p></div>
+				
+				<div class="col-md-9">
+					<table class="score_table">
+					
+					
+					<tbody>
+					<tr class="gradient_class">
+					<td style="height:20px;border:none;" id=""><p id="" class="hidden" style="color:black;text-align:center;font-weight:bold;">None Reported</p></td>
+					<td style="height:20px;border:none;" id=""><p id="" class="hidden" style="color:black;text-align:center;font-weight:bold;">Your Score</p></td>
+					<td style="border:none;" id=""><p id="" class="hidden" style="color:black;text-align:center;font-weight:bold;">Your Score</p></td>
+					<td style="border:none;" id=""><p id="" class="hidden" style="color:white;text-align:center;font-weight:bold;">Your Score</p></td>
+					</tr>
+					</tbody>
+					</table>
+					
+					<table class="score_table">
+					
+					
+					<tbody>
+					<tr>
+					<td style="height:20px;border:none;" id="arrow13"><p id="icon13" class="hidden" style="color:black;text-align:center;font-weight:bold;"><span class="glyphicon glyphicon-arrow-up"></span></p></td>
+					<td style="height:20px;border:none;" id="arrow14"><p id="icon14" class="hidden" style="color:black;text-align:center;font-weight:bold;"><span class="glyphicon glyphicon-arrow-up"></span></p></td>
+					<td style="border:none;" id="arrow15"><p id="icon15" class="hidden" style="color:black;text-align:center;font-weight:bold;"><span class="glyphicon glyphicon-arrow-up"></span></p></td>
+					<td style="border:none;" id="arrow16"><p id="icon16" class="hidden" style="color:black;text-align:center;font-weight:bold;"><span class="glyphicon glyphicon-arrow-up"></span></p></td>
+					</tr>
+					</tbody>
+					</table>
+					
+					<table class="score_table">
+					
+					
+					<tbody>
+					<tr>
+					<td style="height:20px;border:none;" id="col10_new"><p id="p10_new" class="hidden" style="color:black;text-align:center;font-weight:bold;">None Reported</p></td>
+					<td style="height:20px;border:none;" id="col10"><p id="p10" class="hidden" style="color:black;text-align:center;font-weight:bold;">Your Score</p></td>
+					<td style="border:none;" id="col11"><p id="p11" class="hidden" style="color:black;text-align:center;font-weight:bold;">Your Score</p></td>
+					<td style="border:none;" id="col12"><p id="p12" class="hidden" style="color:black;text-align:center;font-weight:bold;">Your Score</p></td>
+					</tr>
+					</tbody>
+					</table><br><br><br>
+					
+				</div>
+				<div class="col-md-1 feedback_label" style="text-align:left;"><p>Severe</p></div>
+				</div>
+				
+				
+				<div class="clear"></div>
+				
+				<p id="recommend" style="font-size:15px;text-align:center;"></p>
+				
+				<p id="feedback1" class="hidden" style="color:darkblue;"><b> 	You are experiencing mild severity of depressive symptoms.<br>
+					 	You report minimal I disturbance in your functioning. <br>
+					 	 	In addition, you report no significant anxiety symptoms.<br>
+					 	 	Or <br>
+					 	 	 In addition   you report minimal anxiety symptoms.<br><br><br>
+					 	 	 You may register   for PUSH-D for self-help. <br><br>
+					 	 	 Please   remember that PUSH-D is   not a tool for providing diagnosis, nor it is a substitute for professional   consultation and treatment. Seeking face to face professional consultation is useful   for provide an accurate and comprehensive evaluation of  mental health  issues. </b></p>
+					
+					<p id="feedback2" class="hidden" style="color:darkblue;"><b> 	You are experiencing moderate severity of depressive symptoms. <br>
+					 			Your responses indicate absence of significant suicidal thoughts or a sense of control over such thoughts. <br>
+					 	 		You have indicated clinically significant level/ moderate severity of disturbance in your functioning.<br>
+					 	 	 	In addition, you report mild/moderate level of anxiety symptoms.<br><br>
+					 	 	 	You may register for and use PUSH-D. But  we  would  strongly  recommend   you to use   it  as a supplement  /add-on to face  to face   professional  treatment.<br><br><br>
+					 	 	 	
+								Please   remember that PUSH-D is   not a tool for providing diagnosis, nor it is a substitute for professional   consultation and treatment. Seeking face to face professional consultation is useful   for provide an accurate and comprehensive evaluation of mental health  issues. 
+					 	 	 	</b></p>
+					 	 	 	
+					 	 	 	
+					<p id="feedback3" class="hidden" style="color:darkblue;"><b>You are experiencing severe depressive symptoms.<br>
+					Your responses indicate presence of suicidal thoughts and difficulties in controlling such thoughts<br>
+					You have indicated clinically significant level/severe/ moderate severity of- disturbance in your functioning.<br>
+					In addition,   you have indicated mild/moderate/severe anxiety symptoms.<br><br><br>
+					We strongly recommend   you to seek face to face/direct professional help for   your mental health concerns. Mere reliance on PUSH-D will be very insufficient to help   you. We can provide    you guidance on seeking referral with a mental health professional in   your  region, if  you so desire Let us know  if   you need   such help in finding  a mental health professional  and  we  will try  to help  with that. Once   you have initiated  treatment,   you can  let us know/ request   your doctor  to contact  us and  we  can  re-examine  the  suitability of PUSH-D  for  you at that  point.  Email for contacting us: push.d.nimhans@gmail.com</b></p>
+				
+				</div>
+				
+				<div class="modal-footer">
+					
+					<button type="button" class="btn btn-success"  onclick="close_modal()">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	</div>
+	<!-- end of new design -->
+
+	
+	
+	<script type="text/javascript">
+	 var res1 = [];
+	  var res2 = [];
+	  var res2_a = [];
+	  var res2_b = [];
+	  var res3 = [];
+	  var res3_a = [];
+	  var res3_b = [];
+	  var res4 = [];
+	  var res4_a = [];
+	  var res4_b = [];
+	  var date1 = [];
+	  var date2 = [];
+	  var resp1 = [];
+	  var resp2 = [];
+	  var feedback1;
+	  var feedback2;
+	  var score1 = 0;
+	  var score2;
+	  var score3 = 0;
+	  var score4 = 0;
+	  
+	  var str1;
+	  var str1_new;
+	  var str2;
+	  var str3;
+	  var str3_new;
+	  var str4;
+	  var str4_new;
+	  
+	 
+		$(document).ready(function() {
+		
+			$.ajax({
+				  type: "GET",
+				  url: serverURL + "users/getAllSelfRegUserInfo",
+				  success: function(data){
+					  
+		   if(data.length == 0 ){
+			   
+			    var container1 = document.getElementById('divID_new');
+				var table = document.getElementById('table1');
+				table.setAttribute("style", "border: 1px solid black;");
+				var tr = document.createElement('tr'); 
+			    var td1 = document.createElement('td');
+			    
+			    td1.setAttribute('class', 'className');
+			   
+			    td1.innerHTML = "No message to display";
+			   
+			    tr.appendChild(td1);
+				table.appendChild(tr);
+			    container1.appendChild(table);
+   				}else{
+							
+				for (var i=0;i<data.length;i++){
+					  		
+				  	  
+					  <!--data for each registration page and screener is extracted for all user_ids-->
+					  res1 = data[i].reg_form1.split("#@@#");
+					 
+					  res2 = data[i].reg_form2.split("undefined");
+					  res2 = res2[1].split("#@@#");
+					  res2_a = res2[0].split("#");
+					  res2_b = res2[1].split("@");
+					  
+					  
+					  res3 = data[i].reg_form3.split("undefined");
+					  res3_a = res3[0].split("#");
+					  
+					  res3_b = res3[1].split("@");
+					  
+					  
+					  res4 = data[i].reg_form4.split("#@@#");
+					  res4_a = data[i].reg_form4.split("#");
+					  res4_b = data[i].reg_form4.split("undefined");
+					  res4_b = res4_b[1].split("@");
+					  date1 =data[i].scr_date;
+					  date2 = data[i].scr_date1;
+					  
+					  resp1 =data[i].scr_responce.split(",");
+					  resp2 =data[i].scr_responce1.split(",");;
+					 
+					  
+				
+		var container1 = document.getElementById('divID_new');
+		var table = document.getElementById('table1');
+		table.setAttribute("style", "border: 1px solid black;");
+		
+			
+		    var tr = document.createElement('tr');
+		    
+		    var td1 = document.createElement('td');
+		    var td2 = document.createElement('td');
+		    var td3 = document.createElement('td');
+		    var td3_a = document.createElement('A');
+		    td3_a.href = "#";
+		    td3.appendChild(td3_a);
+		   
+		    
+		    var td4 = document.createElement('td');
+		    var td5 = document.createElement('td');
+		    var td6 = document.createElement('td');   
+		    var td7 = document.createElement('td');
+		    var td8 = document.createElement('td');
+		    var td9 = document.createElement('td');
+		    var td10 = document.createElement('td');
+		    var td11= document.createElement('td');
+		    var td12 = document.createElement('td');
+		    var td13 = document.createElement('td');
+		    var td14= document.createElement('td');
+		    var td15 = document.createElement('td');
+		    var td16 = document.createElement('td');
+		    
+		    var td17 = document.createElement('td');
+		    var td18 = document.createElement('td');
+		    var td19 = document.createElement('td');
+		    var td20 = document.createElement('td');
+		    var td21 = document.createElement('td');
+		    
+		    var td22 = document.createElement('td');
+		    var td23 = document.createElement('td');
+		    var td24 = document.createElement('td');
+		    var td25= document.createElement('td');
+		    var td26= document.createElement('td');
+		    var td27 = document.createElement('td');
+		    var td28 = document.createElement('td');
+		    var td29= document.createElement('td');
+		    
+		    var td30 = document.createElement('td');
+		    var td31 = document.createElement('td');
+		    var td32= document.createElement('td');
+		    var td33 = document.createElement('td');
+		    var td34 = document.createElement('td');
+		    var td35 = document.createElement('td');
+		    
+		    var td36 = document.createElement('td');
+		    var td37= document.createElement('td');
+		    var td38 = document.createElement('td');
+		    var td39 = document.createElement('td');
+		    var td40 = document.createElement('td');
+		    var td41 = document.createElement('td');
+		    var td42 = document.createElement('td');
+		    var td43 = document.createElement('td');
+		    var td44 = document.createElement('td');
+		    
+		    
+		    
+		    td1.setAttribute('class', 'className');
+		    td2.setAttribute('class', 'className');
+		    td3.setAttribute('class', 'className');
+		    td4.setAttribute('class', 'className');
+		    td5.setAttribute('class', 'className');
+		    td6.setAttribute('class', 'className');
+		    
+		    td7.setAttribute('class', 'className');
+		    td8.setAttribute('class', 'className');
+		    td9.setAttribute('class', 'className');
+		    
+		    td10.setAttribute('class', 'className');
+		    td11.setAttribute('class', 'className');
+		    td12.setAttribute('class', 'className');
+		    td13.setAttribute('class', 'className');
+		    td14.setAttribute('class', 'className');
+		    td15.setAttribute('class', 'className');
+		    td16.setAttribute('class', 'className');
+		    td17.setAttribute('class', 'className');
+		    td18.setAttribute('class', 'className');
+		    
+		    td19.setAttribute('class', 'className');
+		    td20.setAttribute('class', 'className');
+		    td21.setAttribute('class', 'className');
+		    td22.setAttribute('class', 'className');
+		    td23.setAttribute('class', 'className');
+		    td24.setAttribute('class', 'className');
+		    td25.setAttribute('class', 'className');
+		    td26.setAttribute('class', 'className');
+		    td27.setAttribute('class', 'className');
+		    td28.setAttribute('class', 'className');
+		    td29.setAttribute('class', 'className');
+		    td30.setAttribute('class', 'className');
+		    td31.setAttribute('class', 'className');
+		    td32.setAttribute('class', 'className');
+		    td33.setAttribute('class', 'className');
+		    td34.setAttribute('class', 'className');
+		    td35.setAttribute('class', 'className');
+		    td36.setAttribute('class', 'className');
+		    td37.setAttribute('class', 'className');
+		    td38.setAttribute('class', 'className');
+		    td39.setAttribute('class', 'className');
+		    td40.setAttribute('class', 'className');
+		    td41.setAttribute('class', 'className');
+		    td42.setAttribute('class', 'className');
+		    td43.setAttribute('class', 'className');
+		    td44.setAttribute('class', 'className');
+		   
+		    
+		    td1.innerHTML =(i+1);
+		    td2.innerHTML =data[i].reg_cmp_time;
+		   
+		    td3_a.innerHTML =data[i].user_id;
+		   
+		   
+		    
+		    td4.innerHTML = res1[2];
+		    td5.innerHTML = res1[3];
+		    td6.innerHTML = res1[4];
+		    
+		    td7.innerHTML = res2_a[0];
+		    td8.innerHTML = res2_a[1];
+		    td9.innerHTML = res2_a[2];
+		    td10.innerHTML = res2_a[3];
+		    td11.innerHTML = res2_a[4];
+		    td12.innerHTML = res2_a[5];
+		    td13.innerHTML = res2_a[6];
+		    td14.innerHTML = res2_a[7];
+		    td15.innerHTML = res2_a[8];
+		    
+		   //depress score
+		    score1 = Number( res2_a[0]) + Number( res2_a[1]) + Number( res2_a[2]) + Number( res2_a[3]) + Number( res2_a[4]) + Number( res2_a[5]) + Number( res2_a[6]) + Number( res2_a[7]) + Number( res2_a[8]); 
+		    
+		  	
+		  	if(score1 == 0){
+		  		td16.innerHTML ="None Reported";	
+		  		str1="Mild";
+		  	}else if(score1>0 && score1<=5){
+		  		td16.innerHTML ="Mild";	
+		  		str1="Mild";	
+		  	}else if(score1 > 5 && score1 <= 10){
+		  		td16.innerHTML ="Moderate";
+		  		str1="Moderate";
+		  	}else{
+		  		td16.innerHTML ="Severe";
+		  		str1="Severe";
+		  	}
+		    
+		    
+		    
+		    td17.innerHTML = res2_b[0];
+		    td18.innerHTML = res2_b[1];
+		    td19.innerHTML = res2_b[2];
+		    td20.innerHTML = res2_b[3];
+		   
+		    
+		    if((res2_b[3] === "Yes") && (res2_b[4] ==undefined)){
+		    	 td21.innerHTML = "No data";
+		    }else if(res2_b[3] === "No" && res2_b[4] == undefined){
+		    	 td21.innerHTML = "";
+		    }else
+		    td21.innerHTML = res2_b[4];
+		    
+		   
+			
+			//p4 screener score - new algo
+		     
+		     if(res2_b[2]==="Somewhat likely" || res2_b[2]==="Very likely" ||  (res2_b[2]==="Not at all likely" && res2_b[3]==="No")){
+		    	 
+		    	
+		    	td22.innerHTML="High";
+				str2="Severe";
+				
+		     }else if(res2_b[0]==="No" && res2_b[1]==="No" && res2_b[2]==="Not at all likely" && res2_b[3]==="Yes"){
+		    					
+		    		
+		    		td22.innerHTML = "Minimal";
+			        str2="Mild";
+			        
+		    }else{
+		    	 
+		    		
+		    		 td22.innerHTML="Low";
+					 str2="Moderate";
+		    	 
+		    }
+		    
+		    td23.innerHTML = res3_a[0];
+		    td24.innerHTML = res3_a[1];
+		    td25.innerHTML = res3_a[2];
+		    td26.innerHTML = res3_a[3];
+		    td27.innerHTML = res3_a[4];
+		    td28.innerHTML = res3_a[5];
+		    td29.innerHTML = res3_a[6];
+		    
+		    
+		    //anxiety score
+		    score3 = Number(res3_a[0]) + Number(res3_a[1]) + Number(res3_a[2]) + Number(res3_a[3]) + Number(res3_a[4]) + Number(res3_a[5]) + Number(res3_a[6]); 
+		    
+		     
+		    if(score3 == 0){
+		    	td30.innerHTML ="None Reported";
+		    	str3="Mild";
+		    }else if(score3 > 0 && score3<=5){
+		    	 td30.innerHTML ="Mild";
+		    	 str3="Mild";
+		  	}else if(score3 > 5 && score3 <= 10){
+		  		td30.innerHTML ="Moderate";
+		  		 str3="Moderate";
+		  	}else{
+		  		td30.innerHTML ="Severe";
+		  		str3="Severe";
+		  	}
+		   
+		    
+		    td31.innerHTML = res3_b[1];
+		    td32.innerHTML = res3_b[2];
+		    td33.innerHTML = res3_b[3];
+		    td34.innerHTML = res3_b[4];
+		    td35.innerHTML = res3_b[5];
+		    
+		    
+		    //current functioning
+		    
+		    score4 = Number(res3_b[1]) + Number( res3_b[2]) + Number( res3_b[3]) + Number( res3_b[4]) + Number( res3_b[5]); 
+		    
+		    if(score4 ==0){
+		    	td36.innerHTML = "None Reported";
+		    	str4="Mild";
+		    }else if(score4>0 && score4<=10){
+				td36.innerHTML = "Mild";
+				str4="Mild";
+		  	}else if(score4 > 10 && score4 <= 20){
+		  		td36.innerHTML ="Moderate";
+		  		str4="Moderate";
+		  	}else{
+		  		td36.innerHTML ="Severe";
+		  		str4="Severe";
+		  	}
+			
+			
+		    
+		    td37.innerHTML = res4_a[0];
+		    td38.innerHTML =res4_a[1];
+		    td39.innerHTML = res4_b;
+		    if(str1 == "Severe" && str2 == "Severe" || str3 == "Severe" || str4 == "Severe"){
+		    td40.innerHTML ="We strongly recommend   you to seek face to face/direct professional help for   your mental health concerns. Mere reliance on PUSH-D will be very insufficient to help   you.";
+		    }else if((str1 == "Moderate" && str2=="Moderate") || str3 == "Moderate" || str4 == "Moderate"){
+		    td40.innerHTML = "You may register for and use PUSH-D. But  we  would  strongly  recommend   you to use   it  as a supplement  /add-on to face  to face   professional  treatment.";
+		    }else{
+		    td40.innerHTML = "You may register   for PUSH-D for self-help.";
+		    }
+		    td41.innerHTML = date1;
+		    if(resp1[9] <= 5){
+		    	td42.innerHTML = "mild";
+		    	
+		    }else if(resp1[9] > 5 && resp1[9]<=10){
+		    	td42.innerHTML = "Moderate";
+		    }else if(resp1[9] > 10){
+		    	td42.innerHTML = "Severe";
+		    }
+		    
+		    td43.innerHTML = date2;
+		    if(resp2[9] <= 5){
+		    	td44.innerHTML = "mild";
+		    	
+		    }else if(resp2[9] > 5 && resp2[9]<=10){
+		    	td44.innerHTML = "Moderate";
+		    }else if(resp2[9] > 10){
+		    	td44.innerHTML = "Severe";
+		    }
+		   
+		    
+		    //call function to display modal with scores and feedback when admin clicks on user_id in the td
+		    td3_a.onclick = function() { display_Modal($(this).html()) };
+		    
+		    
+		    tr.appendChild(td1);
+		    tr.appendChild(td2);
+		    tr.appendChild(td3);
+		    tr.appendChild(td4);
+		    tr.appendChild(td5);
+		    tr.appendChild(td6);
+		    tr.appendChild(td7);
+		    tr.appendChild(td8);
+		    tr.appendChild(td9);
+		    tr.appendChild(td10);
+		    tr.appendChild(td11);
+		    tr.appendChild(td12);
+		    tr.appendChild(td12);
+		    tr.appendChild(td13);
+		    tr.appendChild(td14);
+		    tr.appendChild(td15);
+		    tr.appendChild(td16);
+		    tr.appendChild(td17);
+		    tr.appendChild(td18);
+		    tr.appendChild(td19);
+		    tr.appendChild(td20);
+		    tr.appendChild(td21);
+		    tr.appendChild(td22);
+		    tr.appendChild(td23);
+		    tr.appendChild(td24);
+		    tr.appendChild(td25);
+		    tr.appendChild(td26);
+		    tr.appendChild(td27);
+		    tr.appendChild(td28);
+		    tr.appendChild(td29);
+		    tr.appendChild(td30);
+		    tr.appendChild(td31);
+		    tr.appendChild(td32);
+		    tr.appendChild(td33);
+		    tr.appendChild(td34);
+		    tr.appendChild(td35);
+		    tr.appendChild(td36);
+		    tr.appendChild(td37);
+		    tr.appendChild(td38);
+		    tr.appendChild(td39);
+		     tr.appendChild(td40);
+		    tr.appendChild(td41);
+		    tr.appendChild(td42);
+		    tr.appendChild(td43);
+		    tr.appendChild(td44);
+		    
+
+		    table.appendChild(tr);
+			}
+			container1.appendChild(table);
+			
+			//function to get the scores of each screener for a particular user_id from the group of all user_ids
+			function search(nameKey, myArray){
+				
+			    for (var i=0; i < myArray.length; i++) {
+			     
+		           
+		           var nameKey = parseInt(nameKey)
+			        if (myArray[i].user_id == nameKey) {
+			        	
+			            return myArray[i];
+			            
+			            
+			        }
+			    }
+			}
+			
+			//function to open the modal to display the scres and overall feedback when the admin clicks on a particular user_id
+			 function display_Modal(p){
+				
+				$('#feedback_of_user_id').append(p);
+		   		var resultObject = search(p, data);
+		   		//console.log(resultObject);
+		   		$('#feedbackmodal').modal("show");
+		   	
+		   		
+		   	  //getting each screener score from the data object
+		   	  res1 = resultObject.reg_form1.split("#@@#");
+			 
+			  res2 = resultObject.reg_form2.split("undefined");
+			  res2 = res2[1].split("#@@#");
+			  res2_a = res2[0].split("#");
+			  res2_b = res2[1].split("@");
+			 
+			  
+			  res3 = resultObject.reg_form3.split("undefined");
+			  res3_a = res3[0].split("#");
+			  res3_b = res3[1].split("@");
+			  
+			  
+			
+			 
+			  
+			  
+			//depression score
+			  score1 = Number( res2_a[0]) + Number( res2_a[1]) + Number( res2_a[2]) + Number( res2_a[3]) + Number( res2_a[4]) + Number( res2_a[5]) + Number( res2_a[6]) + Number( res2_a[7]) + Number( res2_a[8]); 
+			    
+			  	
+			  	if(score1 == 0){
+			  		td16.innerHTML ="None Reported";	
+			  		str1="Mild";
+			  		feedback1 = str1;
+					/* $('#col1_new').addClass("color_class_new");
+					$('#p1_new').removeClass("hidden"); */
+					
+			  		$('#col1_new').addClass("color_class_latest");
+					$('#p1_new').removeClass("hidden");
+					$('#arrow1').removeClass("hidden");
+					$('#icon1').removeClass("hidden");
+			  	}else if(score1>0 && score1<=5){
+			  		td16.innerHTML ="Mild";	
+			  		str1="Mild";
+			  		feedback1 = str1;
+					/* $('#col1_new').addClass("color_class_new");
+					$('#col1').addClass("color_class");
+					$('#p1').removeClass("hidden"); */
+					
+			  		$('#col1').addClass("color_class_latest");
+					$('#p1').removeClass("hidden");
+					$('#arrow2').removeClass("hidden");
+					$('#icon2').removeClass("hidden");
+			  		
+			  		
+			  	}else if(score1 > 5 && score1 <= 10){
+			  		td16.innerHTML ="Moderate";
+			  		str1="Moderate";
+			  		feedback1 = str1;
+			  		/* $('#col1_new').addClass("color_class_new");
+					$("#col1").addClass("color_class");
+					$("#col2").addClass("color_class1");
+					$('#p2').removeClass("hidden"); */
+					
+			  		$("#col2").addClass("color_class_latest");
+					$('#p2').removeClass("hidden");
+					$('#arrow3').removeClass("hidden");
+					$('#icon3').removeClass("hidden");
+					
+			  	}else{
+			  		td16.innerHTML ="Severe";
+			  		str1="Severe";
+			  		feedback1 = str1;
+			  		/* $('#col1_new').addClass("color_class_new");
+					$("#col1").addClass("color_class");
+					$("#col2").addClass("color_class1");
+					$("#col3").addClass("color_class2");
+					$('#p3').removeClass("hidden"); */
+					
+			  		$("#col3").addClass("color_class_latest");
+					$('#p3').removeClass("hidden");
+					$('#arrow4').removeClass("hidden");
+					$('#icon4').removeClass("hidden");
+				 	
+			  	}
+			  	
+			  	
+			    //anxiety score
+			    score3 = Number(res3_a[0]) + Number(res3_a[1]) + Number(res3_a[2]) + Number(res3_a[3]) + Number(res3_a[4]) + Number(res3_a[5]) + Number(res3_a[6]); 
+			    
+			     
+			    if(score3 == 0){
+			    	td30.innerHTML ="None Reported";
+			    	str3="Mild";
+			    	/* feedback3 = str1;
+			    	$("#col4_new").addClass("color_class_new");
+					$('#p4_new').removeClass("hidden"); */
+					
+			    	$("#col4_new").addClass("color_class_latest");
+					$('#p4_new').removeClass("hidden");
+					$('#arrow5').removeClass("hidden");
+					$('#icon5').removeClass("hidden");
+					
+			    }else if(score3 > 0 && score3<=5){
+			    	 td30.innerHTML ="Mild";
+			    	 str3="Mild";
+			    	 feedback3 = str3;
+			    	 /* $("#col4_new").addClass("color_class_new");
+					 $("#col4").addClass("color_class");
+					 $('#p4').removeClass("hidden"); */
+					 
+			    	 $("#col4").addClass("color_class_latest");
+					 $('#p4').removeClass("hidden");
+					 $('#arrow6').removeClass("hidden");
+					 $('#icon6').removeClass("hidden");
+						
+			  	}else if(score3 > 5 && score3 <= 10){
+			  		td30.innerHTML ="Moderate";
+			  		str3="Moderate";
+			  		feedback3 = str3;
+			  		/* $("#col4_new").addClass("color_class_new");
+					$("#col4").addClass("color_class");
+					$("#col5").addClass("color_class1");
+					$('#p5').removeClass("hidden"); */
+					
+			  		$("#col5").addClass("color_class_latest");
+					$('#p5').removeClass("hidden");
+					$('#arrow7').removeClass("hidden");
+					$('#icon7').removeClass("hidden");
+					
+			  	}else{
+			  		td30.innerHTML ="Severe";
+			  		str3="Severe";
+			  		feedback3 = str3;
+			  		/* $("#col4_new").addClass("color_class_new");
+					$("#col4").addClass("color_class");
+					$("#col5").addClass("color_class1");
+					$("#col6").addClass("color_class2");
+					$('#p6').removeClass("hidden"); */
+					
+			  		$("#col6").addClass("color_class_latest");
+					$('#p6').removeClass("hidden");
+					$('#arrow8').removeClass("hidden");
+					$('#icon8').removeClass("hidden");
+			  	}
+			    
+			    
+			  	
+			 
+			     if(res2_b[2]==="Somewhat likely" || res2_b[2]==="Very likely" ||  (res2_b[2]==="Not at all likely" && res2_b[3]==="No")){
+			    	 
+			    	
+			    	td22.innerHTML="High";
+					str2="Severe";
+					/* $("#col7_new").addClass("color_class_new");
+					$("#col7").addClass("color_class");
+					$("#col8").addClass("color_class1");
+					$("#col9").addClass("color_class2");
+					$('#p9').removeClass("hidden"); */
+					
+					$("#col9").addClass("color_class_latest");
+					$('#p9').removeClass("hidden");
+					$('#arrow12').removeClass("hidden");
+					$('#icon12').removeClass("hidden");
+					
+			     }else if(res2_b[0]==="No" && res2_b[1]==="No" && res2_b[2]==="Not at all likely" && res2_b[3]==="Yes"){
+			    	
+			    		
+			    		td22.innerHTML = "Minimal";
+				        str2="Mild";
+				        /* $("#col7_new").addClass("color_class_new");
+						$("#col7").addClass("color_class");
+						//$("#col8").addClass("color_class1");
+						$('#p7').removeClass("hidden"); */
+						
+				        $("#col7").addClass("color_class_latest");
+						$('#p7').removeClass("hidden");
+						$('#arrow10').removeClass("hidden");
+						$('#icon10').removeClass("hidden");
+						
+						
+				        
+			    }else{
+			    	
+			    	 
+			    		
+			    		 td22.innerHTML="Low";
+						 str2="Moderate";
+						/*  $("#col7_new").addClass("color_class_new");
+						$("#col7").addClass("color_class");
+						$("#col8").addClass("color_class1");
+						$('#p8').removeClass("hidden"); */
+						
+						$("#col8").addClass("color_class_latest");
+						$('#p8').removeClass("hidden");
+						$('#arrow11').removeClass("hidden");
+						$('#icon11').removeClass("hidden");
+			    	 
+			    }
+			  	
+			   //current functioning
+				    
+				    score4 = Number(res3_b[1]) + Number( res3_b[2]) + Number( res3_b[3]) + Number( res3_b[4]) + Number( res3_b[5]); 
+				    
+				    if(score4 ==0){
+				    	td36.innerHTML = "None Reported";
+				    	str4="Mild";
+				    	/* $("#col10_new").addClass("color_class_new");
+						$('#p10_new').removeClass("hidden"); */
+						
+				    	$("#col10_new").addClass("color_class_latest");
+						$('#p10_new').removeClass("hidden");
+						$('#arrow13').removeClass("hidden");
+						$('#icon13').removeClass("hidden");
+				    }else if(score4>0 && score4<=10){
+						td36.innerHTML = "Mild";
+						str4="Mild";
+						/* $("#col10_new").addClass("color_class_new");
+						$("#col10").addClass("color_class");
+						$('#p10').removeClass("hidden"); */
+						
+						$("#col10").addClass("color_class_latest");
+						$('#p10').removeClass("hidden");
+						$('#arrow14').removeClass("hidden");
+						$('#icon14').removeClass("hidden");
+				  	}else if(score4 > 10 && score4 <= 20){
+				  		td36.innerHTML ="Moderate";
+				  		str4="Moderate";
+				  		/* $("#col10_new").addClass("color_class_new");
+						$("#col10").addClass("color_class");
+						$("#col11").addClass("color_class1");
+						$('#p11').removeClass("hidden"); */
+						
+				  		$("#col11").addClass("color_class_latest");
+						$('#p11').removeClass("hidden");
+						$('#arrow15').removeClass("hidden");
+						$('#icon15').removeClass("hidden");
+				  	}else{
+				  		td36.innerHTML ="Severe";
+				  		str4="Severe";
+				  		/* $("#col10_new").addClass("color_class_new");
+						$("#col10").addClass("color_class");
+						$("#col11").addClass("color_class1");
+						$("#col12").addClass("color_class2");
+						$('#p12').removeClass("hidden"); */
+						
+				  		$("#col12").addClass("color_class_latest");
+						$('#p12').removeClass("hidden");
+						$('#arrow16').removeClass("hidden");
+						$('#icon16').removeClass("hidden");
+						
+				  	}
+			  	
+			  	
+			  	
+				    if(str1 == "Severe" && str2 == "Severe" || str3 == "Severe" || str4 == "Severe"){
+					    
+				    	output = "We strongly recommend   you to seek face to face/direct professional help for   your mental health concerns. Mere reliance on PUSH-D will be very insufficient to help   you.<br>This feedback is based on a brief screening of your current depressive and anxiety symptoms. This is not meant to diagnose depression/anxiety disorder which is best done by meeting a health professional.";
+						document.getElementById("recommend").innerHTML = output;
+						document.getElementById("recommend").style.textAlign="justify";
+						document.getElementById("recommend").style.padding="50px";
+						document.getElementById("recommend").style.fontWeight="bold";    
+				    }else if((str1 == "Moderate" && str2=="Moderate") || str3 == "Moderate" || str4 == "Moderate"){
+					    
+				    	output = "You may register for and use PUSH-D. But  we  would  strongly  recommend   you to use   it  as a supplement  /add-on to face  to face   professional  treatment.<br>This feedback is based on a brief screening of your current depressive and anxiety symptoms. This is not meant to diagnose depression/anxiety disorder which is best done by meeting a health professional.";
+						document.getElementById("recommend").innerHTML = output;
+						document.getElementById("recommend").style.textAlign="justify";
+						document.getElementById("recommend").style.padding="50px";
+						document.getElementById("recommend").style.fontWeight="bold";    
+				    }else{
+					  
+				    	output = "You may register   for PUSH-D for self-help.<br>This feedback is based on a brief screening of your current depressive and anxiety symptoms. This is not meant to diagnose depression/anxiety disorder which is best done by meeting a health professional.";
+						document.getElementById("recommend").innerHTML = output;
+						document.getElementById("recommend").style.textAlign="justify";
+						document.getElementById("recommend").style.padding="50px";
+						document.getElementById("recommend").style.fontWeight="bold";
+					    }
+		   		
+		   		
+		   	} 
+			
+			 	  
+			} 
+			
+			},
+			error: function() {
+			alert("Error Occured due to " + serverURL + "users/" + userId + "/currSection");
+			} 
+				  
+			});
+		
+		});	
+		
+		function close_modal(){
+	   		
+	   		$('#feedbackmodal').modal('hide');
+	   		window.location.reload();
+	   	}
+		
+		function download_table(){
+			
+		    var tab_text="<table border='2px'><tr bgcolor='#87AFC6'>";
+		    var textRange; var j=0;
+		    
+		    tab = document.getElementById('table1'); // id of table
+		    for(j = 0 ; j < tab.rows.length ; j++) {     
+		    	tab_text=tab_text+tab.rows[j].innerHTML+"</tr>";
+		       }
+
+		    tab_text=tab_text+"</table>";
+		    tab_text= tab_text.replace(/<A[^>]*>|<\/A>/g, "");//remove if u want links in your table
+		    tab_text= tab_text.replace(/<img[^>]*>/gi,""); // remove if u want images in your table
+		    tab_text= tab_text.replace(/<input[^>]*>|<\/input>/gi, ""); // reomves input params
+
+		    var ua = window.navigator.userAgent;
+		    var msie = ua.indexOf("MSIE "); 
+
+		    if (msie > 0 || !!navigator.userAgent.match(/Trident.*rv\:11\./))      // If Internet Explorer
+		    {
+		        txtArea1.document.open("txt/html","replace");
+		        txtArea1.document.write(tab_text);
+		        txtArea1.document.close();
+		        txtArea1.focus(); 
+		        sa=txtArea1.document.execCommand("SaveAs",true,"Say Thanks to Sumit.xls");
+		    }  
+		    else                 //other browser not tested on IE 11
+		        sa = window.open('data:application/vnd.ms-excel,' + encodeURIComponent(tab_text));  
+
+		    return (sa);
+			
+		}
+
+		
+		//for search based on user_id
+		
+		$("#search").on("keyup", function() {
+		    var value = $(this).val();
+
+		    $("#table1 tr").each(function(index) {
+		        if (index !== 0) {
+
+		            $row = $(this);
+
+		            var id = $row.find('td:eq(2)').text();
+
+		            if (id.indexOf(value) !== 0) {
+		                $row.hide();
+		            }
+		            else {
+		                $row.show();
+		            }
+		        }
+		    });
+		});
+		
+		
+	</script> 
+</body>
+</html>

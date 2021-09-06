@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta charset="ISO-8859-1">
+<title>Push-d Registration</title>
+<link href="bs/css/bootstrap.min.css" rel="stylesheet">
+
+
+	<script src="bs/js/jquery-2.1.1.min.js"></script>
+	<script src="bs/js/jquery.cookie.js"></script>
+	<script src="bs/js/bootstrap.min.js"></script>
+	<style>
+	.checkbox_class{
+	height:25px;
+	width:25px;
+	
+	}
+	</style>
+	<body>
+	<div class="container" style="margin-top:40px;">
+<h3 style="text-align: center;">Terms & Conditions</h3>
+
+		<div class="container" id="new"
+			style="padding-right: 20px; padding-left: 20px; padding-top: 50px;padding-bottom:10px; border: 2px solid black;">
+			
+			
+			<h4 style="text-justify;">Registration-Evaluation process</h4>
+					<p style="text-justify;">For registering into the PUSH-D program, you are requested to complete an online initial evaluation process which requires you to fill in demographic details and answer a few questions about your mental health and wellbeing.<br><br>
+					Your data will be stored in a secure server and used to generate personalized recommendations for you. It would not be shared with any third parties. Any use/ dissemination  of the data  for  research purpose  at any point of time  will  NOT involve any  identifying information about any user and will be presented only in an annonymized,  aggregate/summary  format. </p>
+					<h4>Why   is personal information being requested?</h4>
+					<p style="text-justify;">It is  important  for us and the users  to understand  the  extent  to which  PUSH-D may be a  suitable tool  for a  given user  and whether the user  needs  to supplement  it  with  face  to face  professional  help.<br>
+					Based on the responses you provide during to the initial evaluation, you will receive a feedback on the level of depression, anxiety and your current functioning.  <br>
+					<br>You will also receive our recommendation regarding the suitability of PUSH-D app for your current concerns.<br>
+					For any clarification, you may mail us  at push.d.nimhans@gmail.com<br>
+					Your Consent is needed to proceed to Registration and Evaluation process.
+		
+			<span style="color:blue">I consent</span> <input type="checkbox" id="termscheck" class="checkbox_class">.</p>
+			<button type="button" class="btn btn-success" onclick="next_page()" style="margin-left: 44%; margin-right: 44%;" >Submit</button>
+			
+			
+		</div>
+</div>
+<script>
+function next_page(){
+	
+	
+		
+        if($('#termscheck').prop("checked") == true){
+            
+            window.location.href = "register1.html";
+        }
+        else if($('#termscheck').prop("checked") == false){
+            alert("Please provide  your consent  to proceed");
+            return false;
+        }
+        
+}
+</script>
+</body>
+</html>

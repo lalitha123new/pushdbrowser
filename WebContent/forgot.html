@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Push-D Forgot</title>
+<link href="bs/css/bootstrap.min.css" rel="stylesheet">
+<link href="css/signup.css" rel="stylesheet">
+
+<script src="bs/js/jquery-2.1.1.min.js"></script>
+<script src="bs/js/jquery.cookie.js"></script>
+<script>
+var url_path=window.location.href;
+
+var arr=url_path.split("?");
+var arr1=arr[1].split("=@");
+var dec = window.atob(arr1[1]);
+
+</script>
+</head>
+<body style="background-color:#FFF59D;">
+
+
+<div class = "container" >
+	<div class="wrapper">
+		<form name="Login_Form"  method="post"  class="form-signin">       
+		    <h3 class="form-signin-heading">Forgot password</h3>
+			  <hr class="colorgraph"><br>
+			  <input type="text" class="form-control" name="Username" id="username" value="" disabled/><br>
+			  <input type="text" class="form-control" name="Username" id="username1"  value="" disabled/><br>
+			  <input type="password" id ="password" class="form-control" name="Password" value=""  placeholder="Create password" required=""/>
+			  <input type="password" id="cpassword" class="form-control" name="cpassword" value=""  placeholder="Confirm password" required=""/>     		  
+			   	 
+			  <button class="btn btn-lg btn-primary btn-block"  onclick="forgot()" name="Submit" value="Login" type="button">Submit</button>  			
+		</form>			
+	</div>
+</div>
+
+<script>
+
+document.getElementById("username").value = dec;
+document.getElementById("username1").value = dec;
+</script>
+<script src="js/values.js"></script>
+<script src="js/registration.js"></script>
+</body>
+</html>

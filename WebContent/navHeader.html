@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/jquery-ui.min.css">
+
+
+<!-- default time style -->
+<link rel='stylesheet' type='text/css' href='css/timepicki.css'/>
+
+<!-- drop down time style -->
+ <link rel='stylesheet' type='text/css' href='css/jquery.timepicker.css'/> 
+
+<!-- clock time style -->
+<!-- <link rel='stylesheet' type='text/css' href='css/clockpicker.css'/>-->
+
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/inc.js"></script>
+
+
+<!-- default time style -->
+<script type='text/javascript' src='js/timepicki.js'></script> 
+ 
+ <!-- drop down time style -->
+<script type='text/javascript' src='js/timepicker-1.3.5/jquery.timepicker.js'></script>
+
+<!-- clock time style -->
+<script type='text/javascript' src='js/jquery-1.10.2.js'></script>
+<script type='text/javascript' src='js/jquery-1.12.0.min.js'></script>
+<script type='text/javascript' src='js/bootstrap.js'></script>
+<script type='text/javascript' src='js/bootstrap.min.js'></script>
+
+
+
+<script type='text/javascript'>
+
+var notification_count = 0;
+$(document).ready(function() {
+	
+
+	
+	
+	$(function(){
+		$(".datepicker").datepicker({ dateFormat: 'dd-mm-yy',minDate: 0 });
+	   	$('#timepicker').timepicker({});
+	   	
+		
+	});
+	
+	$.ajax({
+		  type: "GET",
+		  url: serverURL + "users/" + userId + "/currSubSection",
+		  success: function(data){
+			  sid = data['currentSection'];
+			  ssid = data['currentSubSection'];
+			 
+			  if(sid>=11){
+				  $('#logout_link1').addClass("hidden");
+				  $('#logout_link2').removeClass("hidden");
+				  
+			  }else{
+				  $('#logout_link1').removeClass("hidden");
+				  $('#logout_link2').addClass("hidden");
+				  
+			  }
+		  }
+			  
+        });
+	
+	
+	$.ajax({
+		  type: "GET",
+		  url: serverURL + "users/" + userId + "/pushdStatus",
+		  success: function(data){
+			  notification_count = data;
+			  console.log("pushdStatus-1-"+data);
+			  
+			  
+			  
+				// begin code for bell
+				var el = document.querySelector('.notification');
+
+				
+				    
+				    el.setAttribute('data-count', notification_count);
+				    console.log(el.getAttribute('data-count'));
+				    el.classList.remove('notify');
+				    el.offsetWidth = el.offsetWidth;
+				    el.classList.add('notify');
+				    if(notification_count >= 0){
+				        el.classList.add('show-count');
+				    }
+				    if(notification_count  == 0){
+				    	
+				    	$('#notify_div').addClass("invisible");
+				    	$('#notify_div1').removeClass("invisible");
+				    	document.getElementById("notify_div1").style.cursor = "default";
+				    	
+				    }
+				
+		  }
+			  
+      });
+	
+		
+	//end of  code for bell
+	
+});
+	
+function notify_message(){
+	var r = confirm("Do you want to read the message from the Push-D team?");
+	  if (r == true) {
+		  
+	    window.location.href = "message.jsp";
+	    $('#notify_btn').addClass("hidden");
+	    
+	  }
+	  
+	
+}
+
+
+</script>
+
+<style>
+
+.timepicker{
+z-index:-1000;
+
+}
+
+/* begin code for bell*/
+
+
+
+
+
+
+.notification {
+    display: inline-block;
+    position: relative;
+    padding: 0.6em;
+    /*background: #3498db;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 0.2em;*/
+    
+    background:#FFA726;
+    
+    
+    font-size: 1.3em;
+    
+    
+}
+
+.notification::before, 
+.notification::after {
+    color: #fff;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+   
+}
+
+.notification::before {
+    display: block;
+    content: "\f0f3";
+    font-family: "FontAwesome";
+    transform-origin: top center;
+}
+
+.notification::after {
+    font-family: Arial;
+    font-size: 0.7em;
+    font-weight: 700;
+    color:black;
+    position: absolute;
+    top: 5px;
+    right: -9px;
+    padding: 5px 8px;
+    line-height: 100%;
+    border: 2px black solid;
+    border-radius: 60px;
+    background: red;
+    opacity: 0;
+    content: attr(data-count);
+    opacity: 0;
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+    transition: transform, opacity;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-out;
+}
+
+.notification.notify::before {
+    -webkit-animation: ring 1.5s ease;
+    animation: ring 1.5s ease;
+}
+
+.notification.show-count::after {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+}
+
+@-webkit-keyframes ring {
+    0% {
+        -webkit-transform: rotate(35deg);
+    }
+    12.5% {
+        -webkit-transform: rotate(-30deg);
+    }
+    25% {
+        -webkit-transform: rotate(25deg);
+    }
+    37.5% {
+        -webkit-transform: rotate(-20deg);
+    }
+    50% {
+        -webkit-transform: rotate(15deg);
+    }
+    62.5% {
+        -webkit-transform: rotate(-10deg);
+    }
+    75% {
+        -webkit-transform: rotate(5deg);
+    }
+    100% {
+        -webkit-transform: rotate(0deg);
+    }
+}
+
+@keyframes ring {
+    0% {
+        -webkit-transform: rotate(35deg);
+        transform: rotate(35deg);
+    }
+    12.5% {
+        -webkit-transform: rotate(-30deg);
+        transform: rotate(-30deg);
+    }
+    25% {
+        -webkit-transform: rotate(25deg);
+        transform: rotate(25deg);
+    }
+    37.5% {
+        -webkit-transform: rotate(-20deg);
+        transform: rotate(-20deg);
+    }
+    50% {
+        -webkit-transform: rotate(15deg);
+        transform: rotate(15deg);
+    }
+    62.5% {
+        -webkit-transform: rotate(-10deg);
+        transform: rotate(-10deg);
+    }
+    75% {
+        -webkit-transform: rotate(5deg);
+        transform: rotate(5deg);
+    }
+    100% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+} 
+.disabledbutton {
+ pointer-events: none;
+ }
+.invisible{
+display:none;
+}
+/* end of code for bell*/
+
+</style>
+
+</head>
+
+<body oncontextmenu="return false">
+
+<nav class="navbar navbar-default" style="background-color: #FFA726; width:100%; padding-top: 0px; border-bottom: 5px solid #FFB74D;">
+	
+	<div class="container">
+	
+			<!-- Brand and toggle get grouped for better mobile display -->
+		
+			
+			<a class="navbar-brand" style="color: white;">PUSH - D</a>
+		
+		
+			<a class="navbar-brand pull-right" href="" id="logout_link1" data-toggle="modal" data-target="#logoutModal" style="color: white; text-decoration: none;"><small>Logout</small></a>
+			<a class="navbar-brand pull-right hidden" href="index.jsp" id="logout_link2" style="color: white; text-decoration: none;"><small>Logout</small></a>
+		
+		<!--  begin code for bell-->
+		
+   <div  id="notify_div" class="notification" onclick="notify_message()" text="jjk" title="New Message" style="float:right;margin-right:20px;cursor:pointer;margin-top:13px;"></div>
+   <div  id="notify_div1" class="notification invisible" text="jjk" title="No Message" style="float:right;margin-right:20px;cursor:pointer;margin-top:13px;"></div>
+    <!--  end of  code for bell-->
+		
+	</div><!-- /.container-fluid -->
+	
+</nav>
+
+
+<div class="modal fade" id="logoutModal" role="dialog">
+
+	<div class="modal-dialog">
+		<!-- Modal content-->
+		<div class="modal-content">
+		
+			<div class="modal-header modal-primary">
+				Logout
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+			</div>
+			
+			
+			<form>
+			
+				<div class="modal-body">
+				
+					<div class="form-group">
+							<label class="col-md-4 control-label">Do you want to log out now ?</label>
+						<div class="col-md-8">
+							<button type="button" class="col-md-5 btn btn-danger" data-dismiss="modal">NO </button>
+							<div class="col-md-2"></div>
+							<button type="button" class="col-md-5 btn btn-success" onclick="showLogout()">YES</button>
+						</div>
+						
+					</div>
+					
+					<div id="next-session" class="form-horizontal hidden">
+					
+						<div class="clearfix"></div>
+						<hr>
+						<p><strong>When would you like to schedule your next session?</strong></p>
+						<p>Please remember: We strongly recommend you to</p>
+						<ul>
+							<li>Schedule your session when you can give at least about 20 minutes of your time.</li>
+							<li>Avoid rapidly going over the content of various sections. Instead spend sufficient time for each section. You can go through section content at least twice for maximum benefits.</li>
+						<li>Select a date and time so as to receive a login reminder and keep making progress on PUSH-D</li>
+						
+							
+						</ul>
+						
+						<div class="form-group">
+							<label class="col-md-4 control-label">Select Date</label>
+							<div class="col-md-8">
+								<input id="datepicker" type="datetime" name='datepicker' class="form-control datepicker" readonly/>
+							</div>
+						</div>
+						
+						<div class="form-group">
+							<label class="col-md-4 control-label">Select Time</label>
+							<div class="col-md-8">
+								<input id="timepicker" type="datetime" name='timepicker' class="form-control timepicker" readonly/>
+							</div>
+						</div>
+						
+						<p class="text-center">See You Back !!!</p> 
+					</div>
+					
+					<div class="clearfix"></div>
+					
+				</div>
+				
+				<div class="modal-footer">
+					<button id="logoutBtn" type="button" disabled onclick="logout()"
+						class="btn btn-success pull-right">Logout</button>
+				</div>
+				
+			</form>
+			
+		</div>
+		
+	</div>
+	
+</div>
+
+</body>
+
+</html>

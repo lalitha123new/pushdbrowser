@@ -1,0 +1,106 @@
+
+<html>
+<head>
+	
+	<title>PUSH - D</title>
+
+	<!-- Bootstrap -->
+	<link href="bs/css/bootstrap.min.css" rel="stylesheet">
+	<link href="fa/css/font-awesome.min.css" rel="stylesheet">
+	<link href="css/slimscroll.css" rel="stylesheet">
+	<link href="css/signup.css" rel="stylesheet">
+	
+	
+  
+    <script src="bs/js/jquery-2.1.1.min.js"></script>
+    <script src="bs/js/jquery.session.js"></script>
+	<script src="bs/js/jquery.cookie.js"></script>
+    <script src="js/values.js"></script>
+    <script src="bs/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+    var url_path=window.location.href;
+    var arr=url_path.split("?");
+    var arr1=arr[1].split("=");
+    var dec = window.atob(arr1[1]);
+   
+  
+    </script>
+</head>
+<body style="background-color:#956787;">
+
+<div class = "container">
+	<div class="wrapper">
+		<form name="Login_Form"  method="post" class="form-signin" >   <!-- onsubmit="return signup()"   -->  
+		    <h3 class="form-signin-heading">Sign-up</h3>
+			  <hr class="colorgraph"><br>
+			  <input type="text" class="form-control" id="email_id" name="Username" value="" disabled="true"><br>
+			  <input type="text" class="form-control" name="Username"  id = "username" value = "" placeholder="Create username" required=""  /><br>
+			  <input type="password" class="form-control" name="Password"  id = "password" value = "" placeholder="Create password" required="" onfocus="this.placeholder = ''"/>
+			  <input type="password" class="form-control" name="cpassword" id = "cpassword" value = ""  placeholder="Confirm password" required="" onfocus="this.placeholder = ''"/>     		  			   	 
+			  <button class="btn btn-lg btn-primary btn-block"  name="Submit" onclick="signup() " type="Submit">Submit</button>  			
+		</form>	
+		<div id="snackbar1">Email is already register</div>
+		<div id="snackbar2">user created</div>		
+	</div>
+</div>
+
+
+	
+<script type="text/javascript">
+
+$("#email_id").val(dec);
+$("#username").val(dec);
+
+alert(dec);
+
+
+function signup(){
+	
+	var username = $('#username').val();
+	var password = $('#password').val();
+    var cpassword = $('#cpassword').val();
+	alert(serverURL + "users/regNewUser");
+	if(password == cpassword){
+		
+		alert("name: "+username+" password: "+password+" email: "+dec);
+		$.ajax({
+			  url: serverURL + "users/regNewUser",
+			  type: "POST",
+			  data:{name:username,password:password,email:dec},
+			  headers : {
+					'Content-Type' : 'application/x-www-form-urlencoded'
+				},
+			  success: function(data){
+				 
+				 
+				 if(data == "inactive"){
+					 alert("Email alredy exits");
+					
+				 }else {
+					 
+				 	  
+				 	 window.location = "http://localhost:8080/PUSHD-d/register1.html";
+				 	
+					 
+				 }
+				 
+				 
+			  },error: function() {
+				  alert("Error occured due to ");
+				 
+			  }
+		});	
+		
+		
+	}else{
+		
+		alert("Entered password is must be same");
+		return false
+		
+	}
+	
+	
+}
+</script>
+</body>
+</html>

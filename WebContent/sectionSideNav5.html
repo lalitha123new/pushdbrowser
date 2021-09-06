@@ -1,0 +1,63 @@
+<style>
+	.truncate {
+	    width: 120px;
+	    white-space: nowrap;
+	    overflow: hidden;
+	    text-overflow: ellipsis;
+	    display: inline-block;
+	    text-decoration: none;
+	}
+	a:focus, a:hover {
+	    color: #23527C;
+	    text-decoration: none;
+	}
+</style>
+<script type="text/javascript">
+    
+	$.get( serverURL + "users/" + userId + "/currSection", function( data ) {
+	
+		asid = data['activeSection'];
+		
+		$.get( serverURL + "sections/optional", function( data ) {
+			my2(data);
+		});	
+	});
+	
+	function my2(arr) {
+
+		var out = "";
+	    for(i = 0; i < arr.length; i++) {
+	
+	    	if(arr[i].sectionId == asid) {
+	    		out +=  '<div class="list-group-item list-group-item-info">' +
+							'<a href="#" onclick="getPage(`' + arr[i].sectionId + '`)"  id="section' + arr[i].sectionId + '" ' + 
+								'class="truncate" data-toggle="tooltip" data-placement="right" ' + 
+								'title="' + arr[i].sectionName + '">&emsp;' + 
+								(arr[i].sectionId - 10) + ' : ' + arr[i].sectionName + '</a></div>';
+	    	}
+	    	else {
+	    		out +=  '<div class="list-group-item">' +
+							'<a href="#" onclick="getPage(`' + arr[i].sectionId + '`)"  id="section' + arr[i].sectionId + '" ' + 
+								'class="truncate" data-toggle="tooltip" data-placement="right" ' + 
+								'title="' + arr[i].sectionName + '">&emsp;' + 
+								(arr[i].sectionId - 10) + ' : ' + arr[i].sectionName + '</a></div>';
+	    	}
+		}	    
+	    $("#list-optional").html(out);
+	}
+	
+</script>
+
+<ul class="nav nav-pills nav-stacked">
+	<li id="dashboard"><a href="home3.jsp">&emsp;<i class="fa fa-home">&emsp;Home</i></a></li>
+	<li id="section"><a href="section.jsp">&emsp;<i class="fa fa-tasks">&emsp;Essential Zone</i></a></li>
+	<li id="optional">
+		<a id="col" role="button" data-toggle="collapse" data-parent="#accordion" 
+			href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">&emsp;<i class="fa fa-tasks">&emsp;Optional Zone </i><span class="caret"></span></a>
+		<div id="collapseTwo" class="collapse out" role="tabpanel" aria-labelledby="headingOne">
+			<div class="list-group" id="list-optional">
+			</div>
+		</div>
+	</li>
+	<li id="workbook"><a href="workbook.jsp">&emsp;<i class="fa fa-tasks">&emsp;Workbook</i></a></li>
+</ul>

@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+
+<title>Push-d Registration</title>
+
+ <link href="bs/css/bootstrap.min.css" rel="stylesheet">
+ <link href="css/style.css" rel="stylesheet">
+ <link href="fa/css/font-awesome.min.css" rel="stylesheet">
+ <link href="css/register.css" rel="stylesheet">
+ 
+	<script src="bs/js/jquery-2.1.1.min.js"></script>
+	<script src="bs/js/jquery.cookie.js"></script>
+	<script src="bs/js/bootstrap.min.js"></script>
+ 	<script type="text/javascript">
+	history.forward();
+	</script> 
+
+</head>
+
+
+<body>
+
+
+<form name="registerForm" method = "post">
+		
+		<div class="center-container" style="width:100%;">
+		
+			
+			<center class="content-top1">
+				<p  class="no_blink" style="color:blue;font-weight:bold;font-size:18px;">Please  complete  the  registration process  in one  go  or   by re-logging  within  48 hours</p>
+			</center>
+			
+			<div class="content-top">
+			
+			<div class="header-div" style="background-color:#4C6BB5;width:100%;margin-left:auto;margin-right:auto;margin-bottom:30px;">
+			
+			<h1 class="header-w3ls">Registration</h1>
+			
+			</div>
+
+				
+				<div class="col-md-6">
+					<div class="form-group">
+						<label class="label-css">Age</label> <span>*</span> <input
+							 type="number" id="num1" 
+							onKeyUp="if(this.value.length==2){return false;}else if(this.value.length>2){this.value='';}"
+							class="form-control input" alt="Enter age" required="true">
+					</div>
+				</div>
+				
+
+				<div class="col-md-6">
+				<div class="form-group">
+						<label class="label-css">Mobile number</label> <input type="number"
+							id="num2" 
+							onKeyUp="if(this.value.length==10){return false;}else if(this.value.length>10){this.value='';}"
+							 class="form-control input" alt="Enter phone">
+						(You will receive  periodic  sms on mental health  care  and reminder messages  to log in,  as per  your plan)
+				</div>
+				</div> 
+				
+				<div class="col-md-6">
+				<div class="form-group">
+						<label class="label-css">Name of the City I live in</label> <span>*</span>
+						<input type="text" class="form-control input" 
+							alt="Enter city name" required="true" id = "city">
+				</div>
+				</div>
+				
+				
+				
+				<div class="col-md-6">
+
+				<div class="form-group">
+						<label class="label-css">Gender</label> <span>*</span>
+				<div class="radio">
+						<input id="radio-1" name="radio_gender" type="radio" value="male" required="true"><label
+								for="radio-1" class="radio-label">Male</label><input
+								id="radio-2" name="radio_gender" type="radio" value="female" required="true"><label
+								for="radio-2" class="radio-label">Female</label>
+				</div>
+				
+				</div>
+
+				</div>
+				
+				<div class="clear"></div>
+				
+
+				<div class="col-md-6">
+
+				<div class="form-group">
+						<label class="label-css">Highest level of education I have
+							completed <span>*</span></label> 
+				<div class="radio">
+							<input id="radio-3" name="radio_edu" type="radio"  value="1" required="true"><label
+								for="radio-3" class="radio-label">High school</label><input
+								id="radio-4" name="radio_edu" type="radio"  value="2" required="true"><label
+								for="radio-4" class="radio-label radio-pad">Pre-university
+							</label> <input id="radio-5" name="radio_edu" type="radio"  value="3" required="true"><label
+								for="radio-5" class="radio-label radio-pad">Under-graduation
+							</label> <input id="radio-0" name="radio_edu" type="radio"  value="4" required="true"><label
+								for="radio-0" class="radio-label radio-pad">Post
+								graduation </label>
+				</div>
+				
+				</div>
+
+				</div>
+
+				<div class="col-md-6">
+
+				<div class="form-group">
+						<label class="label-css">Which of the following describes
+							me the best currently? <span>*</span></label>
+				<div class="radio">
+						<input id="radio-6" name="radio_best" type="radio"  value="1" required="true"><label
+								for="radio-6" class="radio-label">Working</label><br> <input
+								id="radio-7" name="radio_best" type="radio"  value="2" required="true"><label
+								for="radio-7" class="radio-label radio-pad">Studying</label><br>
+						<input id="radio-8" name="radio_best" type="radio"  value="3" required="true"><label
+								for="radio-8" class="radio-label radio-pad">Being a
+								homemaker</label><br> <input id="radio-9" name="radio_best"
+								type="radio"  value="4" required="true"><label for="radio-9"
+								class="radio-label radio-pad">Searching for a job</label><br>
+						<input id="radio-10" name="radio_best" type="radio"  value="5" required="true"><label
+								for="radio-10" class="radio-label radio-pad">Retired</label>
+				</div>
+				
+				</div>
+
+				</div>
+
+				<div class="clear"></div>
+
+				<div class="col-md-6">
+
+				<div class="form-group">
+						<label class="label-css">Marital status </label> <span>*</span>
+				<div class="radio">
+							<input id="radio-11" name="radio_marry" type="radio" value="married"  required="true"><label
+								for="radio-11" class="radio-label">Married</label><br> <input
+								id="radio-12" name="radio_marry" type="radio" value="single" required="true"><label
+								for="radio-12" class="radio-label radio-pad">Single</label>
+				</div>
+				
+				</div>
+
+				</div>
+
+				<div class="col-md-6">
+
+				<div class="form-group">
+						<label class="label-css">Have you sought help from a
+							mental health professional any time in your life? <span>*</span></label> 
+				<div class="radio">
+						<input id="radio-20" name="radio_sought" type="radio" value="yes" required="true"><label
+								for="radio-20" class="radio-label">Yes</label><br> <input
+								id="radio-13" name="radio_sought" type="radio" value="no" required="true"><label
+								for="radio-13" class="radio-label radio-pad">No</label>
+				</div>
+				
+				</div>
+
+				</div>
+				
+				
+				<div class="clear"></div>
+
+				<div class="col-md-6">
+
+				<div class="form-group">
+						<label class="label-css">Do you think you are currently
+							dealing with a mental health problem? <span>*</span></label> 
+				<div class="radio">
+						<input id="radio-19" name="radio_deal" type="radio" value="yes" required="true"><label
+								for="radio-19" class="radio-label">Yes</label><br> <input
+								id="radio-14" name="radio_deal" type="radio" value="no" required="true"><label
+								for="radio-14" class="radio-label radio-pad">No</label> <br>
+						<input id="radio-15" name="radio_deal" type="radio" value="not sure" required="true"><label
+								for="radio-15" class="radio-label radio-pad">Not sure</label>
+					</div>
+					</div>
+
+					</div>
+				
+				
+					<div class="col-md-6">
+
+					<div class="form-group">
+					
+						<label class="label-css">Are you currently seeking help
+							from a professional for a mental health problem? <span>*</span></label>  
+						<div class="radio">
+						<input id="seek1" name="radio_seek" type="radio"  value="1"><label
+								for="seek1" class="radio-label">Yes, I am on
+								medication for mental health issues</label><br> <input
+								id="seek2" name="radio_seek" type="radio"  value="2"><label
+								for="seek2" class="radio-label radio-pad">Yes, I am
+								meeting a counselor </label><br> <input id="seek3" name="radio_seek"
+								type="radio"  value="3"><label for="seek3"
+								class="radio-label radio-pad">No</label>
+								<br> <input id="seek4" name="radio_seek"
+								type="radio"  value="4"><label for="seek4"
+								class="radio-label radio-pad">I  am on medication AND  counseling</label>
+					</div>
+					
+					</div>
+
+					</div>
+					
+					
+				<div class="clear"></div>
+		
+					
+					<div class="outside_container">
+					
+					<div class="buttons_reverse">
+					    <button type="button" onclick="next1()" class="btn btn-success" style="margin:10px 40px auto;">Create</button>
+						<!-- <button type="button"  id="nextbutton1" name="Submit" value="Submit" onclick="next1()" class="submit_button">Submit</button> 
+						<button type="button" id="nextpagebutton1"  name="Submit" value="Next" onclick = "nextpage()"  class="submit_button1 hidden">Next</button>-->
+						
+					</div>
+						 
+					<div class="clear"></div>
+				
+				
+				
+				
+			 </div>
+			 <!-- end of content top -->
+			 </div>
+
+
+			<div class="container">
+			<div class="pagination">
+  
+			  <a class="active" href="#">1</a>
+			  <a href="#">2</a>
+			  <a href="#">3</a>
+			  <a href="#">4</a>
+			  
+			</div>
+			</div>
+			
+			
+			
+			<div class="footer">
+			
+				<div>
+					<p class="copyright" style="color:black;">Copyright &copy; 2018 - NIMHANS</p>
+				</div>
+
+			</div>
+			
+		</div>	
+					
+					
+					
+	</form>
+	
+	<script src="js/values.js"></script>
+	<script src="js/registration.js"></script>
+	<script>
+	
+	
+	var srs_id = localStorage.getItem("srs_id");
+	//var srs_id = 1345;
+	
+	
+	var register1_array = [];
+	var register1_obj = {};
+	var register_info_obj = {};
+	var register_info_obj1 = {};
+	var age;
+	var mobileNumber;
+	
+	
+	function next1(){
+		
+		
+		
+		register1_obj.age = $('#num1').val();
+		
+		if(register1_obj.age < 18){
+			alert("This application is designed for only persons above 18.");
+			return false;
+		}
+		
+		register1_obj.gender = $('input[name=radio_gender]:checked').val();
+		register1_obj.education = $('input[name=radio_edu]:checked').val();
+		register1_obj.maritalStatus = $('input[name=radio_marry]:checked').val();
+	    register1_obj.id = srs_id;
+	    register1_obj.mobileNumber = $('#num2').val();
+	    
+	  
+		
+	    register_info_obj.city = $('#city').val();
+	    register_info_obj.best_val = $('input[name=radio_best]:checked').val();
+	    register_info_obj.sought = $('input[name=radio_sought]:checked').val();
+	    register_info_obj.deal = $('input[name=radio_deal]:checked').val();
+	    register_info_obj.seek = $('input[name=radio_seek]:checked').val();
+	
+	   
+	   
+	   
+	    register1_obj.reginfo=$('#city').val()+"#@@#"+$('input[name=radio_best]:checked').val()+"#@@#"+$('input[name=radio_sought]:checked').val()+"#@@#"+$('input[name=radio_deal]:checked').val()+"#@@#"+$('input[name=radio_seek]:checked').val();
+		register1_array.push(register1_obj);
+		
+		
+		if((register1_obj.reginfo) && (register1_obj.age) && (register1_obj.gender) && (register1_obj.education) && (register1_obj.id) && (register_info_obj.city) && (register_info_obj.best_val) && (register_info_obj.sought) && (register_info_obj.deal) && (register_info_obj.seek)){
+		
+		
+		
+		localStorage.setItem("register1_array_localstorage", JSON.stringify(register1_array[0]));
+		
+		var newArr1=JSON.stringify(register1_array[0]);
+			
+		$.ajax({
+			  type: "POST",
+			  url: serverURL + "users/regNewUserform/1",
+			  data: newArr1,
+			  headers: { 
+			        'Accept': 'application/json',
+			        'Content-Type': 'application/json' 
+			    },
+			  success: function(data){ 
+				 
+				 
+				  window.location.href="register2.html";
+			  },
+			  error: function() {
+				  alert("Error Occured");
+				  
+			  }
+		});
+		
+		 
+	} else{
+		
+		alert("all fields are mandatory");
+		return false;
+		
+	}// client validations
+
+	}
+	
+	function nextpage(){
+		//window.location.href="register2.html";
+	}
+	
+
+	</script>
+	
+	
+</body>
+
+</html>

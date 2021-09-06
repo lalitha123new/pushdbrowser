@@ -1,0 +1,53 @@
+package in.ac.nimhans.model;
+
+public class Link {
+
+	private String link;
+	private String rel;
+	private String sId;
+	private String ssId;
+	
+	public Link() {
+		
+	}
+	
+	public Link(String link, String rel) {
+		super();
+		this.link = link;
+		this.rel = rel;
+	}
+
+	public String getLink() {
+		return link;
+	}
+
+	public void setLink(String link) {
+		this.link = link;
+	}
+
+	public String getRel() {
+		return rel;
+	}
+
+	public void setRel(String rel) {
+		this.rel = rel;
+	}
+
+	public String getsId() {
+		return sId;
+	}
+
+	public void setsId(String sId) {
+		this.sId = sId;
+	}
+
+	public String getSsId() {
+		return ssId;
+	}
+
+	public void setSsId(String ssId) {
+		this.ssId = ssId;
+	}
+	
+	
+}

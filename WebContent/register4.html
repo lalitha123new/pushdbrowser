@@ -1,0 +1,1486 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta charset="ISO-8859-1">
+<title>Push-d Registration</title>
+<link href="bs/css/bootstrap.min.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+<link href="fa/css/font-awesome.min.css" rel="stylesheet">
+<link href="css/register.css" rel="stylesheet">
+
+	<script src="bs/js/jquery-2.1.1.min.js"></script>
+	<script src="bs/js/jquery.cookie.js"></script>
+	<script src="bs/js/bootstrap.min.js"></script>
+	
+	<script type="text/javascript">
+	history.forward();
+	</script> 
+	
+	<style>
+	
+	
+	.wsas_class{
+	
+	border:1px solid black;
+	padding-top:25px;
+	padding-bottom:25px;
+	
+	}
+	
+	.center_align {
+	text-align:center;
+	}
+	
+	
+	
+/* begin css code for earlier image design for feedback*/
+	@media ( min-width : 1281px) {
+	
+	#depress_new{
+	display:none;
+	}
+	#anxiety_new{
+	display:none;
+	}
+	#self_new{
+	display:none;
+	}
+	#daily_new{
+	display:none;
+	}
+	.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+	}
+
+/* Three image containers (use 25% for four, and 50% for two, etc) */
+.column1 {
+  float: left;
+  width: 50%;
+  padding-left: 95px;
+	}
+
+.column2 {
+  float: left;
+  width: 50%;
+  padding: 5px;
+	}
+
+/* Clear floats after image containers */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+	}
+
+.text-block {
+    position: absolute;
+    top: 75px;
+    left: 230px;
+   
+    color: white;
+    padding-left: 10px;
+    padding-right: 20px;
+	}
+
+.text-block1 {
+    position: absolute;
+    top: 175px;
+    left: 227px;
+   
+    color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+	}
+
+.text-block2 {
+    position: absolute;
+    top: 315px;
+    left: 225px;
+   
+    color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+	}
+	
+	.text-block3 {
+    position: absolute;
+    top: 460px;
+    left: 230px;
+   
+    color: white;
+    padding-left: 20px;
+   }
+   
+   .text-block4 {
+    position: absolute;
+    top: 100px;
+    left: 540px;
+   
+    color: white;
+    padding-right: 160px;
+   }
+   }
+   
+   @media ( min-width : 1025px) and (max-width: 1280px) {
+   
+   #depress_new{
+	display:none;
+	}
+	#anxiety_new{
+	display:none;
+	}
+	#self_new{
+	display:none;
+	}
+	#daily_new{
+	display:none;
+	}
+   
+   .centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+	}
+
+/* Three image containers (use 25% for four, and 50% for two, etc) */
+.column1 {
+  float: left;
+  width: 50%;
+  padding-left: 95px;
+	}
+
+.column2 {
+  float: left;
+  width: 50%;
+  padding: 5px;
+	}
+
+/* Clear floats after image containers */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+	}
+
+.text-block {
+    position: absolute;
+    top: 75px;
+    left: 230px;
+   
+    color: white;
+    padding-left: 10px;
+    padding-right: 20px;
+	}
+
+.text-block1 {
+    position: absolute;
+    top: 175px;
+    left: 227px;
+   
+    color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+	}
+
+.text-block2 {
+    position: absolute;
+    top: 315px;
+    left: 225px;
+   
+    color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+	}
+	
+	.text-block3 {
+    position: absolute;
+    top: 460px;
+    left: 230px;
+   
+    color: white;
+    padding-left: 20px;
+   }
+   
+   .text-block4 {
+    position: absolute;
+    top: 100px;
+    left: 540px;
+   
+    color: white;
+    padding-right: 160px;
+   }
+   }
+   
+   @media ( min-width : 768px) and (max-width: 1024px) {
+   
+   #depress_new{
+	display:none;
+	}
+	#anxiety_new{
+	display:none;
+	}
+	#self_new{
+	display:none;
+	}
+	#daily_new{
+	display:none;
+	}
+   
+    .centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+	}
+
+/* Three image containers (use 25% for four, and 50% for two, etc) */
+.column1 {
+  float: left;
+  width: 50%;
+  padding-left: 95px;
+	}
+
+.column2 {
+  float: left;
+  width: 50%;
+  padding: 5px;
+	}
+
+/* Clear floats after image containers */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+	}
+
+.text-block {
+    position: absolute;
+    top: 53px;
+    left: 180px;
+   
+    color: white;
+    padding-left: 10px;
+    padding-right: 20px;
+	}
+
+.text-block1 {
+    position: absolute;
+    top: 113px;
+    left: 167px;
+   
+    color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+	}
+
+.text-block2 {
+    position: absolute;
+    top: 197px;
+    left: 164px;
+   
+    color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+	}
+	
+	.text-block3 {
+    position: absolute;
+    top: 284px;
+    left: 180px;
+   
+    color: white;
+    padding-left: 20px;
+   }
+   
+   .text-block4 {
+    position: absolute;
+    top: 82px;
+    left: 400px;
+   
+    color: white;
+    padding-right: 160px;
+   }
+   }
+   
+    @media ( min-width : 990px) and (max-width: 1024px) and (orientation:
+	landscape) {
+	
+	#depress_new{
+	display:none;
+	}
+	#anxiety_new{
+	display:none;
+	}
+	#self_new{
+	display:none;
+	}
+	#daily_new{
+	display:none;
+	}
+	 .centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+	}
+
+/* Three image containers (use 25% for four, and 50% for two, etc) */
+.column1 {
+  float: left;
+  width: 50%;
+  padding-left: 95px;
+	}
+
+.column2 {
+  float: left;
+  width: 50%;
+  padding: 5px;
+	}
+
+/* Clear floats after image containers */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+	}
+
+.text-block {
+    position: absolute;
+    top: 76px;
+    left: 237px;
+   
+    color: white;
+    padding-left: 10px;
+    padding-right: 20px;
+	}
+
+.text-block1 {
+    position: absolute;
+    top: 180px;
+    left: 226px;
+   
+    color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+	}
+
+.text-block2 {
+    position: absolute;
+    top: 317px;
+    left: 218px;
+   
+    color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+	}
+	
+	.text-block3 {
+    position: absolute;
+    top: 456px;
+    left: 234px;
+   
+    color: white;
+    padding-left: 20px;
+   }
+   
+   .text-block4 {
+    position: absolute;
+    top: 110px;
+    left: 553px;
+   
+    color: white;
+    padding-right: 160px;
+   }
+	}
+	
+   @media ( min-width : 768px) and (max-width: 989px) and (orientation:
+	landscape) {
+	
+	#depress_new{
+	display:none;
+	}
+	#anxiety_new{
+	display:none;
+	}
+	#self_new{
+	display:none;
+	}
+	#daily_new{
+	display:none;
+	}
+	
+	 .centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+	}
+
+/* Three image containers (use 25% for four, and 50% for two, etc) */
+.column1 {
+  float: left;
+  width: 50%;
+  padding-left: 95px;
+	}
+
+.column2 {
+  float: left;
+  width: 50%;
+  padding: 5px;
+	}
+
+/* Clear floats after image containers */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+	}
+
+.text-block {
+    position: absolute;
+    top: 53px;
+    left: 180px;
+   
+    color: white;
+    padding-left: 10px;
+    padding-right: 20px;
+	}
+
+.text-block1 {
+    position: absolute;
+    top: 113px;
+    left: 167px;
+   
+    color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+	}
+
+.text-block2 {
+    position: absolute;
+    top: 197px;
+    left: 164px;
+   
+    color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+	}
+	
+	.text-block3 {
+    position: absolute;
+    top: 284px;
+    left: 180px;
+   
+    color: white;
+    padding-left: 20px;
+   }
+   
+   .text-block4 {
+    position: absolute;
+    top: 82px;
+    left: 400px;
+   
+    color: white;
+    padding-right: 160px;
+   }
+	}
+	
+	@media ( min-width : 481px) and (max-width: 767px) {
+	
+	#img1{
+	display:none;
+	}
+	
+	#img2{
+	display:none;
+	}
+	
+	
+   .close {
+   
+  opacity: .9;
+  
+	}
+	
+	.button {
+    
+    width: 115px;
+    height: 25px;
+    background: #4E9CAF;
+    padding: 5px;
+    text-align: center;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+ 	}
+ 	}
+ 	@media ( min-width : 320px) and (max-width: 480px) {
+	
+	#img1{
+	display:none;
+	}
+	
+	#img2{
+	display:none;
+	}
+	
+	
+   .close {
+   
+  opacity: .9;
+  
+	}
+	
+	.button {
+    
+    width: 115px;
+    height: 25px;
+    background: #4E9CAF;
+    padding: 5px;
+    text-align: center;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+ 	}
+ 	}
+ 	
+ 	/* end of  css code for earlier image design for feedback*/
+ 	
+ 	
+ 	
+ 	
+ 	td{
+ 	/* border:1px solid black; */
+ 	}
+ 	
+ 	th{
+ 	text-align:center;
+ 	}
+ 	.score_table{
+ 	 margin: 0 auto;
+	 table-layout: fixed;
+	 width : 100%;
+	 }
+	 
+	 .color_class_new{
+	 background-color:#dee7f4;
+	 }
+	 .color_class{
+	 background-color:#66EAE8;
+	 text-align:center;
+	 
+	 font-size:25px;
+	 }
+	 
+	 .color_class1{
+	 background-color:#0080ff;
+	 }
+	 .color_class2{
+	 background-color: #000099;
+	 }
+	 
+	 .color_class_latest{
+	 background-color:white;
+	 }
+	 
+	 hr.new1 {
+  border: 1px solid black;
+}
+
+.checkbox input[type=checkbox]{
+margin-left:0;
+}
+	
+	
+	.gradient_class{
+	 background-color: red; /* For browsers that do not support gradients */
+ 	 background-image: linear-gradient(to right, #dee7f4 , #66EAE8,#0080ff,#000099);
+	} 
+	
+	
+	i {
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+  
+  text-align:center;
+  
+}
+	
+	
+	.up {
+  transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+}
+   </style>
+
+</head>
+
+<body>
+
+
+<form name="registerForm" method = "post">
+		
+		<div class="center-container">
+		
+		
+			
+			<center class="content-top1">
+				<p  class="no_blink" style="color:blue;font-weight:bold;font-size:18px;">Please  complete  the  registration process  in one  go  or   by re-logging  within  48 hours</p>
+			</center>
+			
+			<div class="content-top">
+			
+			<div class="header-div" style="background-color:#4C6BB5;width:100%;margin-left:auto;margin-right:auto;margin-bottom:30px;">
+			<h1 class="header-w3ls">Registration</h1>
+			</div>
+			
+				
+					 <div class="col-md-12">
+
+					<div class="form-group">
+					<div class="col-md-9">
+						<label class="label-css">Are you currently interested to meet a mental health professional?</label> <span>*</span>
+						
+						</div>
+						<div class ="dropdown col-md-3">
+						<select id = "select_interested" class="drop_down" style = "background-color:#F0F3FA;">
+						<option  class ="option_class" selected>Select</option>
+						<option value="No"  class ="option_class">No</option>
+      					<option value="Yes" class ="option_class">Yes</option>
+						
+						</select>
+						</div>
+						
+						</div>
+						
+					</div> 
+					
+					 <div class="clear"></div>
+					
+					<div class="col-md-12">
+
+					<div class="form-group">
+					<div class="col-md-9">
+						<label class="label-css">     
+                        Are you currently interested in using any kind of internet based self-help program for mental health?    
+  						<span>*</span></label>
+  						</div>
+						<div class ="dropdown col-md-3">
+						<select  id = "select_internet" class="drop_down" style = "background-color:#F0F3FA;">
+						<option  class ="option_class" selected>Select</option>
+						<option value="No"  class ="option_class">No</option>
+      					<option value="Yes" class ="option_class">Yes</option>
+					     </select>
+					</div>
+						
+					</div>
+						
+					</div> 
+					
+					 <div class="clear"></div>
+					
+					<div class="col-md-12">
+
+					<div class="form-group">
+							<label class="label-css">I was/am interested to know about PUSH-D because... (You can select more than one option) <span>*</span>
+							</label>
+					<div class="checkbox">
+							<input id="check-1" name="check5" type="checkbox"  value="1"><label
+							for="check-1" class="check-label">I do not have finances to seek face to face mental health consultation </label><br> <br>
+								
+								
+								<input id="check-2" name="check5" type="checkbox"  value="2"><label for="check-2"
+								class="check-label check-pad">I do not have the time to go for face to face counselling/therapy sessions </label><br><br>
+								
+								
+								 <input id="check-3" name="check5" type="checkbox"  value="3"><label for="check-3"
+								class="check-label check-pad">There is no mental health professional close to my location </label><br><br>
+								
+								
+								 <input id="check-4" name="check5" type="checkbox"  value="4"><label for="check-4"
+								class="check-label check-pad">I am not comfortable in meeting someone face to face and talking about my problem</label>  <br><br>
+								
+								
+								 <input id="check-5" name="check5" type="checkbox"  value="5"><label
+								for="check-5" class="check-label check-pad">To help my loved one who has a mental health problem</label><br><br> 
+								
+								
+								<input id="check-6" name="check5" type="checkbox"  value="6"><label for="check-6"
+								class="check-label check-pad">I prefer to do something on my own rather than rely on meeting some expert</label><br> <br>
+							
+							
+								<input id="check-7" name="check5" type="checkbox"  value="7"><label
+								for="check-7" class="check-label check-pad">I do not think my problem is severe to need face to face contact with a mental health professional </label><br><br>
+								
+								
+								 <input id="check-8" name="check5" type="checkbox"  value="8"><label
+								for="check-8" class="check-label check-pad">I like the flexibility in terms of when I do things to help myself. </label><br><br>
+								
+								<input id="check-9" name="check5" type="checkbox"  value="9"><label
+								for="check-9" class="check-label check-pad">Just curious </label><br><br>
+								
+								<input id="check-10" name="check5" type="checkbox"  value="10"><label
+								for="check-10" class="check-label check-pad">Wanted to see how I can use it for my patients/clients </label><br><br>
+								
+								<input id="check-11" name="check5" type="checkbox"  value="11"><label
+								for="check-11" class="check-label check-pad">I am not satisfied with counselling/therapy I am receiving/have received </label><br><br>
+								
+								<input id="check-12" name="check5" type="checkbox"  value="12"><label
+								for="check-12" class="check-label check-pad">I want to learn and do something to prevent problems in future although I am on treatment/therapy</label><br><br>
+								
+								<input id="check-13" name="check5" type="checkbox"  value="13" onclick="enbfield(this)"><label
+								for="check-13" class="check-label check-pad">Any other..... (Please describe in the space below)</label><br><br>
+					<div class = "col-md-5">
+						<input type="text" id="any_other" class="form-control input"
+							alt="Enter city name" required=true>
+					</div>
+					</div>
+					</div>
+
+					</div> 
+
+				
+				
+				<div class="clear"></div>
+				
+			
+				<input type="hidden" ng-model="personal" value="1"/>
+				
+				<div class="clear"></div>
+
+				
+				<div class="col-md-12" style="text-align: center; margin-top: 20px;">
+				
+					<button type="button" id="submit4_button" style="border-radius: 18px; width:30%;height:40px;" class="btn btn-success" onclick="submit_data()" id="submit" name="Submit" value="Submit">Submit</button>
+				</div>
+				
+				<div class="clear"></div> 
+				
+			 </div>
+			 <!-- end of content top -->
+			
+			<div class="container">
+			<div class="pagination">
+  
+			  <a href="#">1</a>
+			  <a href="#">2</a>
+			  <a href="#">3</a>
+			  <a  class="active" href="#">4</a>
+			  
+			</div>
+			</div> 
+			
+			
+			<div class="footer">
+			
+				<div>
+					<p class="copyright" style="color:black;">Copyright &copy; 2018 - NIMHANS</p>
+				</div>
+
+			</div>
+			
+					
+					
+					</div><!-- end of center container  -->
+
+			
+	</form>
+	
+	
+	
+	
+	<!-- new feedback design with color blocks -->
+	<div class="modal fade" id="feedbackmodal" role="dialog">
+		<div class="modal-dialog modal-lg">
+		
+			<!-- Modal content-->
+			<div class="modal-content">
+				<div class="modal-header modal-header-success" style="background: #4CAF50;color: white">
+				<button type="button" class="btn btn-success" onclick="next_modal()" style="float:right;" data-dismiss="modal">&times;</button>
+				<!--  <a href="http://localhost:8080/PUSHD-d/" class="close">&times;</a>-->
+					<h5><b>FEEDBACK</b></h5>
+				</div>
+				
+				<div class="modal-body text-justify">
+				
+				<div class="center-container">
+				
+				<div class="col-md-9">
+				<!-- <h5 style="text-align:left;margin-bottom:40px;">Our gauge of You:<br><br>-->
+				<br><br>
+				Based on your response, this is how we rate you, on current mood and  functioning indicators.</h5>
+				</div>
+				
+				<div class="col-md-3">
+				<!-- new table added -->
+				 <table style="margin-left:50px;">
+					<tr style="margin-bottom:10px;">
+					<td style="background-color:#dee7f4;width:25px;height:25px;"></td><td style="border:none;"><span style="text-align:right;margin-left:10px;">None</span></td>
+					<!-- <br><span style="text-align:right;margin-left:10px;"> Reported</span> -->
+					</tr>
+					</table><br>
+					
+					<table style="margin-left:50px;">
+					<tr style="margin-bottom:10px;">
+					<td style="background-color:#66EAE8;width:25px;height:25px;"></td><td style="border:none;"><span style="text-align:right;margin-left:10px;">Mild</span></td>
+					</tr>
+					</table><br>
+				
+					<table style="margin-left:50px;">
+					<tr>
+					<td style="background-color:#0080ff;width:25px;height:25px;"></td><td style="border:none;"><span style="text-align:right;margin-left:10px;">Moderate</span></td>
+					</tr>
+					</table><br>
+				
+					<table style="margin-left:50px;">
+					<tr>
+					<td style="background-color:#000099;width:25px;height:25px;"></td><td style="border:none;"><span style="text-align:right;margin-left:10px;">Severe</span></td>
+					</tr>
+					</table>
+					
+				</div>
+				<div class="clear"></div>
+				
+				<br><br>
+				
+				
+				
+				
+				<div class="col-md-1"><span style="font-weight:bold;text-align:right">Depressive Symptoms</span></div>
+				<div class="col-md-1 feedback_label" style="text-align:right;padding-right:0px;"><p>None 
+			</p></div>
+				
+				<div class="col-md-9">
+				
+					<table class="score_table">
+					
+					
+					
+					<tbody>
+					
+					<tr class="gradient_class">
+					
+					<td style="height:20px;" id=""><p id="" class="hidden" style="color:black;text-align:center;font-weight:bold;">None Reported</p></td>
+					<td style="height:20px;" id=""><p id="" class="hidden" style="color:black;text-align:center;font-weight:bold;">Your Score</p></td>
+					<td id=""><p id="" class="hidden" style="color:black;text-align:center;font-weight:bold;">Your Score</p></td>
+					<td id=""><p id="" class="hidden" style="color:black;text-align:center;font-weight:bold;">Your Score</p></td>
+					
+					</tr>
+					
+					</tbody>
+					</table>
+					<table class="score_table">
+					
+					
+					
+					<tbody>
+					
+					<tr>
+					
+					<td style="height:20px;" id="arrow1"><p id="icon1" class="hidden" style="color:black;text-align:center;font-weight:bold;"><span class="glyphicon glyphicon-arrow-up"></span></p></td>
+					
+					<td style="height:20px;" id="arrow2"><p id="icon2" class="hidden" style="color:black;text-align:center;font-weight:bold;"><span class="glyphicon glyphicon-arrow-up"></span></p></td>
+					<td id="arrow3"><p id="icon3" class="hidden" style="color:black;text-align:center;font-weight:bold;"><span class="glyphicon glyphicon-arrow-up"></span></p></td>
+					<td id="arrow4"><p id="icon4" class="hidden" style="color:black;text-align:center;font-weight:bold;"><span class="glyphicon glyphicon-arrow-up"></span></p></td>
+					
+					</tr>
+					
+					</tbody>
+					</table>
+					
+					<table class="score_table">
+					
+					
+					
+					<tbody>
+					
+					<tr>
+					
+					<td style="height:20px;" id="col1_new"><p id="p1_new" class="hidden" style="color:black;text-align:center;font-weight:bold;">None Reported</p></td>
+					
+					<td style="height:20px;" id="col1"><p id="p1" class="hidden" style="color:black;text-align:center;font-weight:bold;">Your Score</p></td>
+					<td id="col2"><p id="p2" class="hidden" style="color:black;text-align:center;font-weight:bold;">Your Score</p></td>
+					<td id="col3"><p id="p3" class="hidden" style="color:black;text-align:center;font-weight:bold;">Your Score</p></td>
+					
+					</tr>
+					
+					</tbody>
+					</table><br><br><br>
+					
+				</div>
+				<div class="col-md-1 feedback_label" style="text-align:left;"><p>Severe</p></div>
+				
+				<div class="clear"></div>
+				
+				
+				
+				<div class="col-md-1"><span style="font-weight:bold;">Anxiety Symptoms</span></div>
+				<div class="col-md-1 feedback_label" style="text-align:right;padding-right:0px;"><p>None</p></div>
+				
+				<div class="col-md-9">
+				
+					<table class="score_table">
+					
+					
+					<tbody>
+					<tr class="gradient_class">
+					<td style="height:20px;" id=""><p id="" class="hidden" style="color:black;text-align:center;font-weight:bold;">None Reported</p></td>
+					<td style="height:20px;" id=""><p id="" class="hidden" style="color:black;text-align:center;font-weight:bold;">Your Score</p></td>
+					<td id=""><p id="" class="hidden" style="color:black;text-align:center;font-weight:bold;">Your Score</p></td>
+					<td id=""><p id="" class="hidden" style="color:white;text-align:center;font-weight:bold;">Your Score</p></td>
+					</tr>
+					</tbody>
+					</table>
+					
+					<table class="score_table">
+					
+					
+					
+					<tbody>
+					
+					<tr>
+					
+					<td style="height:20px;" id="arrow5"><p id="icon5" class="hidden" style="color:black;text-align:center;font-weight:bold;"><span class="glyphicon glyphicon-arrow-up"></span></p></td>
+					
+					<td style="height:20px;" id="arrow6"><p id="icon6" class="hidden" style="color:black;text-align:center;font-weight:bold;"><span class="glyphicon glyphicon-arrow-up"></span></p></td>
+					<td id="arrow7"><p id="icon7" class="hidden" style="color:black;text-align:center;font-weight:bold;"><span class="glyphicon glyphicon-arrow-up"></span></p></td>
+					<td id="arrow8"><p id="icon8" class="hidden" style="color:black;text-align:center;font-weight:bold;"><span class="glyphicon glyphicon-arrow-up"></span></p></td>
+					
+					</tr>
+					
+					</tbody>
+					</table>
+					
+					<table class="score_table">
+					
+					
+					<tbody>
+					<tr>
+					<td style="height:20px;" id="col4_new"><p id="p4_new" class="hidden" style="color:black;text-align:center;font-weight:bold;">None Reported</p></td>
+					<td style="height:20px;" id="col4"><p id="p4" class="hidden" style="color:black;text-align:center;font-weight:bold;">Your Score</p></td>
+					<td id="col5"><p id="p5" class="hidden" style="color:black;text-align:center;font-weight:bold;">Your Score</p></td>
+					<td id="col6"><p id="p6" class="hidden" style="color:black;text-align:center;font-weight:bold;">Your Score</p></td>
+					</tr>
+					</tbody>
+					</table><br>
+					<br><br>
+					
+				</div>
+				<div class="col-md-1 feedback_label" style="text-align:left;"><p>Severe</p></div>
+				<div class="clear"></div>
+				
+				
+				
+				<div class="col-md-1"><span style="font-weight:bold;">Self-rated Suicidal Thoughts</span></div>
+				<div class="col-md-1 feedback_label" style="text-align:right;padding-right:0px;"><p>None</p></div>
+				
+				<div class="col-md-9">
+				
+					<table class="score_table">
+					
+					
+					<tbody>
+					<tr class="gradient_class">
+					<td style="height:20px;" id=""><p id="" class="hidden" style="color:black;text-align:center;font-weight:bold;">None Reported</p></td>
+					<td style="height:20px;" id=""><p id="" class="hidden" style="color:black;text-align:center;font-weight:bold;">Your Score<br>(Minimal)</p></td>
+					<td id=""><p id="" class="hidden" style="color:black;text-align:center;font-weight:bold;">Your Score<br>(Low)</p></td>
+					<td id=""><p id="" class="hidden" style="color:black;text-align:center;font-weight:bold;">Your Score<br>(High)</p></td>
+					</tr>
+					</tbody>
+					</table>
+					
+					<table class="score_table">
+					
+					
+					<tbody>
+					<tr>
+					<td style="height:20px;" id="arrow9"><p id="icon9" class="hidden" style="color:black;text-align:center;font-weight:bold;"><span class="glyphicon glyphicon-arrow-up"></span></p></td>
+					<td style="height:20px;" id="arrow10"><p id="icon10" class="hidden" style="color:black;text-align:center;font-weight:bold;"><span class="glyphicon glyphicon-arrow-up"></span></p></td>
+					<td id="arrow11"><p id="icon11" class="hidden" style="color:black;text-align:center;font-weight:bold;"><span class="glyphicon glyphicon-arrow-up"></span></p></td>
+					<td id="arrow12"><p id="icon12" class="hidden" style="color:black;text-align:center;font-weight:bold;"><span class="glyphicon glyphicon-arrow-up"></span></p></td>
+					</tr>
+					</tbody>
+					</table>
+					
+					<table class="score_table">
+					
+					
+					<tbody>
+					<tr>
+					<td style="height:20px;" id="col7_new"><p id="p7_new" class="hidden" style="color:black;text-align:center;font-weight:bold;">None Reported</p></td>
+					<td style="height:20px;" id="col7"><p id="p7" class="hidden" style="color:black;text-align:center;font-weight:bold;">Your Score<br>(Minimal)</p></td>
+					<td id="col8"><p id="p8" class="hidden" style="color:black;text-align:center;font-weight:bold;">Your Score<br>(Low)</p></td>
+					<td id="col9"><p id="p9" class="hidden" style="color:black;text-align:center;font-weight:bold;">Your Score<br>(High)</p></td>
+					</tr>
+					</tbody>
+					</table><br><br><br>
+					
+				</div>
+				<div class="col-md-1 feedback_label" style="text-align:left;"><p>Severe</p></div>
+				<div class="clear"></div>
+				
+				
+				
+				<div class="col-md-1"><span style="font-weight:bold;">Interference With<br> Daily Functioning</span></div>
+				<div class="col-md-1 feedback_label" style="text-align:right;padding-right:0px;"><p>None</p></div>
+				
+				<div class="col-md-9">
+					<table class="score_table">
+					
+					
+					<tbody>
+					<tr class="gradient_class">
+					<td style="height:20px;" id=""><p id="" class="hidden" style="color:black;text-align:center;font-weight:bold;">None Reported</p></td>
+					<td style="height:20px;" id=""><p id="" class="hidden" style="color:black;text-align:center;font-weight:bold;">Your Score</p></td>
+					<td id=""><p id="" class="hidden" style="color:black;text-align:center;font-weight:bold;">Your Score</p></td>
+					<td id=""><p id="" class="hidden" style="color:white;text-align:center;font-weight:bold;">Your Score</p></td>
+					</tr>
+					</tbody>
+					</table>
+					
+					<table class="score_table">
+					
+					
+					<tbody>
+					<tr>
+					<td style="height:20px;" id="arrow13"><p id="icon13" class="hidden" style="color:black;text-align:center;font-weight:bold;"><span class="glyphicon glyphicon-arrow-up"></span></p></td>
+					<td style="height:20px;" id="arrow14"><p id="icon14" class="hidden" style="color:black;text-align:center;font-weight:bold;"><span class="glyphicon glyphicon-arrow-up"></span></p></td>
+					<td id="arrow15"><p id="icon15" class="hidden" style="color:black;text-align:center;font-weight:bold;"><span class="glyphicon glyphicon-arrow-up"></span></p></td>
+					<td id="arrow16"><p id="icon16" class="hidden" style="color:black;text-align:center;font-weight:bold;"><span class="glyphicon glyphicon-arrow-up"></span></p></td>
+					</tr>
+					</tbody>
+					</table>
+					
+					<table class="score_table">
+					
+					
+					<tbody>
+					<tr>
+					<td style="height:20px;" id="col10_new"><p id="p10_new" class="hidden" style="color:black;text-align:center;font-weight:bold;">None Reported</p></td>
+					<td style="height:20px;" id="col10"><p id="p10" class="hidden" style="color:black;text-align:center;font-weight:bold;">Your Score</p></td>
+					<td id="col11"><p id="p11" class="hidden" style="color:black;text-align:center;font-weight:bold;">Your Score</p></td>
+					<td id="col12"><p id="p12" class="hidden" style="color:black;text-align:center;font-weight:bold;">Your Score</p></td>
+					</tr>
+					</tbody>
+					</table><br><br><br>
+					
+				</div>
+				<div class="col-md-1 feedback_label" style="text-align:left;"><p>Severe</p></div>
+				
+				<div class="clear"></div>
+				
+				<p id="recommend" style="font-size:15px;text-align:center;"></p>
+				
+				<p id="feedback1" class="hidden" style="color:darkblue;"><b> 	You are experiencing mild severity of depressive symptoms.<br>
+					 	You report minimal I disturbance in your functioning. <br>
+					 	 	In addition, you report no significant anxiety symptoms.<br>
+					 	 	Or <br>
+					 	 	 In addition   you report minimal anxiety symptoms.<br><br><br>
+					 	 	 You may register   for PUSH-D for self-help. <br><br>
+					 	 	 Please   remember that PUSH-D is   not a tool for providing diagnosis, nor it is a substitute for professional   consultation and treatment. Seeking face to face professional consultation is useful   for provide an accurate and comprehensive evaluation of  mental health  issues. </b></p>
+					
+					<p id="feedback2" class="hidden" style="color:darkblue;"><b> 	You are experiencing moderate severity of depressive symptoms. <br>
+					 			Your responses indicate absence of significant suicidal thoughts or a sense of control over such thoughts. <br>
+					 	 		You have indicated clinically significant level/ moderate severity of disturbance in your functioning.<br>
+					 	 	 	In addition, you report mild/moderate level of anxiety symptoms.<br><br>
+					 	 	 	You may register for and use PUSH-D. But  we  would  strongly  recommend   you to use   it  as a supplement  /add-on to face  to face   professional  treatment.<br><br><br>
+					 	 	 	
+								Please   remember that PUSH-D is   not a tool for providing diagnosis, nor it is a substitute for professional   consultation and treatment. Seeking face to face professional consultation is useful   for provide an accurate and comprehensive evaluation of mental health  issues. 
+					 	 	 	</b></p>
+					 	 	 	
+					 	 	 	
+					<p id="feedback3" class="hidden" style="color:darkblue;"><b>You are experiencing severe depressive symptoms.<br>
+					Your responses indicate presence of suicidal thoughts and difficulties in controlling such thoughts<br>
+					You have indicated clinically significant level/severe/ moderate severity of- disturbance in your functioning.<br>
+					In addition,   you have indicated mild/moderate/severe anxiety symptoms.<br><br><br>
+					We strongly recommend   you to seek face to face/direct professional help for   your mental health concerns. Mere reliance on PUSH-D will be very insufficient to help   you. We can provide    you guidance on seeking referral with a mental health professional in   your  region, if  you so desire Let us know  if   you need   such help in finding  a mental health professional  and  we  will try  to help  with that. Once   you have initiated  treatment,   you can  let us know/ request   your doctor  to contact  us and  we  can  re-examine  the  suitability of PUSH-D  for  you at that  point.  Email for contacting us: push.d.nimhans@gmail.com</b></p>
+				
+				</div>
+				
+				<div class="modal-footer">
+					
+					<button type="button" class="btn btn-success" onclick="next_modal()" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end of new design -->
+	
+	<!-- message Modal -->
+<div class="modal fade" id="message_Modal"  role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" onclick="next_page()" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Message</h4>
+      </div>
+      <div class="modal-body">
+        <p>You have  completed  the registration -evaluation process.You can start using PUSH-D  by logging in. But  please  remember that our  recommendation to  you is based on  the  responses you provided. Your registration is valid for a period of 3 months.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-success" onclick="next_page()" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div><!-- end of message modal -->
+
+		<div class="modal fade" id="complete" role="dialog">
+		<div class="modal-dialog" >
+			<!-- Modal content-->
+			<div class="modal-content">
+
+				<div class="text-justify" style="padding: 20px;">Please complete the form to get the feedback</div>
+				<div class="modal-footer">
+					
+					<button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="js/values.js"></script>
+	<script src="js/registration.js"></script>
+	<script>
+	
+	$('#any_other').prop('disabled',true);
+	var retrievedData1 = localStorage.getItem("register1_array_localstorage");
+	var register1_array = JSON.parse(retrievedData1);
+	
+	
+	var retrievedData2 = localStorage.getItem("register2_array_localstorage");
+	var register2_array = JSON.parse(retrievedData2);
+	
+	
+	var retrievedData3 = localStorage.getItem("register3_array_localstorage");
+	var register3_array = JSON.parse(retrievedData3);
+	
+	
+	var register4_array = [];
+	var register4_check_array = [];
+	var register4_obj = {};
+	
+	var new_obj_form4={};
+	var form4_data1;
+	var form4_data2;
+	
+	
+	
+	var srs_id = localStorage.getItem("srs_id");
+	
+	
+	var str1 = "Mild";
+	var str2 = "Moderate";
+	var str3 = "Severe";
+	
+	
+	
+	var feedback1;
+	var feedback2;
+	var feedback3;
+	var feedback4;
+	var output;
+	
+	$('#any_other').prop('disabled',true);
+	
+	function enbfield(){
+		$('#any_other').prop('disabled',false);
+		
+		}
+	
+	
+	function submit_data(){
+		
+		
+	register4_obj.register4_q1 = $('#select_interested').find(":selected").text(); 
+	register4_obj.register4_q2 = $('#select_internet').find(":selected").text(); 
+		
+	form4_data1=$('#select_interested').find(":selected").text()+"#"+$('#select_internet').find(":selected").text();
+		
+		$('input[name="check5"]:checked').each(function() {
+			
+			form4_data2+=$(this).val()+"@";
+			register4_check_array.push($(this).val());
+
+			});
+		
+		
+		register4_obj.register4_check_text = $("#any_other").val();
+		register4_obj.reginfo=form4_data1+"#@@#"+form4_data2;
+		register4_obj.id=srs_id;
+		
+		
+		register4_obj.register4_check_options = register4_check_array;
+		register4_array.push(register4_obj);
+		
+		
+		//depression screener
+		
+		if(register2_array.register2_screener1_totalScore1==0){
+			feedback1 = str1;
+			
+			$('#col1_new').addClass("color_class_latest");
+			$('#p1_new').removeClass("hidden");
+			$('#arrow1').removeClass("hidden");
+			$('#icon1').removeClass("hidden");
+			
+		}else if((register2_array.register2_screener1_totalScore1>0) && (register2_array.register2_screener1_totalScore1<=5)){
+			feedback1 = str1;
+			//$('#col1_new').addClass("color_class_new");
+			
+			$('#col1').addClass("color_class_latest");
+			$('#p1').removeClass("hidden");
+			$('#arrow2').removeClass("hidden");
+			$('#icon2').removeClass("hidden");
+		}else if(register2_array.register2_screener1_totalScore1 > 5 && register2_array.register2_screener1_totalScore1<=10){
+			feedback1 = str2;
+			//$('#col1_new').addClass("color_class_new");
+			//$("#col1").addClass("color_class");
+			
+			$("#col2").addClass("color_class_latest");
+			$('#p2').removeClass("hidden");
+			$('#arrow3').removeClass("hidden");
+			$('#icon3').removeClass("hidden");
+			
+		}else{
+			feedback1 = str3;
+			//$('#col1_new').addClass("color_class_new");
+			//$("#col1").addClass("color_class");
+			//$("#col2").addClass("color_class1");
+			
+			$("#col3").addClass("color_class_latest");
+			$('#p3').removeClass("hidden");
+			$('#arrow4').removeClass("hidden");
+			$('#icon4').removeClass("hidden");
+		 	
+		}
+		
+		
+		
+		/*self-rated suicidability thoughts score*/
+		
+		if(register2_array.register2_screener2_totalScore2=="Mild risk"){
+			feedback2 = str1;
+			//$("#col7").addClass("color_class");
+			
+			$("#col7").addClass("color_class_latest");
+			$('#p7').removeClass("hidden");
+			$('#arrow10').removeClass("hidden");
+			$('#icon10').removeClass("hidden");
+			
+			
+		}else if(register2_array.register2_screener2_totalScore2=="Moderate risk"){
+
+			feedback2 = str2;
+			//$("#col7_new").addClass("color_class_new");
+			//$("#col8").addClass("color_class1");
+			
+			$("#col8").addClass("color_class_latest");
+			$('#p8').removeClass("hidden");
+			$('#arrow11').removeClass("hidden");
+			$('#icon11').removeClass("hidden");
+			
+		}else if(register2_array.register2_screener2_totalScore2=="High risk"){
+			feedback2 = str3;
+			//$("#col7_new").addClass("color_class_new");
+			//$("#col7").addClass("color_class");
+			//$("#col8").addClass("color_class1");
+			
+			$("#col9").addClass("color_class_latest");
+			$('#p9').removeClass("hidden");
+			$('#arrow12').removeClass("hidden");
+			$('#icon12').removeClass("hidden");
+		}
+			
+		
+		
+		/*anxiety screener score*/
+		
+		if(register3_array.register3_screener1_totalScore1 ==0){
+			
+			feedback3 = str1;
+			$("#col4_new").addClass("color_class_latest");
+			$('#p4_new').removeClass("hidden");
+			$('#arrow5').removeClass("hidden");
+			$('#icon5').removeClass("hidden");
+			
+			
+			
+		}else if((register3_array.register3_screener1_totalScore1>0) && (register3_array.register3_screener1_totalScore1<=5)){
+			feedback3 = str1;
+			//$("#col4_new").addClass("color_class_new");
+			$("#col4").addClass("color_class_latest");
+			$('#p4').removeClass("hidden");
+			$('#arrow6').removeClass("hidden");
+			$('#icon6').removeClass("hidden");
+			
+		}else if(register3_array.register3_screener1_totalScore1 >5 && register3_array.register3_screener1_totalScore1<=10 ){
+			
+			feedback3 = str2;
+			//$("#col4_new").addClass("color_class_new");
+			//$("#col4").addClass("color_class");
+			
+			$("#col5").addClass("color_class_latest");
+			$('#p5').removeClass("hidden");
+			$('#arrow7').removeClass("hidden");
+			$('#icon7').removeClass("hidden");
+			
+			}else {
+				
+			feedback3 = str3;
+			//$("#col4_new").addClass("color_class_new");
+			//$("#col4").addClass("color_class");
+			//$("#col5").addClass("color_class1");
+			
+			$("#col6").addClass("color_class_latest");
+			$('#p6').removeClass("hidden");
+			$('#arrow8').removeClass("hidden");
+			$('#icon8').removeClass("hidden");
+		}
+		
+		
+		
+		/*current functioning*/
+		
+		
+		if(register3_array.register3_screener2_totalScore2==0){
+			feedback4 = str1;
+			$("#col10_new").addClass("color_class_latest");
+			$('#p10_new').removeClass("hidden");
+			$('#arrow13').removeClass("hidden");
+			$('#icon13').removeClass("hidden");
+		}else if((register3_array.register3_screener2_totalScore2>0) && (register3_array.register3_screener2_totalScore2<=10)){
+			feedback4 = str1;
+			//$("#col10_new").addClass("color_class_new");
+			
+			$("#col10").addClass("color_class_latest");
+			$('#p10').removeClass("hidden");
+			$('#arrow14').removeClass("hidden");
+			$('#icon14').removeClass("hidden");
+		}else if(register3_array.register3_screener2_totalScore2 >10 && register3_array.register3_screener2_totalScore2<=20 ){
+			feedback4 = str2;
+			//$("#col10_new").addClass("color_class_new");
+			//$("#col10").addClass("color_class");
+			
+			$("#col11").addClass("color_class_latest");
+			$('#p11').removeClass("hidden");
+			$('#arrow15').removeClass("hidden");
+			$('#icon15').removeClass("hidden");
+		}else {
+			feedback4 = str3;
+			//$("#col10_new").addClass("color_class_new");
+			//$("#col10").addClass("color_class");
+			//$("#col11").addClass("color_class1");
+			
+			$("#col12").addClass("color_class_latest");
+			$('#p12').removeClass("hidden");
+			$('#arrow16').removeClass("hidden");
+			$('#icon16').removeClass("hidden");
+		}
+	
+		
+	
+	
+	//displaying the recommendations from push-d team on the right side of the modal
+	
+	if(feedback1 == str3 && feedback2==str3 || feedback3 == str3 || feedback4 == str3){
+		output = "We strongly recommend   you to seek face to face/direct professional help for   your mental health concerns. Mere reliance on PUSH-D will be very insufficient to help   you.<br>This feedback is based on a brief screening of your current depressive and anxiety symptoms. This is not meant to diagnose depression/anxiety disorder which is best done by meeting a health professional.";
+		document.getElementById("recommend").innerHTML = output;
+		document.getElementById("recommend").style.textAlign="justify";
+		document.getElementById("recommend").style.padding="50px";
+		document.getElementById("recommend").style.fontWeight="bold";
+		}else if(feedback1 == str2 && feedback2==str2 || feedback3 == str2 || feedback4 == str2){
+		output = "You may register for and use PUSH-D. But  we  would  strongly  recommend   you to use   it  as a supplement  /add-on to face  to face   professional  treatment.<br>This feedback is based on a brief screening of your current depressive and anxiety symptoms. This is not meant to diagnose depression/anxiety disorder which is best done by meeting a health professional.";
+		document.getElementById("recommend").innerHTML = output;
+		document.getElementById("recommend").style.textAlign="justify";
+		document.getElementById("recommend").style.padding="50px";
+		document.getElementById("recommend").style.fontWeight="bold";
+		}else {
+		output = "You may register   for PUSH-D for self-help.<br>This feedback is based on a brief screening of your current depressive and anxiety symptoms. This is not meant to diagnose depression/anxiety disorder which is best done by meeting a health professional.";
+		document.getElementById("recommend").innerHTML = output;
+		document.getElementById("recommend").style.textAlign="justify";
+		document.getElementById("recommend").style.padding="50px";
+		document.getElementById("recommend").style.fontWeight="bold";
+		}
+	
+	
+	var newArr1=JSON.stringify(register4_obj);
+	
+	var check_13 = $('#check-13').is(":checked");
+	
+
+if((register4_check_array.length > 0) && (register4_obj.register4_q1 != "Select") && (register4_obj.register4_q2 != "Select")){
+	if((check_13 == true && (register4_obj.register4_check_text != "")) || check_13 == false ){
+	
+		$.ajax({
+			  type: "POST",
+			  url: serverURL + "users/regNewUserform/4",
+			  data: newArr1,
+			 
+			  headers: { 
+			        'Accept': 'application/json',
+			        'Content-Type': 'application/json' 
+			    },
+			  success: function(data){ 
+				
+				$('#feedbackmodal').modal("show");
+				 
+			  },
+			  error: function() {
+				  console.log("Error Occured");
+				 
+			  }
+		});
+		
+	
+	}else{
+		
+		alert("Please  enter  your response in the  box  at the end");
+		register4_check_array = [];
+		return false;
+		 
+		
+	}
+	
+	
+	
+   }else{
+	   alert("all fields are mandatory");
+	   register4_check_array = [];
+	   return false;
+	  
+ }
+	
+		
+		
+	}
+	
+	
+	function next_modal(){
+		
+		$('#feedbackmodal').modal('hide');
+		window.location.href = "message_feedback.html";
+		
+	}
+	
+	function next_page(){
+		if ($(window).width() < 500) {
+			window.location.href = "googleplay.html";
+		}else
+		window.location.href = "index.jsp";
+		
+	}
+	</script>
+	
+	
+
+</body>
+</html>

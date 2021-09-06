@@ -1,0 +1,73 @@
+<!-- Modal -->
+	<div class="modal fade" id="reviewModal" role="dialog">
+		<div class="modal-dialog">
+			<form id="reviewForm">
+			<!-- Modal content-->
+			<div class="modal-content">
+				<div class="modal-header modal-header-success">
+					<h5>Thank You !</h5>
+				</div>
+				<div class="modal-body text-justify">
+					<p>About the last section that you completed: (please check one item)</p>
+					<div class="radio">
+						<label>
+							<input type="radio" name="review" value="1">
+							I did not use this
+						</label> 
+				  	</div>
+				  	<div class="radio">
+						<label>
+							<input type="radio" name="review" value="2">
+							I tried using it
+						</label> 
+				  	</div>
+				  	<div class="radio">
+						<label>
+							<input type="radio" name="review" value="3">
+							I will try to use this
+						</label> 
+				  	</div>
+				  	<div class="radio">
+						<label>
+							<input type="radio" name="review" value="4">
+							I used it and it was somewhat helpful
+						</label> 
+				  	</div>
+				  	<div class="radio">
+						<label>
+							<input type="radio" name="review" value="5">
+							I used it and it was quite helpful
+						</label> 
+				  	</div>
+				</div>
+				<div class="modal-footer">
+					<button id="submitReview" type="button" class="btn btn-primary">Submit</button>
+				</div>
+			</div>
+			</form>
+		</div>
+	</div>
+
+<script>
+	$("#submitReview").click(function () {
+		
+		formData = $("#reviewForm").serialize();
+		
+		if(formData == "") {
+			alert("Please check one item");	
+		}
+		else {
+			$.ajax({
+				  type: "POST",
+				  url: serverURL + "users/" + userId + "/sections/" + sectionId + "/review",
+				  data: formData,
+				  success: function() {
+						$('#reviewModal').modal("hide");
+				  },
+				  error: function() {
+					  alert("Error occured due to " + serverURL + "sections/" + sectionId + "/review");
+				  } 
+			});
+		}
+	});
+</script>	

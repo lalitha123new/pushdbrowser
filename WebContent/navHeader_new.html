@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/jquery-ui.min.css">
+
+
+
+<!-- default time style -->
+<link rel='stylesheet' type='text/css' href='css/timepicki.css'/>
+
+<!-- drop down time style -->
+ <link rel='stylesheet' type='text/css' href='css/jquery.timepicker.css'/> 
+
+
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/inc.js"></script>
+
+<!-- js files for timepicker -->
+
+<!-- default time style -->
+  <script type='text/javascript' src='js/timepicki.js'></script> 
+ 
+ <!-- drop down time style -->
+<script type='text/javascript' src='js/timepicker-1.3.5/jquery.timepicker.js'></script>
+
+<!-- clock time style -->
+<script type='text/javascript' src='js/jquery-1.10.2.js'></script>
+<script type='text/javascript' src='js/jquery-1.12.0.min.js'></script>
+<script type='text/javascript' src='js/bootstrap.js'></script>
+<script type='text/javascript' src='js/bootstrap.min.js'></script>
+
+
+
+<script type='text/javascript'>
+
+
+$(document).ready(function() {
+	
+
+	
+	
+	$(function(){
+		$(".datepicker").datepicker({ dateFormat: 'dd-mm-yy',minDate: 0 });
+	   	$('#timepicker').timepicker({});
+	   	
+	  
+		
+	});
+	
+	$.ajax({
+		  type: "GET",
+		  url: serverURL + "users/" + userId + "/currSubSection",
+		  success: function(data){
+			  sid = data['currentSection'];
+			  ssid = data['currentSubSection'];
+			 	
+			  
+			  if(sid>=11){
+				  $('#logout_link1').addClass("hidden");
+				  $('#logout_link2').removeClass("hidden");
+				  
+			  }else{
+				  $('#logout_link1').removeClass("hidden");
+				  $('#logout_link2').addClass("hidden");
+				  
+			  }
+		  }
+			  
+        });
+	
+});
+
+
+
+
+	
+</script>
+
+<style>
+
+.timepicker{
+z-index:-1000;
+
+}
+
+
+</style>
+
+</head>
+
+<body oncontextmenu="return false">
+
+<nav class="navbar navbar-default" style="background-color: #FFA726; width:100%; padding-top: 0px; border-bottom: 5px solid #FFB74D;">
+	
+	<div class="container">
+	
+			<!-- Brand and toggle get grouped for better mobile display -->
+		
+			
+			<a class="navbar-brand" style="color: white;">PUSH - D</a>
+		
+		
+			<a class="navbar-brand pull-right" href="" id="logout_link1" data-toggle="modal" data-target="#logoutModal" style="color: white; text-decoration: none;"><small>Logout</small></a>
+			<a class="navbar-brand pull-right hidden" href="index.jsp" id="logout_link2" style="color: white; text-decoration: none;"><small>Logout</small></a>
+		
+		
+    
+	</div><!-- /.container-fluid -->
+	
+</nav>
+
+
+<div class="modal fade" id="logoutModal" role="dialog">
+
+	<div class="modal-dialog">
+		<!-- Modal content-->
+		<div class="modal-content">
+		
+			<div class="modal-header modal-primary">
+				Logout
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+			</div>
+			
+			
+			<form>
+			
+				<div class="modal-body">
+				
+					<div class="form-group">
+							<label class="col-md-4 control-label">Do you want to log out now ?</label>
+						<div class="col-md-8">
+							<button type="button" class="col-md-5 btn btn-danger" data-dismiss="modal">NO </button>
+							<div class="col-md-2"></div>
+							<button type="button" class="col-md-5 btn btn-success" onclick="showLogout()">YES</button>
+						</div>
+						
+					</div>
+					
+					<div id="next-session" class="form-horizontal hidden">
+					
+						<div class="clearfix"></div>
+						<hr>
+						<p><strong>When would you like to schedule your next session?</strong></p>
+						<p>Please remember: We strongly recommend you to</p>
+						<ul>
+							<li>Schedule your session when you can give at least about 20 minutes of your time.</li>
+							<li>Avoid rapidly going over the content of various sections. Instead spend sufficient time for each section. You can go through section content at least twice for maximum benefits.</li>
+						<li>Select a date and time so as to receive a login reminder and keep making progress on PUSH-D</li>
+						
+							
+						</ul>
+						
+						<div class="form-group">
+							<label class="col-md-4 control-label">Select Date</label>
+							<div class="col-md-8">
+								<input id="datepicker" type="datetime" name='datepicker' class="form-control datepicker" readonly/>
+							</div>
+						</div>
+						
+						<div class="form-group">
+							<label class="col-md-4 control-label">Select Time</label>
+							<div class="col-md-8">
+								<input id="timepicker" type="datetime" name='timepicker' class="form-control timepicker" readonly/>
+							</div>
+						</div>
+						
+						<p class="text-center">See You Back !!!</p> 
+					</div>
+					
+					<div class="clearfix"></div>
+					
+				</div>
+				
+				<div class="modal-footer">
+					<button id="logoutBtn" type="button" disabled onclick="logout()"
+						class="btn btn-success pull-right">Logout</button>
+				</div>
+				
+			</form>
+			
+		</div>
+		
+	</div>
+	
+</div>
+
+</body>
+
+</html>

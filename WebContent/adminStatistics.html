@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+
+<title>Admin - Statistics</title>
+
+	<!-- Bootstrap -->
+	<link href="bs/css/bootstrap.min.css" rel="stylesheet">
+	<link href="fa/css/font-awesome.min.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+	<link href="css/daterangepicker.css" rel="stylesheet">
+	<!-- <link href="css/daterangepicker.css" rel="stylesheet"> -->
+
+	<script src="bs/js/jquery-2.1.1.min.js"></script>
+    <script src="bs/js/jquery.cookie.js"></script>
+    <script src="js/values.js"></script>
+    <script src="js/inc.js"></script>
+   	<script src="bs/js/bootstrap.min.js"></script>
+   	<script src="js/moment.min.js"></script>
+   	<script src="js/daterangepicker.min.js"></script>
+   	
+   
+   
+   	
+   	<script type="text/javascript">
+   	history.forward();
+	
+	
+	</script>
+	
+   
+ <style>
+     
+   
+     
+    #table{
+    
+    background-color:white;
+    border:2px solid black;
+    width:80%;
+    margin: 0 auto;
+    
+    }
+    
+    .header_class{
+    
+    background-color:#FFF59D;
+    border:2px solid black;
+    text-align:center;
+    height:60px;
+    font-size:17px;
+    
+    }
+    
+    .className {
+    background-color:#FFF59D;
+    border:2px solid black;
+    
+    height:40px;
+    padding-left:5px;
+    text-align:center;
+    }
+    .className1 {
+    background-color:#FFF59D;
+   
+    height:50px;
+    padding-left:5px;
+    text-align:center;
+    }
+    
+ </style>
+    
+</head>
+
+<body class="bgcolor" oncontextmenu="return false">
+
+<nav class="navbar navbar-inverse navbar-static-top">
+	<div class="container">
+		<!-- Brand and toggle get grouped for better mobile display -->
+		<div class="navbar-header col-md-10">
+			<button type="button" class="navbar-toggle collapsed"
+				data-toggle="collapse" data-target="#navbar-collapse-1"
+				aria-expanded="false">
+				<span class="sr-only">Toggle navigation</span> <span
+					class="icon-bar"></span> <span class="icon-bar"></span> <span
+					class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand active" href="index.jsp">PUSH-D</a>
+		</div>
+		<div class="col-md-1" style="padding: 10px 10px 0px 25px;">
+			<a href="viewUsers.jsp" type="button" class="btn btn-success"
+				data-toggle="tooltip" data-placement="top" title="Home"><i
+				class="glyphicon glyphicon-home"></i></a>
+		</div>
+		<!-- Collect the nav links, forms, and other content for toggling -->
+		<div class="collapse navbar-collapse col-md-1" id="navbar-collapse-1">
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="index.jsp">Logout</a></li>
+			</ul>
+		</div>
+		<!-- /.navbar-collapse -->
+	</div>
+	<!-- /.container --> </nav>
+
+
+
+
+<div class="container-fluid" style="height: 100%;padding-top:10px;">
+
+
+
+
+<div class="container"></div>
+	<div class="row" style="padding: 20px 100px;">
+	<div class="container">
+	<!-- <hr> -->
+			
+			<table class="table" id="table">
+				<thead>
+				<tr>
+						<th class="header_class" style="border-bottom:2px solid black; color:blue">Category</th>
+						<th class="header_class" style="border-bottom:2px solid black; color:blue">Number</th>
+				</tr>
+				</thead>
+				
+				<tbody id="table-body">
+				
+				<tr>
+				<td class="className">Number of Views</td>
+				<td id="views" class="className"></td>
+				</tr>
+				
+				<tr>
+				<td class="className">Number of Logins</td>
+				<td id="logins" class="className"></td>
+				</tr>
+				
+				<tr>
+				<td class="className">Number of Registered Users</td>
+				<td id="users_registered" class="className"></td>
+				</tr>
+				
+				<tr>
+				<td class="className">Number of Requests for Registration</td>
+				<td id="reg_requests" class="className"></td>
+				</tr>
+				
+				<tr>
+				<td class="className">Number of Users Who Completed All Sections</td>
+				<td id="user_completed_all" class="className"></td>
+				</tr>
+				
+				<tr>
+				<td class="className">Number of Users Who Have Not Completed All Sections</td>
+				<td id="user_not_completed_all" class="className"></td>
+				</tr>
+				
+				<tr>
+				<th class="className1" colspan="2" style="border:2px solid black; color:blue">Number of Logins By DeviceType</th>
+				</tr>
+				
+				<tr>
+				<td class="className">Desktop Browser</td>
+				<td id="login_desktop" class="className"></td>
+				</tr>
+				
+				<tr>
+				<td class="className">Mobile Browser</td>
+				<td id="login_mob_browser"class="className"></td>
+				</tr>
+				
+				<tr>
+				<td class="className">Mobile App</td>
+				<td id="login_mob_app" class="className"></td>
+				</tr>
+				
+				
+				</tbody>
+			</table>
+			
+	</div>	
+	</div>
+	</div>
+
+
+
+	<script>
+		 $(function() {
+		 $('input[name="daterange"]').daterangepicker({
+		    opens: 'left'
+		  }, function(start, end, label) {
+		    
+		  });
+		});
+		 
+		 
+		 //ajax call to get analytics data 
+		 $.ajax({
+			  type: "GET",
+			  url: serverURL + "users/usagestats",
+			  success: function(data){
+				  $("#views").append(data.website_visits_count);
+				  $("#logins").append(data.noflogins);
+				  $("#users_registered").append(data.registrated_users);
+				  $("#reg_requests").append(data.registration_request_count);
+				  $("#user_completed_all").append(data.completedAllSections);
+				  $("#user_not_completed_all").append(data.notcompletedAllSections);
+				  $("#login_desktop").append(data.nofloginsByDesktop);
+				  $("#login_mob_browser").append(data.nofloginsByMobiBrowser);
+				  $("#login_mob_app").append(data.nofloginsByApp);
+			  },
+			  error: function() {
+				  alert("Error occured due to missed session Please login Again..");
+				  
+			  } 
+		});
+</script>
+	
+	
+</body>
+</html>
