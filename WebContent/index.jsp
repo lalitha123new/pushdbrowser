@@ -9,7 +9,7 @@
 	<meta http-equiv="Cache-Control" content="no-cache">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-	<title>PUSH - D</title>
+	<title>PUSH - D1</title>
 
 	<!-- Bootstrap -->
 	<link href="bs/css/bootstrap.min.css" rel="stylesheet">
