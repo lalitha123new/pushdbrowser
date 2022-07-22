@@ -459,8 +459,11 @@ public void sendEmail(String dest, String subject, String body) {
 class SMTPAuthenticator extends javax.mail.Authenticator {
 
  public PasswordAuthentication getPasswordAuthentication() {
-  String d_email = "nimhans.pushd@gmail.com";
-            String d_password = "nimhans@123#";
+	 		String d_email = "nimhans.pushd@gmail.com";
+            //String d_password = "nimhans@123#";
+	 		//String d_password = "tbktpvinadrpjkiw";
+	 		String d_password = "anntokzouuedkyaa";
+	 		
   return new PasswordAuthentication(d_email, d_password);
  }
 }
@@ -510,12 +513,14 @@ public void emailWithAttachment(int user_id) throws SQLException{
        
 
        // Sender's email ID needs to be mentioned
-       String from = "nimhans.pushd@gmail.com";
-
+      	String from = "nimhans.pushd@gmail.com";
        final String username = "nimhans.pushd@gmail.com";//change accordingly
-       final String password = "nimhans@123#";//change accordingly
+       //final String password = "nimhans@123#";//change accordingly
+       //final String password = "tbktpvinadrpjkiw";
+       final String password = "anntokzouuedkyaa";
+       
+      
 
-       // Assuming you are sending email through relay.jangosmtp.net
        String host =  "smtp.gmail.com";
 
          Properties props = new Properties();

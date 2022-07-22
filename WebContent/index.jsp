@@ -9,7 +9,7 @@
 	<meta http-equiv="Cache-Control" content="no-cache">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-	<title>PUSH - D1</title>
+	<title>PUSH - D</title>
 
 	<!-- Bootstrap -->
 	<link href="bs/css/bootstrap.min.css" rel="stylesheet">
@@ -311,14 +311,14 @@ text-align:center;
 	<div id="body" style="padding: 20px 50px; background-color: #FFF59D"> <!--#FFF59D #FFFF6A -->
 		<div class="row">
 			<div class="col-md-4 col-md-push-8" style="padding-top: 24px;">
-			<div style="border:1px solid blue;margin-bottom:5px;background-color: white;">
+			<!-- <div style="border:1px solid blue;margin-bottom:5px;background-color: white;">
 			 <p class="research_class" style="padding-top:10px;">PUSH-D is freely available for use as a self-help tool.</p>
 			 <p class="research_class" style="padding-top:10px;">In addition, PUSH-D is currently being tested/researched as a combination package:</p><br>
         <p class="research_class">PUSH-PLUS (internet-based self help program + a few face-to-face sessions + weekly telephonic support)</p><br><br>
         <p class="research_class">Interested to know more/register?</p>
         <p class="research_class">Drop in a message to 9483029609 or mail us at</p>
         <p class="research_class">push.d.nimhans@gmail.com</p>
-        </div>
+        </div> -->
 				<img alt="" src="images/news.jpg" class="img-responsive">
 			</div>
 			<div class="col-md-8 col-md-pull-4" style="padding-top: 20px;">
